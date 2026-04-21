@@ -1,11 +1,77 @@
 sources:
+  # ─── Tier 1: Anthropic / Claude ─────────────────────────────────────
   - name: anthropic-blog
     kind: rss
     url: https://www.anthropic.com/news/rss.xml
     tier: 1
     source_weight: 1.0
+  - name: claude-code-releases
+    kind: rss
+    url: https://github.com/anthropics/claude-code/releases.atom
+    tier: 1
+    source_weight: 1.0
+
+  # ─── Tier 1: OpenAI / Codex ─────────────────────────────────────────
+  - name: openai-blog
+    kind: rss
+    url: https://openai.com/blog/rss.xml
+    tier: 1
+    source_weight: 1.0
+  - name: codex-releases
+    kind: rss
+    url: https://github.com/openai/codex/releases.atom
+    tier: 1
+    source_weight: 1.0
+
+  # ─── Tier 1: other frontier labs ────────────────────────────────────
+  - name: deepmind-blog
+    kind: rss
+    url: https://deepmind.google/blog/rss.xml
+    tier: 1
+    source_weight: 0.9
+  - name: huggingface-blog
+    kind: rss
+    url: https://huggingface.co/blog/feed.xml
+    tier: 2
+    source_weight: 0.7
+
+  # ─── Tier 2: analyst newsletters (high signal) ──────────────────────
+  - name: simon-willison
+    kind: rss
+    url: https://simonwillison.net/atom/everything/
+    tier: 2
+    source_weight: 0.8
+  - name: import-ai
+    kind: rss
+    url: https://importai.substack.com/feed
+    tier: 2
+    source_weight: 0.7
+  - name: latent-space
+    kind: rss
+    url: https://www.latent.space/feed
+    tier: 2
+    source_weight: 0.7
+  - name: interconnects
+    kind: rss
+    url: https://www.interconnects.ai/feed
+    tier: 2
+    source_weight: 0.7
+
+  # ─── Tier 2: community viral signal (Reddit) ────────────────────────
+  - name: reddit-localllama
+    kind: rss
+    url: https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day
+    tier: 2
+    source_weight: 0.6
+  - name: reddit-claudeai
+    kind: rss
+    url: https://www.reddit.com/r/ClaudeAI/top/.rss?t=day
+    tier: 2
+    source_weight: 0.5
+
+  # ─── Tier 3: HN (threshold raised to reduce link-only noise) ────────
   - name: hackernews
     kind: hn
-    score_threshold: 200
-    tier: 2
-    source_weight: 0.4
+    score_threshold: 300
+    tier: 3
+    source_weight: 0.3

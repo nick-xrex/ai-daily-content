@@ -1,0 +1,33 @@
+---
+id: inbox_0c6e3d9f
+source: simon-willison
+source_type: rss
+url: "https://simonwillison.net/2026/Apr/13/steve-yegge/#atom-everything"
+author: ""
+published_at: 2026-04-13T20:59:00+00:00
+fetched_at: 2026-04-21T01:58:22.532884+00:00
+content_hash: "39f2d9a44d1d851980b5ad5d17d13078c6f5319c14603354309bbb6895e53b2f"
+lang: en
+caption_quality: None
+raw: true
+topics: []
+---
+
+# Steve Yegge
+
+<p><a href="https://twitter.com/steve_yegge/status/2043747998740689171">Steve Yegge</a>:</p>
+<blockquote>
+<p>I was chatting with my buddy at Google, who's been a tech director there for about 20 years, about their AI adoption. Craziest convo I've had all year.</p>
+<p>The TL;DR is that Google engineering appears to have the same AI adoption footprint as John Deere, the tractor company. Most of the industry has the same internal adoption curve: 20% agentic power users, 20% outright refusers, 60% still using Cursor or equivalent chat tool. It turns out Google has this curve too. [...]</p>
+<p>There has been an industry-wide hiring freeze for 18+ months, during which time nobody has been moving jobs. So there are no clued-in people coming in from the outside to tell Google how far behind they are, how utterly mediocre they have become as an eng org.</p>
+</blockquote>
+<p><a href="https://twitter.com/addyosmani/status/2043812343508021460">Addy Osmani</a>:</p>
+<blockquote>
+<p>On behalf of @Google, this post doesn't match the state of agentic coding at our company. Over 40K SWEs use agentic coding weekly here. Googlers have access to our own versions of @antigravity, @geminicli, custom models, skills, CLIs and MCPs for our daily work. Orchestrators, agent loops, virtual SWE teams and many other systems are actively available to folks. [...]</p>
+</blockquote>
+<p><a href="https://twitter.com/demishassabis/status/2043867486320222333">Demis Hassabis</a>:</p>
+<blockquote>
+<p>Maybe tell your buddy to do some actual work and to stop spreading absolute nonsense. This post is completely false and just pure clickbait.</p>
+</blockquote>
+
+    <p>Tags: <a href="https://simonwillison.net/tags/addy-osmani">addy-osmani</a>, <a href="https://simonwillison.net/tags/steve-yegge">steve-yegge</a>, <a href="https://simonwillison.net/tags/google">google</a>, <a href="https://simonwillison.net/tags/generative-ai">generative-ai</a>, <a href="https://simonwillison.net/tags/agentic-engineering">agentic-engineering</a>, <a href="https://simonwillison.net/tags/ai">ai</a>, <a href="https://simonwillison.net/tags/llms">llms</a></p>
