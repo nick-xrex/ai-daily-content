@@ -23,11 +23,26 @@ columns:
       keywords: ["claude code", "codex", "cursor", "windsurf", "aider", "cline"]
     min_items: 1
 
-  - id: frontier-models
-    display_name: "🚀 Frontier 模型動態"
-    prompt: "今天旗艦級 LLM（Claude / GPT / Gemini / Llama / DeepSeek / Qwen）的新版本、benchmark、重大能力變化。跳過週邊產品。"
+  - id: ai-knowledge-mgmt
+    display_name: "📚 AI 知識管理"
+    prompt: "AI 輔助的個人 / 團隊知識管理：RAG 系統、second-brain 工具、Obsidian + AI 整合、企業內部知識檢索、文件摘要自動化、筆記組織、prompt library 管理、memory system。"
     filter:
-      topics: ["foundation_models"]
+      keywords: ["knowledge management", "rag", "retrieval augmented", "second brain",
+                 "obsidian", "notion ai", "knowledge base", "memory system",
+                 "prompt library", "semantic search", "embedding", "vector db",
+                 "vector database", "knowledge graph"]
+    min_items: 1
+
+  - id: enterprise-ai-adoption
+    display_name: "🏢 企業導入 AI"
+    prompt: "企業 / 組織導入 AI 的案例、策略、治理、ROI、change management：包括大型企業 AI 部署（ChatGPT Enterprise、Claude for Enterprise）、產業應用（金融 / 醫療 / 製造 / 零售 / 法務）、AI 治理框架、合規、採購決策、組織變革、培訓。"
+    filter:
+      keywords: ["enterprise", "chatgpt enterprise", "claude for enterprise",
+                 "copilot for business", "ai governance", "ai adoption",
+                 "ai transformation", "roi", "case study", "deployment",
+                 "compliance", "企業", "導入", "部署", "治理", "合規",
+                 "金融", "fintech", "healthcare", "medical", "manufacturing",
+                 "retail", "legal"]
     min_items: 1
 
   - id: ai-security
