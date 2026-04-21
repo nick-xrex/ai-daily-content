@@ -78,6 +78,58 @@ columns:
                  "技巧", "心法", "手法", "套路", "方法"]
     min_items: 1
 
+  - id: payment-fintech
+    display_name: "💳 支付 / Fintech"
+    prompt: "支付與金融科技相關：傳統支付（Visa/Mastercard/Stripe/PayPal）、跨境匯款、穩定幣支付、CBDC、數位錢包、remittance、merchant acquiring、card issuing、PCI 合規、KYC/AML、fraud detection、risk engine、reconciliation、支付基礎設施、open banking。AI 與支付的交集（fraud AI、chargeback prediction、onboarding AI）特別重要。"
+    filter:
+      keywords: [
+        "payment", "payments", "stablecoin", "usdc", "usdt", "cbdc",
+        "remittance", "cross-border", "card issuing", "acquirer", "merchant",
+        "stripe", "visa", "mastercard", "paypal", "adyen", "checkout",
+        "kyc", "aml", "fraud", "chargeback", "pci", "compliance",
+        "open banking", "digital wallet", "e-money", "gateway",
+        "fintech", "neobank", "bnpl",
+        "支付", "匯款", "跨境", "穩定幣", "錢包", "清算", "結算",
+        "金融科技", "詐欺", "風控", "合規"
+      ]
+    min_items: 1
+
+  - id: blockchain-crypto
+    display_name: "⛓️ 區塊鏈 / Web3"
+    prompt: "區塊鏈、加密貨幣、Web3：公鏈動態（Ethereum/Solana/Bitcoin L2）、L2（Arbitrum/Optimism/Base）、DeFi protocols（lending/DEX/derivatives）、MEV、validator economics、on-chain data、token 經濟、NFT、DAO、Web3 infrastructure、restaking、RWA tokenization。AI 與區塊鏈的交集（on-chain agents、TEE、decentralized AI）優先。"
+    filter:
+      keywords: [
+        "blockchain", "crypto", "bitcoin", "ethereum", "solana",
+        "defi", "dex", "lending", "staking", "restaking", "mev",
+        "layer 2", "layer-2", "rollup", "arbitrum", "optimism", "base",
+        "zk-", "zero-knowledge", "validator", "consensus",
+        "nft", "dao", "web3", "smart contract", "tokenomics",
+        "rwa", "real world asset", "tokenization",
+        "on-chain", "onchain", "wallet", "dapp",
+        "區塊鏈", "加密", "比特幣", "以太坊", "智能合約",
+        "代幣", "鏈上", "去中心化"
+      ]
+    min_items: 1
+
+  - id: ledger-accounting
+    display_name: "📒 帳務架構 / Ledger"
+    prompt: "帳務系統與 ledger 架構：double-entry bookkeeping、journal entry、general ledger、reconciliation、transaction matching、event sourcing for financial records、multi-currency accounting、cost center allocation、SOX compliance、audit trail、GL/AP/AR、close process 自動化、blockchain ledger design（UTXO vs account model）、高頻交易系統的 ledger 正確性、distributed transaction。實務導向的系統設計優先。"
+    filter:
+      keywords: [
+        "ledger", "double-entry", "double entry", "bookkeeping",
+        "journal entry", "general ledger", "gl account", "accounting",
+        "reconciliation", "reconcile", "transaction matching",
+        "event sourcing", "close process", "period close",
+        "audit trail", "sox", "sarbanes-oxley",
+        "multi-currency", "fx accounting", "cost center",
+        "gaap", "ifrs", "fasb",
+        "utxo", "account model", "balance sheet",
+        "chart of accounts", "debit credit",
+        "帳務", "分錄", "總帳", "對帳", "會計", "記帳",
+        "結算", "清算", "財報"
+      ]
+    min_items: 1
+
   - id: ai-security
     display_name: "🔐 AI 安全 / 濫用"
     prompt: "AI 相關的資安事件、濫用偵測、紅隊研究、對抗攻擊、prompt injection、模型供應鏈。對加密資產/金融詐騙場景特別重要。"
