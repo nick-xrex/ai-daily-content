@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://stephvee.ca/blog/artificial%20intelligence/ai-resistance-is-growing/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# AI Resistance: some recent anti-AI stuff that’s worth discussing
+
+</details>

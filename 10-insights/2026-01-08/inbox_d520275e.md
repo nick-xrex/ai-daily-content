@@ -33,3 +33,14 @@ OpenAI 推出 OpenAI for Healthcare，一項為醫療產業設計的企業級 AI
 - 企業級安全設計，針對醫療產業優化
 
 **原文：** [openai-blog](https://openai.com/index/openai-for-healthcare)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI for Healthcare enables secure, enterprise-grade AI that supports HIPAA compliance—reducing administrative burden and supporting clinical workflows.
+
+</details>

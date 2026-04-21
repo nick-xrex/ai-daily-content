@@ -31,3 +31,14 @@ OpenAI 對 Elon Musk 近期提出的法庭文件作出回應，標題指出「El
 - 涉及 OpenAI 與 Elon Musk 的法律爭議
 
 **原文：** [openai-blog](https://openai.com/index/the-truth-elon-left-out)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+The truth left out from Elon Musk’s recent court filing.
+
+</details>

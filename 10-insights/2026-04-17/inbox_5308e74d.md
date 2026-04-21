@@ -33,3 +33,14 @@ Anthropic 發布 Claude Opus 4.7，成為新的 SOTA（最先進）模型。標�
 - 確立 Anthropic 的模型領導地位
 
 **原文：** [(resumed)](https://www.latent.space/p/ainews-anthropic-claude-opus-47-literally)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+The new SOTA model asserts its dominance.
+
+</details>

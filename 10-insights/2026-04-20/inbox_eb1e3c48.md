@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://www.kimi.com/blog/kimi-k2-6)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Kimi K2.6: Advancing open-source coding
+
+</details>

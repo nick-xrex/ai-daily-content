@@ -33,3 +33,14 @@ OpenAI Academy 推出 ChatGPT 研究應用課程，教授使用者如何利用 C
 - 系統化整合與驗證信息來源的工作流
 
 **原文：** [openai-blog](https://openai.com/academy/research)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how to use ChatGPT for research to gather sources, analyze information, and create structured, citation-backed insights.
+
+</details>

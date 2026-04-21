@@ -33,3 +33,14 @@ deep_dive_approved: false
 - 實現跨廣告、媒體、遊戲部門的 AI 標準化和品質提升
 
 **原文：** [openai-blog](https://openai.com/index/cyberagent)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+CyberAgent uses ChatGPT Enterprise and Codex to securely scale AI adoption, improve quality, and accelerate decisions across advertising, media, and gaming.
+
+</details>

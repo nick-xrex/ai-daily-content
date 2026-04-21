@@ -33,3 +33,14 @@ deep_dive_approved: false
 - 著作進度與 AI 研究工作
 
 **原文：** [(resumed)](https://www.interconnects.ai/p/what-ive-been-building-atom-report)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+What I've been up to!
+
+</details>

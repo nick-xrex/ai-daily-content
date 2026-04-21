@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://simonwillison.net/2026/Apr/16/qwen-beats-opus/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7
+
+</details>

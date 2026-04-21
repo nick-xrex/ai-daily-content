@@ -33,3 +33,14 @@ OpenAI 闡述其商業模式隨著 AI 智能深化而擴展的理念，涵蓋訂
 - 由 ChatGPT 用戶採用率深化驅動整體增長
 
 **原文：** [openai-blog](https://openai.com/index/a-business-that-scales-with-the-value-of-intelligence)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI’s business model scales with intelligence—spanning subscriptions, API, ads, commerce, and compute—driven by deepening ChatGPT adoption.
+
+</details>

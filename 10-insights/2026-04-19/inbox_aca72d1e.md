@@ -33,3 +33,14 @@ deep_dive_approved: false
 - 硬體短缺可能限制 AI 基礎設施擴展
 
 **原文：** [(resumed)](https://www.theverge.com/ai-artificial-intelligence/914672/the-ram-shortage-could-last-years)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# The RAM shortage could last years
+
+</details>

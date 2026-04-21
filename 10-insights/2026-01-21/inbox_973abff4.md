@@ -33,3 +33,14 @@ OpenAI 发布最新报告，深入分析了全球范围内 AI 先进能力与实
 - 多维度因素（政策、基础设施、人才）影响全球 AI 采纳
 
 **原文：** [openai-blog](https://openai.com/index/how-countries-can-end-the-capability-overhang)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Our latest report reveals stark differences in advanced AI adoption across countries and outlines new initiatives to help nations capture productivity gains from AI.
+
+</details>

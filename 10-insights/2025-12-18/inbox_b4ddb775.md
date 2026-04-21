@@ -33,3 +33,14 @@ OpenAI 與美國能源部（DOE）簽署諒解備忘錄，深化在 AI 與進階
 - 整合 national laboratories 生態系的 AI 協作框架
 
 **原文：** [openai-blog](https://openai.com/index/us-department-of-energy-collaboration)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI and the U.S. Department of Energy have signed a memorandum of understanding to deepen collaboration on AI and advanced computing in support of scientific discovery. The agreement builds on ongoing work with national laboratories and helps establish a framework for applying AI to high-impact research across the DOE ecosystem.
+
+</details>

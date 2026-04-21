@@ -33,3 +33,14 @@ OpenAI 與美國太平洋西北國家實驗室（PNNL）合作，推出 DraftNEP
 - 具體應用於美國聯邦基礎設施審批與環評流程現代化
 
 **原文：** [openai-blog](https://openai.com/index/pacific-northwest-national-laboratory)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI and Pacific Northwest National Laboratory introduce DraftNEPABench, a new benchmark evaluating how AI coding agents can accelerate federal permitting—showing potential to reduce NEPA drafting time by up to 15% and modernize infrastructure reviews.
+
+</details>

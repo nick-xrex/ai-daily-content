@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://www.righto.com/2026/04/B-52-star-tracker-angle-computer.html)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# The electromechanical angle computer inside the B-52 bomber's star tracker
+
+</details>

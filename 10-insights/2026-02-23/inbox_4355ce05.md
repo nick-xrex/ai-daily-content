@@ -33,3 +33,14 @@ OpenAI 推出 Frontier Alliance Partners 計畫。該計畫幫助企業從 AI �
 - 加速企業規模化採用前沿 AI 技術
 
 **原文：** [openai-blog](https://openai.com/index/frontier-alliance-partners)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI announces Frontier Alliance Partners to help enterprises move from AI pilots to production with secure, scalable agent deployments.
+
+</details>

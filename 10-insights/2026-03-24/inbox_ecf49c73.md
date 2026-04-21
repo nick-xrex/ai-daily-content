@@ -33,3 +33,14 @@ OpenAI 發布針對青少年的 AI 安全政策工具 gpt-oss-safeguard，幫助
 - 體現 AI 系統對不同用戶群體的責任差異化管理
 
 **原文：** [openai-blog](https://openai.com/index/teen-safety-policies-gpt-oss-safeguard)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems.
+
+</details>

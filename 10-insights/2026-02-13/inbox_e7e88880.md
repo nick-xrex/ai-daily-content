@@ -33,3 +33,14 @@ OpenAI 發布開源工具 GABRIEL，可將定性文本與圖像轉換為定量�
 - 開源發布，服務社會科學研究社群
 
 **原文：** [openai-blog](https://openai.com/index/scaling-social-science-research)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+GABRIEL is a new open-source toolkit from OpenAI that uses GPT to turn qualitative text and images into quantitative data, helping social scientists analyze research at scale.
+
+</details>

@@ -33,3 +33,14 @@ OpenAI 針對 Axios 開發工具遭受的供應鏈攻擊發布了官方回應。
 - 確認無用戶資料被竊取或洩露
 
 **原文：** [openai-blog](https://openai.com/index/axios-developer-tool-compromise)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI responds to the Axios supply chain attack by rotating macOS code signing certificates, updating apps, and confirming no user data was compromised.
+
+</details>

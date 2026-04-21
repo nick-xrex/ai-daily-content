@@ -33,3 +33,14 @@ Balyasny Asset Management 利用 OpenAI 完整平台與 AI 代理工作流重新
 - 展示 AI 代理在複雜金融分析中的實際應用價值
 
 **原文：** [openai-blog](https://openai.com/index/balyasny-asset-management)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+By combining rigorous model evaluation, full-platform use of OpenAI, and agent workflows, Balyasny is reinventing investment research.
+
+</details>

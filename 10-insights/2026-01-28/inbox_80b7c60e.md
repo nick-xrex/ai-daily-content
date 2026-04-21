@@ -33,3 +33,14 @@ OpenAI 宣佈 EMEA 青年與福祉補助計畫，資助規模為 €500,000。�
 - EMEA地區社會責任倡議
 
 **原文：** [openai-blog](https://openai.com/index/emea-youth-and-wellbeing-grant)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Apply for the EMEA Youth & Wellbeing Grant, a €500,000 program funding NGOs and researchers advancing youth safety and wellbeing in the age of AI.
+
+</details>

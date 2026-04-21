@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [hackernews](https://www.apple.com/newsroom/2026/04/tim-cook-to-become-apple-executive-chairman-john-ternus-to-become-apple-ceo/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# John Ternus to become Apple CEO
+
+</details>

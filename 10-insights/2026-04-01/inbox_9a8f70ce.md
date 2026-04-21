@@ -33,3 +33,14 @@ Gradient Labs 運用 GPT-4.1 和 GPT-5.4 mini/nano 等多個模型構建 AI agen
 - 為銀行客戶提供個性化 AI 帳戶經理
 
 **原文：** [openai-blog](https://openai.com/index/gradient-labs)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Gradient Labs uses GPT-4.1 and GPT-5.4 mini and nano to power AI agents that automate banking support workflows with low latency and high reliability.
+
+</details>

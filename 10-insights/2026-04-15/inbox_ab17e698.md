@@ -33,3 +33,14 @@ Google 發布 Gemini 3.1 Flash TTS 音頻模型，為文字轉語音生成帶來
 - 應用場景涵蓋客服機器人、虛擬助手、媒體內容生成
 
 **原文：** [(resumed)](https://deepmind.google/blog/gemini-3-1-flash-tts-the-next-generation-of-expressive-ai-speech/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Our newest audio model introduces granular audio tags that give you precise control to direct AI speech for expressive audio generation.
+
+</details>

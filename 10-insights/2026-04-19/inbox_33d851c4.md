@@ -27,3 +27,14 @@ None
 ### 重點
 
 **原文：** [(resumed)](https://twitter.com/weezerOSINT/status/2045849358462222720)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Notion leaks email addresses of all editors of any public page
+
+</details>

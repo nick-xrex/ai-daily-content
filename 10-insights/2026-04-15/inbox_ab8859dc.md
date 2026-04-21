@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://www.latent.space/p/ainews-humanitys-last-gasp)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+a quiet day lets us reflect on work in the time of AI
+
+</details>

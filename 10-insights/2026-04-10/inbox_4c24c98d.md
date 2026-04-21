@@ -33,3 +33,14 @@ OpenAI 發布 ChatGPT 研究教程，展示如何使用搜尋（search）與深�
 - 可綜合多來源資訊並轉化為結構化洞察與報告
 
 **原文：** [openai-blog](https://openai.com/academy/search-and-deep-research)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how to research with ChatGPT using search and deep research to find up-to-date information, analyze sources, and generate structured insights.
+
+</details>

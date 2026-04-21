@@ -33,3 +33,14 @@ OpenAI 與 Snowflake 達成 2 億美元戰略合作協議，將前沿 AI 能力�
 - 將前沿 AI 能力與企業數據基礎設施深度整合
 
 **原文：** [openai-blog](https://openai.com/index/snowflake-partnership)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI and Snowflake partner in a $200M agreement to bring frontier intelligence into enterprise data, enabling AI agents and insights directly in Snowflake.
+
+</details>

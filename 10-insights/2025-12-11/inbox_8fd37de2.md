@@ -33,3 +33,14 @@ GPT-5.2在數學與科學領域創造業界新紀錄，在GPQA Diamond與Frontie
 - 展現LLM從評測能力向實際科研工具轉變的成熟度
 
 **原文：** [openai-blog](https://openai.com/index/gpt-5-2-for-science-and-math)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+GPT-5.2 is OpenAI’s strongest model yet for math and science, setting new state-of-the-art results on benchmarks like GPQA Diamond and FrontierMath. This post shows how those gains translate into real research progress, including solving an open theoretical problem and generating reliable mathematical proofs.
+
+</details>

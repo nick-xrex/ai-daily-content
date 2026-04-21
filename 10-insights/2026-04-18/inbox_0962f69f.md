@@ -29,3 +29,17 @@ Claude Code v2.1.114 於 2026 年 4 月 18 日發布，這是最小化修復版�
 - 修復 agent teams 隊友工具權限對話框當機
 
 **原文：** [claude-code-releases](https://github.com/anthropics/claude-code/releases/tag/v2.1.114)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+<h2>What's changed</h2>
+<ul>
+<li>Fixed a crash in the permission dialog when an agent teams teammate requested tool permission</li>
+</ul>
+
+</details>

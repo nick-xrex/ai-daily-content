@@ -33,3 +33,14 @@ deep_dive_approved: false
 - 支持大規模本地新聞報導同時保持品質
 
 **原文：** [openai-blog](https://openai.com/index/axios-allison-murphy)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Axios COO Allison Murphy explains how the company uses AI to support local reporters, streamline newsroom workflows, and deliver high-impact local journalism at scale.
+
+</details>

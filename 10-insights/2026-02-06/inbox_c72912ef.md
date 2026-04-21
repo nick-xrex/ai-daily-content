@@ -33,3 +33,14 @@ OpenAI 分享其 AI 模型本地化方法论，展示全球共享的前沿模型
 - 安全性在整个本地化过程中保持一致，不因地区而削弱
 
 **原文：** [openai-blog](https://openai.com/index/our-approach-to-localization)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI shares its approach to AI localization, showing how globally shared frontier models can be adapted to local languages, laws, and cultures without compromising safety.
+
+</details>

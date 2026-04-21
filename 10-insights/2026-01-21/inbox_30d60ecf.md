@@ -33,3 +33,14 @@ OpenAI 宣布推出「Edu for Countries」(各国教育) 计划，这是一个�
 - OpenAI 进一步拓展从技术提供商到政策顾问的角色
 
 **原文：** [openai-blog](https://openai.com/index/edu-for-countries)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Edu for Countries is a new OpenAI initiative helping governments use AI to modernize education systems and build future-ready workforces.
+
+</details>

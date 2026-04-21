@@ -33,3 +33,14 @@ OpenAI 發表關於『智能時代產業政策』的見解，提議以人為中�
 - 制度建設：構建適應 AI 發展的監管框架和社會制度
 
 **原文：** [openai-blog](https://openai.com/index/industrial-policy-for-the-intelligence-age)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Explore our ambitious, people-first industrial policy ideas for the AI era—focused on expanding opportunity, sharing prosperity, and building resilient institutions as advanced intelligence evolves.
+
+</details>

@@ -33,3 +33,14 @@ OpenAI 构建了实时访问系统，整合速率限制、使用跟踪和积分�
 - 在资源约束下实现公平且连续的 API 访问
 
 **原文：** [openai-blog](https://openai.com/index/beyond-rate-limits)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+How OpenAI built a real-time access system combining rate limits, usage tracking, and credits to power continuous access to Sora and Codex.
+
+</details>

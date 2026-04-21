@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://huggingface.co/blog/ecom-rlve)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Ecom-RLVE: Adaptive Verifiable Environments for E-Commerce Conversational Agents
+
+</details>

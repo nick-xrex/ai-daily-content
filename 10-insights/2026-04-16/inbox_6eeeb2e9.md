@@ -31,3 +31,14 @@ Codex 應用程式的 macOS 和 Windows 版本更新新增電腦使用、應用�
 - 新增記憶體支援和插件機制，擴展開發工作流整合能力
 
 **原文：** [openai-blog](https://openai.com/index/codex-for-almost-everything)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+The updated Codex app for macOS and Windows adds computer use, in-app browsing, image generation, memory, and plugins to accelerate developer workflows.
+
+</details>

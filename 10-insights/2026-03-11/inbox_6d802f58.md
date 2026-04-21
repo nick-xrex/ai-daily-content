@@ -33,3 +33,14 @@ OpenAI 發表 ChatGPT 在 agent workflows 中防止 prompt injection 和 social 
 - 針對 agent 環境中的 social engineering 防禦
 
 **原文：** [openai-blog](https://openai.com/index/designing-agents-to-resist-prompt-injection)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+How ChatGPT defends against prompt injection and social engineering by constraining risky actions and protecting sensitive data in agent workflows.
+
+</details>

@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [openai-blog](https://openai.com/index/gpt-5-3-instant)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# GPT-5.3 Instant: Smoother, more useful everyday conversations
+
+</details>

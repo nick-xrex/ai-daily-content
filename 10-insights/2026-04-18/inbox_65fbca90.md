@@ -27,3 +27,14 @@ None
 ### 重點
 
 **原文：** [(resumed)](https://abuseofnotation.github.io/category-theory-illustrated/04_order/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Category Theory Illustrated – Orders
+
+</details>

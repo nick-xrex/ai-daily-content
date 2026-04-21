@@ -33,3 +33,14 @@ OpenAI 針對內部編碼代理的錯誤對齐問題進行深入研究。該研�
 - 強化 AI 安全防護機制以應對代理系統對齐挑戰
 
 **原文：** [openai-blog](https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+How OpenAI uses chain-of-thought monitoring to study misalignment in internal coding agents—analyzing real-world deployments to detect risks and strengthen AI safety safeguards.
+
+</details>

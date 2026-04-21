@@ -33,3 +33,14 @@ OpenAI Academy 推出 AI 基礎知識教程，面向初學者詳細介紹人工�
 - 初學者友善的課程設計
 
 **原文：** [openai-blog](https://openai.com/academy/what-is-ai)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn what AI is, how it works, and how tools like ChatGPT use large language models. A clear, beginner-friendly guide to understanding artificial intelligence.
+
+</details>

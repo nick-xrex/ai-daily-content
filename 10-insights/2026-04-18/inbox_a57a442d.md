@@ -27,3 +27,14 @@ None
 ### 重點
 
 **原文：** [(resumed)](https://bigthink.com/mind-behavior/the-quiet-disappearance-of-the-free-range-childhood/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# The quiet disappearance of the free-range childhood
+
+</details>

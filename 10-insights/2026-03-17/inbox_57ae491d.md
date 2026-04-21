@@ -33,3 +33,14 @@ deep_dive_approved: false
 - 幫助解決勞動力市場中的工資信息不對稱問題
 
 **原文：** [openai-blog](https://openai.com/index/equipping-workers-with-insights-about-compensation)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+New research shows Americans send nearly 3 million daily messages to ChatGPT asking about compensation and earnings, helping close the wage information gap.
+
+</details>

@@ -33,3 +33,14 @@ OpenAI 發布 GPT-5.3-Codex 的系統卡，為模型透明性提供詳細文件�
 - 為開發者與用戶提供透明的能力基準與責任使用指南
 
 **原文：** [openai-blog](https://openai.com/index/gpt-5-3-codex-system-card)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+GPT‑5.3-Codex is the most capable agentic coding model to date, combining the frontier coding performance of GPT‑5.2-Codex with the reasoning and professional knowledge capabilities of GPT‑5.2.
+
+</details>

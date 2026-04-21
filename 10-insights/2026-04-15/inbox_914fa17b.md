@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://www.sumida-aquarium.com/special/sokanzu/en/2026/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Sumida Aquarium Posts 2026 Penguin Relationship Chart, with Drama and Breakups
+
+</details>

@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://www.latent.space/p/ainews-rip-pull-requests-2005-2026)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+a quiet day lets us report on the death of the pull requests
+
+</details>

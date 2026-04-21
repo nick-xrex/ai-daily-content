@@ -29,3 +29,17 @@ Claude Code v2.1.109 改進了 extended-thinking 指示器的視覺回饋，加�
 - 旋轉進度提示改進 extended-thinking 指示器視覺反饋
 
 **原文：** [claude-code-releases](https://github.com/anthropics/claude-code/releases/tag/v2.1.109)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+<h2>What's changed</h2>
+<ul>
+<li>Improved the extended-thinking indicator with a rotating progress hint</li>
+</ul>
+
+</details>

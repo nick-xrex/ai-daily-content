@@ -33,3 +33,14 @@ OpenAI 使用 Codex 在 28 天內為 Android 平台上線了 Sora 視訊生成�
 - 展示小型靈活團隊透過 AI 工具實現快速可靠的軟體交付
 
 **原文：** [openai-blog](https://openai.com/index/shipping-sora-for-android-with-codex)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI shipped Sora for Android in 28 days using Codex. AI-assisted planning, translation, and parallel coding workflows helped a nimble team deliver rapid, reliable development.
+
+</details>

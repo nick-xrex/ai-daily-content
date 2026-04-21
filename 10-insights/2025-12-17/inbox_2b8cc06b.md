@@ -33,3 +33,14 @@ OpenAI 發佈《企業 AI 現狀 2025 報告》，提供數據驅動的企業 AI
 - 反映企業 AI 投資的實踐價值與轉型路徑
 
 **原文：** [openai-blog](https://openai.com/business/guides-and-resources/the-state-of-enterprise-ai-2025-report)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+A data-driven look at enterprise AI adoption, showing how organizations move from experimentation to real productivity gains and new capabilities.
+
+</details>

@@ -33,3 +33,14 @@ deep_dive_approved: false
 - 精益型銷售團隊透過 AI 擴充產能
 
 **原文：** [openai-blog](https://openai.com/index/zenken)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+By rolling out ChatGPT Enterprise company-wide, Zenken has boosted sales performance, cut preparation time, and increased proposal success rates. AI-supported workflows are helping a lean team deliver more personalized, effective customer engagement.
+
+</details>

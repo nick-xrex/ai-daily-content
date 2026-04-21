@@ -33,3 +33,14 @@ OpenAI 推出第二屆 Grove 創業加速計畫，為期 5 週，向任何階段
 - OpenAI 團隊直接指導與工具早期存取
 
 **原文：** [openai-blog](https://openai.com/index/openai-grove)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Applications are now open for OpenAI Grove Cohort 2, a 5-week founder program designed for individuals at any stage, from pre-idea to product. Participants receive $50K in API credits, early access to AI tools, and hands-on mentorship from the OpenAI team.
+
+</details>

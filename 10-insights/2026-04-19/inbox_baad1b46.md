@@ -27,3 +27,14 @@ None
 ### 重點
 
 **原文：** [(resumed)](https://www.swissinfo.ch/eng/swiss-ai/swiss-authorities-want-to-reduce-dependency-on-microsoft/91280532)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Swiss authorities want to reduce dependency on Microsoft
+
+</details>

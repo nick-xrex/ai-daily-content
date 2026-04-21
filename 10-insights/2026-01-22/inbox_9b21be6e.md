@@ -33,3 +33,14 @@ OpenAI 發布了一份數據驅動的報告，詳細分析了全球員工如何�
 - 洞察 AI 在工作場景中的當前應用和未來前景
 
 **原文：** [openai-blog](https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+A data-driven report on how workers across industries use ChatGPT—covering adoption trends, top tasks, departmental patterns, and the future of AI at work.
+
+</details>

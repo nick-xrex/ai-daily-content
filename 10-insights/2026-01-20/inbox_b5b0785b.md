@@ -33,3 +33,14 @@ OpenAI 与比尔及梅琳达·盖茨基金会联合宣布启动「Horizon 1000�
 - 聚焦初级医疗保健的 AI 赋能和能力建设
 
 **原文：** [openai-blog](https://openai.com/index/horizon-1000)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI and the Gates Foundation launch Horizon 1000, a $50M pilot advancing AI capabilities for healthcare in Africa. The initiative aims to reach 1,000 clinics by 2028.
+
+</details>

@@ -33,3 +33,14 @@ OpenAI Academy 發布個性化 ChatGPT 教程，介紹如何透過自訂指示�
 - 適用於企業與個人用戶的日常優化
 
 **原文：** [openai-blog](https://openai.com/academy/personalization)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how to personalize ChatGPT using custom instructions and memory to get more relevant, consistent, and tailored responses.
+
+</details>

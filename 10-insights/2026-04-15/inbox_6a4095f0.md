@@ -33,3 +33,14 @@ deep_dive_approved: false
 - 作者對開源模型生態未來的投資與戰略預測
 
 **原文：** [(resumed)](https://www.interconnects.ai/p/my-bets-on-open-models-mid-2026)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+What I expect to come next and why, focused on the open-closed gap.
+
+</details>

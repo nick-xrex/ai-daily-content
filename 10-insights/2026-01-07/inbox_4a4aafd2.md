@@ -33,3 +33,14 @@ Tolan 利用 OpenAI 的 GPT-5.1 模型建構聲音優先的 AI 伴侶應用。�
 - 聲音優先 UI，強調自然對話體驗
 
 **原文：** [openai-blog](https://openai.com/index/tolan)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Tolan built a voice-first AI companion with GPT-5.1, combining low-latency responses, real-time context reconstruction, and memory-driven personalities for natural conversations.
+
+</details>

@@ -27,3 +27,14 @@ None
 ### 重點
 
 **原文：** [(resumed)](https://en.wikipedia.org/wiki/Michael_O._Rabin)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Michael Rabin has died
+
+</details>

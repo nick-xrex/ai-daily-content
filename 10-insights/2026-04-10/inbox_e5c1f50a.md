@@ -33,3 +33,14 @@ OpenAI Academy 推出 ChatGPT 入門課程，涵蓋如何開啟第一次對話�
 - 針對新手設計的入門教育資源
 
 **原文：** [openai-blog](https://openai.com/academy/getting-started)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how to use ChatGPT, start your first conversation, and discover simple ways to write, brainstorm, and solve problems with AI.
+
+</details>

@@ -33,3 +33,14 @@ OpenAI 發佈企業 AI 發展的新階段，整合 Frontier（推理模型）、
 - 針對金融、製造、醫療等行業的 AI 規模化採用需求
 
 **原文：** [openai-blog](https://openai.com/index/next-phase-of-enterprise-ai)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI outlines the next phase of enterprise AI, as adoption accelerates across industries with Frontier, ChatGPT Enterprise, Codex, and company-wide AI agents.
+
+</details>

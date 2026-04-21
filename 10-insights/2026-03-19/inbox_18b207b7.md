@@ -33,3 +33,14 @@ OpenAI 宣布收購 Astral，這是一項戰略性的開發工具投資。該收
 - 擴展 OpenAI 在開發工具生態中的戰略地位
 
 **原文：** [openai-blog](https://openai.com/index/openai-to-acquire-astral)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Accelerates Codex growth to power the next generation of Python developer tools
+
+</details>

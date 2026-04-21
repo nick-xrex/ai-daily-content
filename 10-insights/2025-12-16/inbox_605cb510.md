@@ -33,3 +33,14 @@ OpenAI 推出升級版本的 ChatGPT 圖像生成功能，由其旗艦圖像生�
 - 已向所有 ChatGPT 使用者推出，並可透過 API 供開發者使用
 
 **原文：** [openai-blog](https://openai.com/index/new-chatgpt-images-is-here)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+The new ChatGPT Images is powered by our flagship image generation model, delivering more precise edits, consistent details, and image generation up to 4× faster. The upgraded model is rolling out to all ChatGPT users today and is also available in the API as GPT-Image-1.5.
+
+</details>

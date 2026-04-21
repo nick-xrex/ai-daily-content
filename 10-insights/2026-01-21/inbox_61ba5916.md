@@ -33,3 +33,14 @@ Higgsfield 是一个综合多个 OpenAI 模型的创意视频生成工具。该�
 - 社交优先的视频输出满足现代内容分发需求
 
 **原文：** [openai-blog](https://openai.com/index/higgsfield)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Discover how Higgsfield gives creators cinematic, social-first video output from simple inputs using OpenAI GPT-4.1, GPT-5, and Sora 2.
+
+</details>

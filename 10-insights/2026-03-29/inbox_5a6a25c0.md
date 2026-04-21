@@ -33,3 +33,14 @@ OpenAI 與蓋茨基金會合作，在亞洲舉辦工作坊推進 AI 在災害應
 - 幫助災難應對團隊將 AI 轉化為實際行動
 
 **原文：** [openai-blog](https://openai.com/index/helping-disaster-response-teams-asia)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+AI for Disaster Response in Asia: OpenAI Workshop with Gates Foundation
+
+</details>

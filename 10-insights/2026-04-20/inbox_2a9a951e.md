@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [hackernews](https://www.theolivepress.es/spain-news/2026/04/20/eu-to-force-replaceable-batteries-in-phones-and-tablets-from-2027/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# All phones sold in the EU to have replaceable batteries from 2027
+
+</details>

@@ -33,3 +33,14 @@ OpenAI 發表新的思鏈（chain-of-thought）可監控性評估框架，涵蓋
 - 為 AI 可控性與透明度提供可擴展解決方案
 
 **原文：** [openai-blog](https://openai.com/index/evaluating-chain-of-thought-monitorability)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI introduces a new framework and evaluation suite for chain-of-thought monitorability, covering 13 evaluations across 24 environments. Our findings show that monitoring a model’s internal reasoning is far more effective than monitoring outputs alone, offering a promising path toward scalable control as AI systems grow more capable.
+
+</details>

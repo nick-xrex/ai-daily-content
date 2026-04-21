@@ -33,3 +33,14 @@ OpenAI 與 Paradigm 聯合推出 EVMbench，一個評估 AI agents 在智能合�
 - 由 OpenAI 與 Paradigm 聯合開發
 
 **原文：** [openai-blog](https://openai.com/index/introducing-evmbench)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI and Paradigm introduce EVMbench, a benchmark evaluating AI agents’ ability to detect, patch, and exploit high-severity smart contract vulnerabilities.
+
+</details>

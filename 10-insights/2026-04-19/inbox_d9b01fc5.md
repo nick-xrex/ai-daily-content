@@ -33,3 +33,14 @@ Claude Opus 4.6 和 4.7 版本之間的系統提示發生了重要變化。Anthr
 - 開發者應了解新版本的變化以充分利用其能力
 
 **原文：** [(resumed)](https://simonwillison.net/2026/Apr/18/opus-system-prompt/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Changes in the system prompt between Claude Opus 4.6 and 4.7
+
+</details>

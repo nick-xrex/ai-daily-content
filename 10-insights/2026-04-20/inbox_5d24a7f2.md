@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [hackernews](https://reason.com/2026/04/20/this-big-tech-firm-wants-to-reinstate-the-draft/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Palantir Wants to Reinstate the Draft
+
+</details>

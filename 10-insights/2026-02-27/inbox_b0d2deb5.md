@@ -47,3 +47,14 @@ pie title 1100億美元融資來源分配
 - 顯示 AI 基礎設施的資本密集性與市場對 AGI 方向的信心
 
 **原文：** [openai-blog](https://openai.com/index/scaling-ai-for-everyone)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Today we’re announcing $110B in new investment at a $730B pre money valuation. This includes $30B from SoftBank, $30B from NVIDIA, and $50B from Amazon.
+
+</details>

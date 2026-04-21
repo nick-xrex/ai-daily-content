@@ -27,3 +27,14 @@ None
 ### 重點
 
 **原文：** [(resumed)](https://www.lbc.co.uk/article/dubai-police-spied-private-whatsapp-5HjdXwr_2/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Airline worker arrested after sharing photos of bomb damage in WhatsApp group
+
+</details>

@@ -33,3 +33,14 @@ OpenAI 分享在心理健康安全方面的最新進展，包括家長控制、�
 - 涵蓋訴訟進展，體現負責任 AI 的長期承諾
 
 **原文：** [openai-blog](https://openai.com/index/update-on-mental-health-related-work)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI shares updates on its mental health safety work, including parental controls, trusted contacts, improved distress detection, and recent litigation developments.
+
+</details>

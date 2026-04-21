@@ -33,3 +33,14 @@ OpenAI 揭示了其如何擴展 PostgreSQL 以支持 ChatGPT 的 8 億用戶的�
 - 提供企業級資料庫擴展的實戰經驗和最佳實踐
 
 **原文：** [openai-blog](https://openai.com/index/scaling-postgresql)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+An inside look at how OpenAI scaled PostgreSQL to millions of queries per second using replicas, caching, rate limiting, and workload isolation.
+
+</details>

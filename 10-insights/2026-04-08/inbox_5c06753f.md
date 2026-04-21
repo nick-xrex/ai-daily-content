@@ -33,3 +33,14 @@ OpenAI 發佈《兒童安全藍圖》，為負責任 AI 設計和部署提供框
 - 協作層面：與 NGO、教育機構、監管機構制定行業標準
 
 **原文：** [openai-blog](https://openai.com/index/introducing-child-safety-blueprint)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.
+
+</details>

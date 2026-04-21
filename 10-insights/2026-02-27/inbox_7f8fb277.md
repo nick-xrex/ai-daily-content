@@ -33,3 +33,14 @@ OpenAI 與 Amazon 在 Amazon Bedrock 上推出 Stateful Runtime for Agents，為
 - 針對長程 AI 工作流設計最佳化，維持跨步驟的狀態保留
 
 **原文：** [openai-blog](https://openai.com/index/introducing-the-stateful-runtime-environment-for-agents-in-amazon-bedrock)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Stateful Runtime for Agents in Amazon Bedrock brings persistent orchestration, memory, and secure execution to multi-step AI workflows powered by OpenAI.
+
+</details>

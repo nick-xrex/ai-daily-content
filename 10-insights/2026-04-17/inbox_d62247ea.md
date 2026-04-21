@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://risky.biz/risky-bulletin-nist-gives-up-enriching-most-cves/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# NIST gives up enriching most CVEs
+
+</details>

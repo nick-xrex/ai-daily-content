@@ -27,3 +27,14 @@ None
 ### 重點
 
 **原文：** [(resumed)](https://lisyarus.github.io/blog/posts/its-ok-to-compare-floating-points-for-equality.html)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# It's OK to compare floating-points for equality
+
+</details>

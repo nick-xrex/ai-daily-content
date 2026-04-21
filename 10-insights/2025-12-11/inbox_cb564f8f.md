@@ -33,3 +33,14 @@ Disney與OpenAI達成標誌性協議，將超過200個Disney、Marvel、Pixar與
 - Disney全公司採用ChatGPT Enterprise與OpenAI API雙產品方案
 
 **原文：** [openai-blog](https://openai.com/index/disney-sora-agreement)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Disney and OpenAI have reached an agreement to bring more than 200 Disney, Marvel, Pixar and Star Wars characters to Sora for fan-inspired short videos. The agreement emphasizes responsible AI in entertainment and includes Disney’s company-wide use of ChatGPT Enterprise and the OpenAI API.
+
+</details>

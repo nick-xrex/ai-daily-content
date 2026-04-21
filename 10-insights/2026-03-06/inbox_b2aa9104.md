@@ -33,3 +33,14 @@ Descript 利用 OpenAI 推理模型實現大規模多語言影片自動配音，
 - 展示推理模型在影片製作實際應用中的優勢
 
 **原文：** [openai-blog](https://openai.com/index/descript)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Using OpenAI reasoning models, Descript unlocked automatic localization of large content libraries without losing timing or meaning.
+
+</details>

@@ -33,3 +33,14 @@ OpenAI發布GPT-5.2系統卡更新，詳述該模型家族的安全防護與合�
 - 系統卡作為安全合規的對外承諾文檔，保障透明度
 
 **原文：** [openai-blog](https://openai.com/index/gpt-5-system-card-update-gpt-5-2)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+GPT-5.2 is the latest model family in the GPT-5 series. The comprehensive safety mitigation approach for these models is largely the same as that described in the GPT-5 System Card and GPT-5.1 System Card. Like OpenAI’s other models, the GPT-5.2 models were trained on diverse datasets, including information that is publicly available on the internet, information that we partner with third parties to access, and information that our users or human trainers and researchers provide or generate.
+
+</details>

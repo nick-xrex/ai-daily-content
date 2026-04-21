@@ -33,3 +33,14 @@ OpenAI 與 Ginkgo Bioworks 建立合作，利用 GPT-5 與雲自動化實驗室�
 - 應用場景涵蓋製藥、生物燃料、食品科技等生物製造產業全領域
 
 **原文：** [openai-blog](https://openai.com/index/gpt-5-lowers-protein-synthesis-cost)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+An autonomous lab combining OpenAI’s GPT-5 with Ginkgo Bioworks’ cloud automation cut cell-free protein synthesis costs by 40% through closed-loop experimentation.
+
+</details>

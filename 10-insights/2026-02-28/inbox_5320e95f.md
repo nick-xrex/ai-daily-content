@@ -33,3 +33,14 @@ OpenAI 與美國 Department of War（戰爭部）簽署了重大合作協議，�
 - 建立法律框架規範國防 AI 的負責任使用
 
 **原文：** [openai-blog](https://openai.com/index/our-agreement-with-the-department-of-war)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Details on OpenAI’s contract with the Department of War, outlining safety red lines, legal protections, and how AI systems will be deployed in classified environments.
+
+</details>

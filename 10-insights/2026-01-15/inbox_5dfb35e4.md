@@ -33,3 +33,14 @@ OpenAI 發起採購徵案（RFP），強化美國 AI 供應鏈建設，重點聚
 - 擴大國內 AI 運算基礎設施規模
 
 **原文：** [openai-blog](https://openai.com/index/strengthening-the-us-ai-supply-chain)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI launches a new RFP to strengthen the U.S. AI supply chain by accelerating domestic manufacturing, creating jobs, and scaling AI infrastructure.
+
+</details>

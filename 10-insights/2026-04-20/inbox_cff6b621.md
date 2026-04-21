@@ -31,3 +31,14 @@ Hyatt 國際酒店集團在全球員工中部署 ChatGPT Enterprise，使用 GPT
 - 採用 GPT-5.4 和 Codex 模型組合
 
 **原文：** [openai-blog](https://openai.com/index/hyatt-advances-ai-with-chatgpt-enterprise)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Hyatt deploys ChatGPT Enterprise across its global workforce, using GPT-5.4 and Codex to improve productivity, operations, and guest experiences.
+
+</details>

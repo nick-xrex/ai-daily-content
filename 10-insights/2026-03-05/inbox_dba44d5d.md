@@ -33,3 +33,14 @@ OpenAI 發布企業 AI 戰略報告，闡述五種主要的 AI 價值創造模�
 - 強調從點狀試點升級為系統性商業變革的重要性
 
 **原文：** [openai-blog](https://openai.com/index/the-five-ai-value-models-driving-business-reinvention)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Five AI value models show how leaders can sequence AI from workforce fluency to process reinvention and build durable business advantage.
+
+</details>

@@ -33,3 +33,14 @@ OpenAI 揭示了 Codex App Server 的技術基礎，這是一個雙向 JSON-RPC 
 - 為嵌入式 AI agent 提供生產級基礎設施
 
 **原文：** [openai-blog](https://openai.com/index/unlocking-the-codex-harness)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how to embed the Codex agent using the Codex App Server, a bidirectional JSON-RPC API powering streaming progress, tool use, approvals, and diffs.
+
+</details>

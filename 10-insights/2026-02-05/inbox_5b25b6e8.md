@@ -33,3 +33,14 @@ OpenAI 推出企業級 AI agent 平台 Frontier，提供統一的代理構建、
 - 支持長期、複雜的 AI agent 工作流在企業規模的部署
 
 **原文：** [openai-blog](https://openai.com/index/introducing-openai-frontier)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI Frontier is an enterprise platform for building, deploying, and managing AI agents with shared context, onboarding, permissions, and governance.
+
+</details>

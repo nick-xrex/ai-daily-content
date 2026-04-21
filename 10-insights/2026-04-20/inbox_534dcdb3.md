@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [hackernews](https://opensource.posit.co/blog/2026-04-20_ggsql_alpha_release/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# ggsql: A Grammar of Graphics for SQL
+
+</details>

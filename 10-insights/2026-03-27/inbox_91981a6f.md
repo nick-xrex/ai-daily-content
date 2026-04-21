@@ -33,3 +33,14 @@ deep_dive_approved: false
 - 提升生產力並節省大量時間成本
 
 **原文：** [openai-blog](https://openai.com/index/stadler)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how STADLER uses ChatGPT to transform knowledge work, saving time and accelerating productivity across 650 employees.
+
+</details>

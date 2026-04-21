@@ -33,3 +33,14 @@ OpenAI 推出「Trusted Access for Cyber」信任框架，旨在平衡擴大前�
 - 平衡開放式研究與安全防護的政策創新方案
 
 **原文：** [openai-blog](https://openai.com/index/trusted-access-for-cyber)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI introduces Trusted Access for Cyber, a trust-based framework that expands access to frontier cyber capabilities while strengthening safeguards against misuse.
+
+</details>

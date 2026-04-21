@@ -27,3 +27,14 @@ None
 ### 重點
 
 **原文：** [(resumed)](https://twitter.com/finmoorhouse/status/2044933442236776794)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Hyperscalers have already outspent most famous US megaprojects
+
+</details>

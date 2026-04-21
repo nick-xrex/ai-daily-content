@@ -33,3 +33,14 @@ OpenAI 公佈針對 AI agents 開啟連結時的數據保護機制。當 AI agen
 - 保護用戶數據在agent執行網頁互動時的安全
 
 **原文：** [openai-blog](https://openai.com/index/ai-agent-link-safety)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how OpenAI protects user data when AI agents open links, preventing URL-based data exfiltration and prompt injection with built-in safeguards.
+
+</details>

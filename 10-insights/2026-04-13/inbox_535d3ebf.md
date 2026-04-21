@@ -33,3 +33,14 @@ Cloudflare 與 OpenAI 達成合作，在 Cloudflare Agent Cloud 中整合 GPT-5.
 - 提供完整的安全、快速的開發部署解決方案
 
 **原文：** [openai-blog](https://openai.com/index/cloudflare-openai-agent-cloud)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Cloudflare brings OpenAI’s GPT-5.4 and Codex to Agent Cloud, enabling enterprises to build, deploy, and scale AI agents for real-world tasks with speed and security.
+
+</details>

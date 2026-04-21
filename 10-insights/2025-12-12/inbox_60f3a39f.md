@@ -33,3 +33,14 @@ BBVA與OpenAI宣布多年AI轉型合作計畫，向全球120,000名員工全面�
 - 示範傳統金融機構與AI領導廠商的多年深度合作模式
 
 **原文：** [openai-blog](https://openai.com/index/bbva-collaboration-expansion)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+BBVA is expanding its work with OpenAI through a multi-year AI transformation program, rolling out ChatGPT Enterprise to all 120,000 employees. Together, the companies will develop AI solutions that enhance customer interactions, streamline operations, and help build an AI-native banking experience.
+
+</details>

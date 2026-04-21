@@ -33,3 +33,14 @@ OpenAI 推出 GPT-5.4 系列的兩款新型號：mini 和 nano。這兩款型號
 - 適合高容量 API 和子代理工作負載的生產部署
 
 **原文：** [openai-blog](https://openai.com/index/introducing-gpt-5-4-mini-and-nano)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+GPT-5.4 mini and nano are smaller, faster versions of GPT-5.4 optimized for coding, tool use, multimodal reasoning, and high-volume API and sub-agent workloads.
+
+</details>

@@ -33,3 +33,14 @@ OpenAI 發布 Sora 2 視頻生成模型和官方 Sora app，在安全機制上�
 - 視頻生成領域首次系統化的安全優先設計方案
 
 **原文：** [openai-blog](https://openai.com/index/creating-with-sora-safely)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+To address the novel safety challenges posed by a state-of-the-art video model as well as a new social creation platform, we’ve built Sora 2 and the Sora app with safety at the foundation. Our approach is anchored in concrete protections.
+
+</details>

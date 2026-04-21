@@ -33,3 +33,14 @@ OpenAI 發布教育指南，介紹如何有效使用 ChatGPT 進行腦力激盪�
 - 實用指南適用於企劃、產品管理等多類應用場景
 
 **原文：** [openai-blog](https://openai.com/academy/brainstorming)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how to use ChatGPT to brainstorm ideas, organize thinking, and turn rough concepts into structured, actionable plans.
+
+</details>

@@ -33,3 +33,14 @@ OpenAI 任命 Arvind KC 為首席人事長官（Chief People Officer）。此職
 - 探索 AI 時代工作模式演變
 
 **原文：** [openai-blog](https://openai.com/index/arvind-kc-chief-people-officer)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI appoints Arvind KC as Chief People Officer to help scale the company, strengthen its culture, and lead how work evolves in the age of AI.
+
+</details>

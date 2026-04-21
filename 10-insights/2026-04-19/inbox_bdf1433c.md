@@ -27,3 +27,14 @@ None
 ### 重點
 
 **原文：** [(resumed)](https://apenwarr.ca/log/20170810)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# The world in which IPv6 was a good design (2017)
+
+</details>

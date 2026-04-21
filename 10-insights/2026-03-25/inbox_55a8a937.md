@@ -33,3 +33,14 @@ OpenAI 發布 Model Spec 作為公開框架，用於規範 AI 模型的行為，
 - 作為 AI 治理的公開標準，將影響行業最佳實踐
 
 **原文：** [openai-blog](https://openai.com/index/our-approach-to-the-model-spec)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how OpenAI’s Model Spec serves as a public framework for model behavior, balancing safety, user freedom, and accountability as AI systems advance.
+
+</details>

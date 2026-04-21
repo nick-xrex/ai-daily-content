@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [hackernews](https://awesomeagents.ai/news/github-fake-stars-investigation/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# GitHub's fake star economy
+
+</details>

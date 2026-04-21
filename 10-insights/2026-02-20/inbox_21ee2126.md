@@ -33,3 +33,14 @@ OpenAI 分享其 AI 模型在 First Proof 數學挑戰中的證明嘗試。該�
 - 展示 AI 在複雜證明和推理上的進展
 
 **原文：** [openai-blog](https://openai.com/index/first-proof-submissions)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+We share our AI model’s proof attempts for the First Proof math challenge, testing research-grade reasoning on expert-level problems.
+
+</details>

@@ -33,3 +33,14 @@ deep_dive_approved: false
 - 展示從孤立試點到系統性、文化融合的 AI 應用最佳實踐
 
 **原文：** [openai-blog](https://openai.com/index/vfl-wolfsburg)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+By focusing on people, not pilots, the Bundesliga club is scaling efficiency, creativity, and knowledge—without losing its football identity.
+
+</details>

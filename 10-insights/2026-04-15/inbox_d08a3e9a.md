@@ -33,3 +33,14 @@ Notion 聯合創始人 Simon Last 與 AI 主管 Sarah Sachs 深度討論知識�
 - 推進知識工作 AI 代理與軟件工廠願景
 
 **原文：** [(resumed)](https://www.latent.space/p/notion)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Notion's cofounder and head of AI peel back the curtains to talk about finally shipping the Knowledge Work AI agents the world has been waiting for.
+
+</details>

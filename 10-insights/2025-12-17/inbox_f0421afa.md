@@ -33,3 +33,14 @@ OpenAI 與美國新聞項目 (American Journalism Project) 和 Lenfest 研究所
 - 協助記者、編輯和出版商在報導及營運中採用 AI
 
 **原文：** [openai-blog](https://openai.com/index/openai-academy-for-news-organizations)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI is launching the OpenAI Academy for News Organizations, a new learning hub built with the American Journalism Project and The Lenfest Institute to help newsrooms use AI effectively. The Academy offers training, practical use cases, and responsible-use guidance to support journalists, editors, and publishers as they adopt AI in their reporting and operations.
+
+</details>

@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://tokens.billchambers.me/leaderboard)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Anonymous request-token comparisons from Opus 4.6 and Opus 4.7
+
+</details>

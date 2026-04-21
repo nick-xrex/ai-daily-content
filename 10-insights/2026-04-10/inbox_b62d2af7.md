@@ -33,3 +33,14 @@ ChatGPT 在臨床環境中的應用包括診斷協助、醫療文件撰寫和患
 - 教程針對臨床工作流程整合設計
 
 **原文：** [openai-blog](https://openai.com/academy/healthcare)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Explore how clinicians use ChatGPT to support diagnosis, documentation, and patient care with secure, HIPAA-compliant AI tools.
+
+</details>

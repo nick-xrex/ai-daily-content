@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://archive.org/details/byte-magazine-1975-09)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Archive of BYTE magazine, starting with issue #1 in 1975
+
+</details>

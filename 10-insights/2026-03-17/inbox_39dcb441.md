@@ -33,3 +33,14 @@ OpenAI Japan 推出『日本青少年安全藍圖』(Japan Teen Safety Blueprint
 - 建立青少年福祉保障的安全框架
 
 **原文：** [openai-blog](https://openai.com/index/japan-teen-safety-blueprint)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI Japan announces the Japan Teen Safety Blueprint, introducing stronger age protections, parental controls, and well-being safeguards for teens using generative AI.
+
+</details>

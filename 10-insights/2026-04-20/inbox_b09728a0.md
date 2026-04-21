@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [hackernews](https://www.axios.com/2026/04/19/nsa-anthropic-mythos-pentagon)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# NSA is using Anthropic's Mythos despite blacklist
+
+</details>

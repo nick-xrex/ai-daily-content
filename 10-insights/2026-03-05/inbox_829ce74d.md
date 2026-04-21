@@ -33,3 +33,14 @@ OpenAI 推出一系列新工具、認證課程和測量資源，協助學校和�
 - 致力於擴大 AI 教育機會的可及性和標準化
 
 **原文：** [openai-blog](https://openai.com/index/ai-education-opportunity)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI shares new tools, certifications, and measurement resources to help schools and universities close AI capability gaps and expand opportunity.
+
+</details>

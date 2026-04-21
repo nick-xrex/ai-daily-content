@@ -33,3 +33,14 @@ OpenAI 宣布不再評估 SWE-bench Verified 基準測試。該基準因遭污�
 - 基準政策改變影響代碼生成模型評測標準
 
 **原文：** [openai-blog](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+SWE-bench Verified is increasingly contaminated and mismeasures frontier coding progress. Our analysis shows flawed tests and training leakage. We recommend SWE-bench Pro.
+
+</details>

@@ -33,3 +33,14 @@ Wayfair 利用 OpenAI models 提升電商平台的支援效率和產品數據品
 - OpenAI models 在電商規模應用中的實務成效
 
 **原文：** [openai-blog](https://openai.com/index/wayfair)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Wayfair uses OpenAI models to improve ecommerce support and product catalog accuracy, automating ticket triage and enhancing millions of product attributes at scale.
+
+</details>

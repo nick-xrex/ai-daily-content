@@ -33,3 +33,14 @@ OpenAI 為 Codex 推出按使用量計費（pay-as-you-go）的定價模式。�
 - 降低企業初期成本和採用門檻
 
 **原文：** [openai-blog](https://openai.com/index/codex-flexible-pricing-for-teams)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Codex now includes pay-as-you-go pricing for ChatGPT Business and Enterprise, providing teams a more flexible option to start and scale adoption.
+
+</details>

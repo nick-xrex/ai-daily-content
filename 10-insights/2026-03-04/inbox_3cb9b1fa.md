@@ -33,3 +33,14 @@ OpenAI 推出了「學習成果測量套件」（Learning Outcomes Measurement S
 - 幫助教育機構科學衡量 AI 對學習的實際影響
 
 **原文：** [openai-blog](https://openai.com/index/understanding-ai-and-learning-outcomes)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI introduces the Learning Outcomes Measurement Suite to assess AI’s impact on student learning across diverse educational environments over time.
+
+</details>

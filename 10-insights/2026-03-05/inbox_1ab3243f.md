@@ -33,3 +33,14 @@ OpenAI 正式發布 GPT-5.4，其最新的前沿基礎模型，專為專業工�
 - 專為專業工作場景設計，兼顧能力和效率
 
 **原文：** [openai-blog](https://openai.com/index/introducing-gpt-5-4)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Introducing GPT-5.4, OpenAI’s most most capable and efficient frontier model for professional work, with state-of-the-art coding, computer use, tool search, and 1M-token context.
+
+</details>

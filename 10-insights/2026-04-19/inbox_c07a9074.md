@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [hackernews](https://ashley.rolfmore.com/stop-trying-to-engineer-your-way-out-of-listening-to-people/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Stop trying to engineer your way out of listening to people
+
+</details>

@@ -33,3 +33,14 @@ Netomi 分享在企業環境中大規模部署 AI Agent 的最佳實踐，使用
 - 企業級 AI Agent 部署最佳實踐分享
 
 **原文：** [openai-blog](https://openai.com/index/netomi)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+How Netomi scales enterprise AI agents using GPT-4.1 and GPT-5.2—combining concurrency, governance, and multi-step reasoning for reliable production workflows.
+
+</details>

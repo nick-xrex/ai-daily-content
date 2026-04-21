@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+<a href="https:&#x2F;&#x2F;vercel.com&#x2F;kb&#x2F;bulletin&#x2F;vercel-april-2026-security-incident" rel="nofollow">https:&#x2F;&#x2F;vercel.com&#x2F;kb&#x2F;bulletin&#x2F;vercel-april-2026-security-in...</a>
+
+</details>

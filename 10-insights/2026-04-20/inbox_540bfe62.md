@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://letsdatascience.com/news/atlassian-enables-default-data-collection-to-train-ai-f71343d8)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Atlassian enables default data collection to train AI
+
+</details>

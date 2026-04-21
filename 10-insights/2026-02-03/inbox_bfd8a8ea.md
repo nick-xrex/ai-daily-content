@@ -33,3 +33,14 @@ OpenAI 介紹了 Sora feed 的設計理念，強調透過個性化推薦激發�
 - 旨在激發創意同時維持平台安全責任
 
 **原文：** [openai-blog](https://openai.com/index/sora-feed-philosophy)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Discover the Sora feed philosophy—built to spark creativity, foster connections, and keep experiences safe with personalized recommendations, parental controls, and strong guardrails.
+
+</details>

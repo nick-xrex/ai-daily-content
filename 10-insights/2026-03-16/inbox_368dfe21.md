@@ -33,3 +33,14 @@ Codex Security 在漏洞檢測方法上進行了創新，摒棄了傳統的靜�
 - 展示 AI 在安全檢測領域的優勢超越傳統工具
 
 **原文：** [openai-blog](https://openai.com/index/why-codex-security-doesnt-include-sast)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+A deep dive into why Codex Security doesn’t rely on traditional SAST, instead using AI-driven constraint reasoning and validation to find real vulnerabilities with fewer false positives.
+
+</details>

@@ -33,3 +33,14 @@ OpenAI發布十週年回顧，回溯從早期研究突破到廣泛應用的演�
 - 重申AGI願景的人文關懷與全球利益導向
 
 **原文：** [openai-blog](https://openai.com/index/ten-years)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI reflects on ten years of progress, from early research breakthroughs to widely used AI systems that reshaped what’s possible. We share lessons from the past decade and why we remain optimistic about building AGI that benefits all of humanity.
+
+</details>

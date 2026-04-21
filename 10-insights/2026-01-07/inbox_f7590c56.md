@@ -33,3 +33,14 @@ OpenAI 推出消費者健康應用 ChatGPT Health，允許使用者安全地連�
 - 隱私為先架構，保護敏感健康資訊安全
 
 **原文：** [openai-blog](https://openai.com/index/introducing-chatgpt-health)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+ChatGPT Health is a dedicated experience that securely connects your health data and apps, with privacy protections and a physician-informed design.
+
+</details>

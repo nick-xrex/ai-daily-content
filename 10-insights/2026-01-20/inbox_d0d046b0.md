@@ -33,3 +33,14 @@ Cisco 与 OpenAI 合作推出 Codex，这是一个深度嵌入企业工程工作
 - 企业级 AI agent 应用的重要商业化进展
 
 **原文：** [openai-blog](https://openai.com/index/cisco)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Cisco and OpenAI redefine enterprise engineering with Codex, an AI software agent embedded in workflows to speed builds, automate defect fixes, and enable AI-native development.
+
+</details>

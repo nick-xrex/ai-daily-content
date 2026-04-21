@@ -33,3 +33,14 @@ OpenAI 基金會宣布投資至少 10 億美元用於支持四大優先領域：
 - 體現 AI 領導者的社會責任和長期承諾
 
 **原文：** [openai-blog](https://openai.com/index/update-on-the-openai-foundation)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+The OpenAI Foundation announces plans to invest at least $1 billion in curing diseases, economic opportunity, AI resilience, and community programs.
+
+</details>

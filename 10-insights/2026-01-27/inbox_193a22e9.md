@@ -33,3 +33,14 @@ Prism 是 OpenAI 推出的免費 LaTeX 原生工作室，內置 GPT-5.2 模型�
 - 降低高品質 AI 工具門檻，特別針對學術用途
 
 **原文：** [openai-blog](https://openai.com/index/introducing-prism)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Prism is a free LaTeX-native workspace with GPT-5.2 built in, helping researchers write, collaborate, and reason in one place.
+
+</details>

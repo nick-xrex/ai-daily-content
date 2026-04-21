@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [hackernews](https://simonwillison.net/2026/Apr/20/claude-token-counts/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Claude Token Counter, now with model comparisons
+
+</details>

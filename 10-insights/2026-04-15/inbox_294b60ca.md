@@ -27,3 +27,17 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://simonwillison.net/2026/Apr/15/gemini-flash-tts/#atom-everything)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+<p><strong>Tool:</strong> <a href="https://tools.simonwillison.net/gemini-flash-tts">Gemini 3.1 Flash TTS</a></p>
+    <p>See <a href="https://simonwillison.net/2026/Apr/15/gemini-31-flash-tts/">my notes</a> on Google's new Gemini 3.1 Flash TTS text-to-speech model.</p>
+    
+        <p>Tags: <a href="https://simonwillison.net/tags/gemini">gemini</a>, <a href="https://simonwillison.net/tags/google">google</a></p>
+
+</details>

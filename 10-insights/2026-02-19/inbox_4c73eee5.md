@@ -33,3 +33,14 @@ OpenAI 宣布資助 The Alignment Project 共 $7.5 百萬美元，用於支持�
 - 加強全球 alignment 研究網絡
 
 **原文：** [openai-blog](https://openai.com/index/advancing-independent-research-ai-alignment)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI commits $7.5M to The Alignment Project to fund independent AI alignment research, strengthening global efforts to address AGI safety and security risks.
+
+</details>

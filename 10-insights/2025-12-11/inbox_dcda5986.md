@@ -33,3 +33,14 @@ OpenAI正式推出GPT-5.2，定位為日常專業工作的最先進前沿模型�
 - 雙通道部署：ChatGPT UI與OpenAI API均可即時使用
 
 **原文：** [openai-blog](https://openai.com/index/introducing-gpt-5-2)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+GPT-5.2 is our most advanced frontier model for everyday professional work, with state-of-the-art reasoning, long-context understanding, coding, and vision. Use it in ChatGPT and the OpenAI API to power faster, more reliable agentic workflows.
+
+</details>

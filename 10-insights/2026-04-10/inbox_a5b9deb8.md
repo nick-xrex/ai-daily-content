@@ -33,3 +33,14 @@ OpenAI 推介 ChatGPT Projects 功能的完整使用教程。Projects 允許使�
 - 改善工作流程組織和資訊檢索
 
 **原文：** [openai-blog](https://openai.com/academy/projects)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how to use projects in ChatGPT to organize chats, files, and instructions, manage ongoing work, and collaborate more effectively.
+
+</details>

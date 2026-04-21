@@ -33,3 +33,14 @@ OpenAI Academy 推出銷售團隊專項課程，教導如何運用 ChatGPT 提�
 - 提高轉換率的 AI 驅動方法
 
 **原文：** [openai-blog](https://openai.com/academy/sales)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how sales teams use ChatGPT to research accounts, personalize outreach, manage deals, and improve pipeline and conversion.
+
+</details>

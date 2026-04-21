@@ -33,3 +33,14 @@ OpenAI 產品生態（ChatGPT、Codex、API）跨領域應用展示，涵蓋工�
 - 跨領域使用案例展示
 
 **原文：** [openai-blog](https://openai.com/academy/applications-of-ai)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Explore how OpenAI products like ChatGPT, Codex, and APIs bring AI into real-world use for work, development, and everyday tasks.
+
+</details>

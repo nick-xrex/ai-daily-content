@@ -33,3 +33,14 @@ OpenAI Academy 為行銷團隊推出 ChatGPT 應用課程。課程涵蓋活動�
 - 加快創意到執行的時間周期
 
 **原文：** [openai-blog](https://openai.com/academy/marketing)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how marketing teams use ChatGPT to plan campaigns, generate content, analyze performance, and move from ideas to execution faster.
+
+</details>

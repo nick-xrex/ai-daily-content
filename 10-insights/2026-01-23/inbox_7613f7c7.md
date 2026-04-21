@@ -33,3 +33,14 @@ OpenAI 發布了關於 Codex 代理迴圈的技術深入分析，詳細解釋了
 - 技術深潛為代理系統開發者提供實踐指導
 
 **原文：** [openai-blog](https://openai.com/index/unrolling-the-codex-agent-loop)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+A technical deep dive into the Codex agent loop, explaining how Codex CLI orchestrates models, tools, prompts, and performance using the Responses API.
+
+</details>

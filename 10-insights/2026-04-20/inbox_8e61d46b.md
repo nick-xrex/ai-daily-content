@@ -33,3 +33,14 @@ Noetik 公司應用自回歸變換器模型（如 TARIO-2）解決臨床試驗�
 - 轉換器架構在醫療配對最佳化領域的新應用案例
 
 **原文：** [(resumed)](https://www.latent.space/p/noetik)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+95% of cancer treatments fail to pass clinical trials, but it may be a matching problem &#8212; that Noetik is solving with autoregressive transformers like TARIO-2!
+
+</details>

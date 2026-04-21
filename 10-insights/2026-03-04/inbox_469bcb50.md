@@ -33,3 +33,14 @@ deep_dive_approved: false
 - 驗證非零引力子振幅的新理論預測
 
 **原文：** [openai-blog](https://openai.com/index/extending-single-minus-amplitudes-to-gravitons)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+A new preprint extends single-minus amplitudes to gravitons, with GPT-5.2 Pro helping derive and verify nonzero graviton tree amplitudes in quantum gravity.
+
+</details>

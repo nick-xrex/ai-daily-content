@@ -33,3 +33,14 @@ OpenAI 正式發佈《員工舉報保護政策》，明確保護員工進行受�
 - 提升企業治理與透明度標準
 
 **原文：** [openai-blog](https://openai.com/index/openai-raising-concerns-policy)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+We’re publishing our Raising Concerns Policy, which protects employees’ rights to make protected disclosures.
+
+</details>

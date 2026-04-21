@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [hackernews](https://mxmap.ch/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Related ongoing thread: <i>Swiss authorities want to reduce dependency on Microsoft</i> - <a href="https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47827383">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47827383</a>
+
+</details>

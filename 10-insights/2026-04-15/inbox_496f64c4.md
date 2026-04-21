@@ -27,3 +27,17 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://simonwillison.net/2026/Apr/15/datasette-export-database/#atom-everything)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+<p><strong>Release:</strong> <a href="https://github.com/datasette/datasette-export-database/releases/tag/0.3a1">datasette-export-database 0.3a1</a></p>
+    <p>This plugin was using the <code>ds_csrftoken</code> cookie as part of a custom signed URL, which needed upgrading now that Datasette 1.0a27 <a href="https://simonwillison.net/2026/Apr/14/replace-token-based-csrf/">no longer sets that cookie</a>.</p>
+    
+        <p>Tags: <a href="https://simonwillison.net/tags/datasette">datasette</a></p>
+
+</details>

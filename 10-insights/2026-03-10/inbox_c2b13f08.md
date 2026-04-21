@@ -33,3 +33,14 @@ OpenAI 推出 IH-Challenge 訓練方法，教導前沿 LLMs 優先執行來自�
 - 提升前沿 LLMs 的安全可控性
 
 **原文：** [openai-blog](https://openai.com/index/instruction-hierarchy-challenge)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injection attacks.
+
+</details>

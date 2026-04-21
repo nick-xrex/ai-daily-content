@@ -33,3 +33,14 @@ deep_dive_approved: false
 - 展示企業版 ChatGPT 在 HR 部門的實際業務價值
 
 **原文：** [openai-blog](https://openai.com/index/taisei)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Taisei Corporation’s HR team is leading the rollout of ChatGPT Enterprise to drive AI-powered talent development across the organization.
+
+</details>

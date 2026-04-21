@@ -33,3 +33,14 @@ OpenAI 推出 GPT-5.2-Codex，這是該公司最先進的編碼模型。該模�
 - 針對開發者生產力、代碼品質和網絡安全的全面提升
 
 **原文：** [openai-blog](https://openai.com/index/gpt-5-2-codex)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+GPT-5.2-Codex is OpenAI’s most advanced coding model, offering long-horizon reasoning, large-scale code transformations, and enhanced cybersecurity capabilities.
+
+</details>

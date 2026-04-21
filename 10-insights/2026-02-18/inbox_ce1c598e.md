@@ -33,3 +33,14 @@ OpenAI 推出 OpenAI for India 計畫，在印度本地擴展 AI 訪問。該計
 - 擴展 AI 在新興市場的訪問
 
 **原文：** [openai-blog](https://openai.com/index/openai-for-india)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI for India expands AI access across the country—building local infrastructure, powering enterprises, and advancing workforce skills.
+
+</details>

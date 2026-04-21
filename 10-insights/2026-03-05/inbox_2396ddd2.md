@@ -33,3 +33,14 @@ OpenAI 正式推出 ChatGPT for Excel 版本，整合新的金融應用數據連
 - 新增金融數據連接，針對規管環境的整合
 
 **原文：** [openai-blog](https://openai.com/index/chatgpt-for-excel)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI introduces ChatGPT for Excel and new financial app integrations, powered by GPT-5.4 to accelerate modeling, research, and analysis in regulated environments.
+
+</details>

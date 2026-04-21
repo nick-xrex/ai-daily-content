@@ -33,3 +33,14 @@ OpenAI 在 ChatGPT 中开始测试广告功能，作为支持免费用户访问�
 - 强隐私保护：用户数据不用于广告定向，用户可完全控制广告偏好
 
 **原文：** [openai-blog](https://openai.com/index/testing-ads-in-chatgpt)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI begins testing ads in ChatGPT to support free access, with clear labeling, answer independence, strong privacy protections, and user control.
+
+</details>

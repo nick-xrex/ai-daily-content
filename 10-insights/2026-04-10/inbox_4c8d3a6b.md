@@ -33,3 +33,14 @@ OpenAI Academy 推出管理者 ChatGPT 使用指南，涵蓋準備重要對話�
 - 組織管理：任務優先化、決策制訂、團隊協調的 AI 輔助
 
 **原文：** [openai-blog](https://openai.com/academy/managers)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how managers use ChatGPT to prepare for conversations, write clear feedback, stay organized, and improve team effectiveness.
+
+</details>

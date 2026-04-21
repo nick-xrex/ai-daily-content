@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [hackernews](https://thelibre.news/i-made-the-next-level-camera-and-i-love-it/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# I Made the "Next-Level" Camera and I love it
+
+</details>

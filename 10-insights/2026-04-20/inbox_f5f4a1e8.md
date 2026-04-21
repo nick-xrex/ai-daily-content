@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [hackernews](https://earthquake.usgs.gov/earthquakes/eventpage/us6000sri7/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# M 7.4 earthquake – 100 km ENE of Miyako, Japan
+
+</details>

@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [openai-blog](https://openai.com/index/gpt-5-2-codex-system-card)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Addendum to GPT-5.2 System Card: GPT-5.2-Codex
+
+</details>

@@ -33,3 +33,14 @@ OpenAI Academy 推出圖像生成教程，教導使用者如何透過 ChatGPT �
 - 數分鐘內快速生成高品質視覺資產
 
 **原文：** [openai-blog](https://openai.com/academy/image-generation)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how to create and refine images with ChatGPT using clear prompts, iterate on designs, and generate high-quality visuals in minutes.
+
+</details>

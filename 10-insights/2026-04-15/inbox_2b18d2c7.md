@@ -27,3 +27,36 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://simonwillison.net/2026/Apr/15/datasette-ports/#atom-everything)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+<p><strong>Release:</strong> <a href="https://github.com/datasette/datasette-ports/releases/tag/0.3">datasette-ports 0.3</a></p>
+    <p>A small update for my tool for helping me figure out what all of the Datasette instances on my laptop are up to.</p>
+<blockquote>
+<ul>
+<li>Show working directory derived from each PID</li>
+<li>Show the full path to each database file</li>
+</ul>
+</blockquote>
+<p>Output now looks like this:</p>
+<pre><code>http://127.0.0.1:8007/ - v1.0a26
+  Directory: /Users/simon/dev/blog
+  Databases:
+    simonwillisonblog: /Users/simon/dev/blog/simonwillisonblog.db
+  Plugins:
+    datasette-llm
+    datasette-secrets
+http://127.0.0.1:8001/ - v1.0a26
+  Directory: /Users/simon/dev/creatures
+  Databases:
+    creatures: /tmp/creatures.db
+</code></pre>
+    
+        <p>Tags: <a href="https://simonwillison.net/tags/datasette">datasette</a></p>
+
+</details>

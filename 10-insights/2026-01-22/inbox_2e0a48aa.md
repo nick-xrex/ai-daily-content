@@ -33,3 +33,14 @@ Praktika 利用 GPT-4.1 和 GPT-5.2 構建了自適應 AI 語言導師系統。�
 - 展示對話 AI 在教育領域的創新應用方案
 
 **原文：** [openai-blog](https://openai.com/index/praktika)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+How Praktika uses GPT-4.1 and GPT-5.2 to build adaptive AI tutors that personalize lessons, track progress, and help learners achieve real-world language fluency
+
+</details>

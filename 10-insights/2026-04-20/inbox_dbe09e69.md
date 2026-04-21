@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [hackernews](https://qwen.ai/blog?id=qwen3.6-max-preview)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Qwen3.6-Max-Preview: Smarter, Sharper, Still Evolving
+
+</details>

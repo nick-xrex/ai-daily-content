@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://importai.substack.com/p/import-ai-454-automating-alignment)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+At what point do the financial markets price in the singularity?
+
+</details>

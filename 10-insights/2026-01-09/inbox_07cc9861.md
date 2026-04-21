@@ -33,3 +33,14 @@ OpenAI 與日本軟銀集團旗下能源公司 SB Energy 宣布合作，共同�
 - AI 產業基礎設施競爭進入新階段
 
 **原文：** [openai-blog](https://openai.com/index/stargate-sb-energy-partnership)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI and SoftBank Group partner with SB Energy to develop multi-gigawatt AI data center campuses, including a 1.2 GW Texas facility supporting the Stargate initiative.
+
+</details>

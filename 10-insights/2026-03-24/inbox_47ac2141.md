@@ -33,3 +33,14 @@ ChatGPT 推出升級的購物體驗，以「商務智能體協議」（Agentic C
 - 展示 AI 助手從信息提供向交易執行的功能擴展
 
 **原文：** [openai-blog](https://openai.com/index/powering-product-discovery-in-chatgpt)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+ChatGPT introduces richer, visually immersive shopping powered by the Agentic Commerce Protocol, enabling product discovery, side-by-side comparisons, and merchant integration.
+
+</details>

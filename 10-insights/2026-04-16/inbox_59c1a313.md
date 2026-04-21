@@ -27,3 +27,14 @@ None
 ### 重點
 
 **原文：** [(resumed)](https://kotaku.com/video-game-devs-explain-how-pausing-works-and-sometimes-it-gets-weird-2000686339)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Game devs explain the tricks involved with letting you pause a game
+
+</details>

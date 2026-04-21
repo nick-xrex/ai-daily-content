@@ -27,3 +27,14 @@ None
 ### 重點
 
 **原文：** [(resumed)](https://blog.calif.io/p/mad-bugs-even-cat-readmetxt-is-not)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# "cat readme.txt" is not safe if you use iTerm2
+
+</details>

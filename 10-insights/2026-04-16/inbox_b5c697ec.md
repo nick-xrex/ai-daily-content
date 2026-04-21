@@ -33,3 +33,14 @@ OpenAI 推出 GPT-Rosalind，一款前沿推理模型，專為生命科學研究
 - 加速科學研究工作流程，提升研究效率
 
 **原文：** [openai-blog](https://openai.com/index/introducing-gpt-rosalind)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI introduces GPT-Rosalind, a frontier reasoning model built to accelerate drug discovery, genomics analysis, protein reasoning, and scientific research workflows.
+
+</details>

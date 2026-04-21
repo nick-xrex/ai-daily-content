@@ -33,3 +33,14 @@ OpenAI 推出新的「Adoption 新聞頻道」，用於分享 AI 應用的實踐
 - 面向企業決策者提供持續更新的應用指導
 
 **原文：** [openai-blog](https://openai.com/index/introducing-the-adoption-news-channel)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Practical insights and frameworks to turn AI progress into business advantage
+
+</details>

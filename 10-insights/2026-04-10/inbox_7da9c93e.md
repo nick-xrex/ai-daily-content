@@ -33,3 +33,14 @@ OpenAI Academy 推出 AI 負責任使用指南，涵蓋安全性、準確性與�
 - 透明度原則：於溝通中清楚揭示 AI 參與度與決策邊界
 
 **原文：** [openai-blog](https://openai.com/academy/responsible-and-safe-use)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how to use AI responsibly with best practices for safety, accuracy, and transparency when using tools like ChatGPT.
+
+</details>

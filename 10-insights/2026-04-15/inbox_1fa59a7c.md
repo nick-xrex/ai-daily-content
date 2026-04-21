@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://warped3.substack.com/p/direct-win32-api-weird-shaped-windows)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Direct Win32 API, weird-shaped windows, and why they mostly disappeared
+
+</details>

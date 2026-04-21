@@ -33,3 +33,14 @@ OpenAI 舉辦『Full Fan Mode』創意競賽，邀請用戶在 Instagram 上分�
 - 由 OpenAI 官方設定判分標準和資格要求
 
 **原文：** [openai-blog](https://openai.com/index/full-fan-mode-contest-terms-conditions)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Explore the official terms and conditions for the OpenAI Full Fan Mode Contest, including eligibility, entry steps, judging criteria, and prize details. Learn how to participate, submit your entry on Instagram, and win IPL match tickets.
+
+</details>

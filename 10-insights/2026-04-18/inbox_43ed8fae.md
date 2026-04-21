@@ -27,3 +27,14 @@ None
 ### 重點
 
 **原文：** [(resumed)](https://sentinelcolorado.com/uncategorized/a-college-instructor-turns-to-typewriters-to-curb-ai-written-work-and-teach-life-lessons/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# College instructor turns to typewriters to curb AI-written work
+
+</details>

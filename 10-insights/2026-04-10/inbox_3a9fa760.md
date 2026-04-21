@@ -33,3 +33,14 @@ OpenAI Academy 推出 ChatGPT Skills 使用課程，教授使用者如何創建�
 - 建立可重用工作流程以提升團隊效率
 
 **原文：** [openai-blog](https://openai.com/academy/skills)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how to create and use ChatGPT skills to build reusable workflows, automate recurring tasks, and ensure consistent, high-quality outputs.
+
+</details>

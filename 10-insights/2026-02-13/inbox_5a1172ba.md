@@ -33,3 +33,14 @@ ChatGPT 推出 Lockdown Mode 和 Elevated Risk labels 兩項安全功能，用�
 - 針對企業組織的安全防禦需求
 
 **原文：** [openai-blog](https://openai.com/index/introducing-lockdown-mode-and-elevated-risk-labels-in-chatgpt)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Introducing Lockdown Mode and Elevated Risk labels in ChatGPT to help organizations defend against prompt injection and AI-driven data exfiltration.
+
+</details>

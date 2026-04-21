@@ -33,3 +33,14 @@ deep_dive_approved: false
 - 未來開源模型發展軌跡的預期變化
 
 **原文：** [(resumed)](https://www.interconnects.ai/p/reading-todays-open-closed-performance)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+The complex factors that determine the single evaluation number so many focus on. Plus, how this changes in the future.
+
+</details>

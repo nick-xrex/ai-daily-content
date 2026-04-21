@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://blog.cloudflare.com/artifacts-git-for-agents-beta/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Artifacts: Versioned storage that speaks Git
+
+</details>

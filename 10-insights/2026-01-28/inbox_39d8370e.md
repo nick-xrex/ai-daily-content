@@ -33,3 +33,14 @@ OpenAI 推出 EU Economic Blueprint 2.0，這是針對歐洲地區的經濟發�
 - 加速AI採用、技能發展、歐洲經濟成長
 
 **原文：** [openai-blog](https://openai.com/index/the-next-chapter-for-ai-in-the-eu)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI launches the EU Economic Blueprint 2.0 with new data, partnerships, and initiatives to accelerate AI adoption, skills, and growth across Europe.
+
+</details>

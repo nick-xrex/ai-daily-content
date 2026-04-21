@@ -33,3 +33,14 @@ ChatGPT 檔案處理功能支援 PDF、試算表等多格式上傳，可用於�
 - 整合在 ChatGPT 介面，無需外部工具
 
 **原文：** [openai-blog](https://openai.com/academy/working-with-files)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how to upload and work with files in ChatGPT to analyze data, summarize documents, and generate content from PDFs, spreadsheets, and more.
+
+</details>

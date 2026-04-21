@@ -33,3 +33,14 @@ OpenAI 與 Figma 推出 Codex 整合，連接代碼與設計畫布。團隊可�
 - 減少代碼與設計間的轉換成本，改善協作
 
 **原文：** [openai-blog](https://openai.com/index/figma-partnership)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI and Figma launch a new Codex integration that connects code and design, enabling teams to move between implementation and the Figma canvas to iterate and ship faster.
+
+</details>

@@ -33,3 +33,14 @@ TRUSTBANK 與 Recursive 公司合作開發 Choice AI 系統，基於 OpenAI 模�
 - 應用於日本Furusato Nozei禮物發現與推薦
 
 **原文：** [openai-blog](https://openai.com/index/trustbank)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+TRUSTBANK partnered with Recursive to build Choice AI using OpenAI models, enabling personalized conversational recommendations that simplify Furusato Nozei gift discovery.
+
+</details>

@@ -33,3 +33,14 @@ OpenAI 正式宣布收購 AI 安全平台 Promptfoo，該平台協助企業在 A
 - 收購強化 OpenAI 在企業 AI 安全工具領域的競爭力
 
 **原文：** [openai-blog](https://openai.com/index/openai-to-acquire-promptfoo)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI is acquiring Promptfoo, an AI security platform that helps enterprises identify and remediate vulnerabilities in AI systems during development.
+
+</details>

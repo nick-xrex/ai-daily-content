@@ -33,3 +33,14 @@ ChatGPT 推出年齡預測功能，可估計帳戶使用者年齡是否在 18 �
 - 持續迭代以提升預測準確性
 
 **原文：** [openai-blog](https://openai.com/index/our-approach-to-age-prediction)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+ChatGPT is rolling out age prediction to estimate if accounts are under or over 18, applying safeguards for teens and refining accuracy over time.
+
+</details>

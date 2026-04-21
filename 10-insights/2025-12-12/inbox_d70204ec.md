@@ -33,3 +33,14 @@ deep_dive_approved: false
 - 透過大規模企業 AI 部署驗證 AI 開發民主化的可行性和商業價值
 
 **原文：** [openai-blog](https://openai.com/index/bny)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+BNY uses OpenAI to expand AI adoption enterprise-wide through Eliza, where 20,000+ employees build AI agents that improve efficiency and client outcomes.
+
+</details>

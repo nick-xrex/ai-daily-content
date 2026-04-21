@@ -33,3 +33,14 @@ OpenAI 推出 macOS 專用的 Codex 應用，將 AI 編程助手轉化為功能�
 - 提供統一的代碼生成、編輯和審查體驗
 
 **原文：** [openai-blog](https://openai.com/index/introducing-the-codex-app)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Introducing the Codex app for macOS—a command center for AI coding and software development with multiple agents, parallel workflows, and long-running tasks.
+
+</details>

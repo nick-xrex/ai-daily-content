@@ -33,3 +33,14 @@ OpenAI 推出首個真實世界評估框架，用以測量 AI 加速生物研究
 - 同時重點研究 AI 輔助實驗的風險和倫理考量
 
 **原文：** [openai-blog](https://openai.com/index/accelerating-biological-research-in-the-wet-lab)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI introduces a real-world evaluation framework to measure how AI can accelerate biological research in the wet lab. Using GPT-5 to optimize a molecular cloning protocol, the work explores both the promise and risks of AI-assisted experimentation.
+
+</details>

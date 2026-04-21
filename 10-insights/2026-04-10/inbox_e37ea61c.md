@@ -33,3 +33,14 @@ ChatGPT 資料分析功能讓使用者可上傳資料集，透過模型探索、
 - 涵蓋從原始資料到決策的完整流程
 
 **原文：** [openai-blog](https://openai.com/academy/data-analysis)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how to analyze data with ChatGPT by exploring datasets, generating insights, creating visualizations, and turning findings into actionable decisions.
+
+</details>

@@ -33,3 +33,14 @@ ServiceNow 與 OpenAI 建立合作，ServiceNow 平台將擴大對 OpenAI 前沿
 - 針對企業用戶提供 AI 驅動的解決方案
 
 **原文：** [openai-blog](https://openai.com/index/servicenow-powers-actionable-enterprise-ai-with-openai)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+ServiceNow expands access to OpenAI frontier models to power AI-driven enterprise workflows, summarization, search, and voice across the ServiceNow Platform.
+
+</details>

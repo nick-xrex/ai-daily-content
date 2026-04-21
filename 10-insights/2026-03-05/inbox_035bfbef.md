@@ -33,3 +33,14 @@ OpenAI 發表 CoT-Control 研究，發現推理模型難以控制其思考鏈（
 - CoT-Control 為推理模型安全性提供新評估框架
 
 **原文：** [openai-blog](https://openai.com/index/reasoning-models-chain-of-thought-controllability)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI introduces CoT-Control and finds reasoning models struggle to control their chains of thought, reinforcing monitorability as an AI safety safeguard.
+
+</details>

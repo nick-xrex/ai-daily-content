@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://www.flyingpenguin.com/build-an-openclaw-free-secure-always-on-local-ai-agent/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# OpenClaw isn't fooling me. I remember MS-DOS
+
+</details>

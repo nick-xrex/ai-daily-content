@@ -27,3 +27,14 @@ deep_dive_approved: false
 ### 重點
 
 **原文：** [(resumed)](https://huggingface.co/blog/nvidia/build-korean-agents-with-nemotron-personas)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# How to Ground a Korean AI Agent in Real Demographics with Synthetic Personas
+
+</details>

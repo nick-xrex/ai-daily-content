@@ -33,3 +33,14 @@ OpenAI 正式推出 GPT-5.3-Codex，一個原生 Codex 的自主 AI agent。該�
 - 代表 AI 編碼助手從代碼生成工具進化為自主技術 agent 的重大演進
 
 **原文：** [openai-blog](https://openai.com/index/introducing-gpt-5-3-codex)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+GPT-5.3-Codex is a Codex-native agent that pairs frontier coding performance with general reasoning to support long-horizon, real-world technical work.
+
+</details>

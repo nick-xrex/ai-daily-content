@@ -29,3 +29,17 @@ Claude Code v2.1.112 於 2026 年 4 月 16 日發布，修復單一問題：解�
 - 修正 claude-opus-4-7 在 auto mode 中暫時無法使用的錯誤
 
 **原文：** [claude-code-releases](https://github.com/anthropics/claude-code/releases/tag/v2.1.112)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+<h2>What's changed</h2>
+<ul>
+<li>Fixed "claude-opus-4-7 is temporarily unavailable" for auto mode</li>
+</ul>
+
+</details>

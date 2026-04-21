@@ -33,3 +33,14 @@ OpenAI 宣布收購 TBPN，旨在加速全球 AI 相關對話並支持獨立媒�
 - 拓展與建造者、企業和科技社群的對話
 
 **原文：** [openai-blog](https://openai.com/index/openai-acquires-tbpn)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI acquires TBPN to accelerate global conversations around AI and support independent media, expanding dialogue with builders, businesses, and the broader tech community.
+
+</details>

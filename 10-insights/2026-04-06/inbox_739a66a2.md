@@ -33,3 +33,14 @@ OpenAI 啟動試點計畫『OpenAI Safety Fellowship』，支援獨立安全和�
 - 建立 AI 安全研究的多元生態系統
 
 **原文：** [openai-blog](https://openai.com/index/introducing-openai-safety-fellowship)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+A pilot program to support independent safety and alignment research and develop the next generation of talent
+
+</details>

@@ -31,3 +31,14 @@ OpenAI 與 Microsoft 發表聯合聲明，重申雙方在研究、工程及產�
 - 聲明重點在於鞏固多年合作基礎，未宣布新的具體項目
 
 **原文：** [openai-blog](https://openai.com/index/continuing-microsoft-partnership)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Microsoft and OpenAI continue to work closely across research, engineering, and product development, building on years of deep collaboration and shared success.
+
+</details>

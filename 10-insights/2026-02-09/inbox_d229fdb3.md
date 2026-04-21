@@ -33,3 +33,14 @@ OpenAI for Government 在 GenAI.mil 平台部署了自定义 ChatGPT，为美国
 - 采用「安全优先」设计原则，满足政府安全标准
 
 **原文：** [openai-blog](https://openai.com/index/bringing-chatgpt-to-genaimil)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI for Government announces the deployment of a custom ChatGPT on GenAI.mil, bringing secure, safety-forward AI to U.S. defense teams.
+
+</details>

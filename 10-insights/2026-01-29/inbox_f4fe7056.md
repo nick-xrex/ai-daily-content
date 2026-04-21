@@ -33,3 +33,14 @@ OpenAI 揭示了其內部開發的數據 agent，該系統結合了 GPT-5、Code
 - 展示 LLM + 代碼生成 + 記憶的實戰整合模式
 
 **原文：** [openai-blog](https://openai.com/index/inside-our-in-house-data-agent)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+How OpenAI built an in-house AI data agent that uses GPT-5, Codex, and memory to reason over massive datasets and deliver reliable insights in minutes.
+
+</details>

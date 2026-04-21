@@ -33,3 +33,14 @@ OpenAI 發布 2026 年 2 月威脅報告，深入分析惡意行為人如何結�
 - 識別 AI 時代特有的新興威脅向量
 
 **原文：** [openai-blog](https://openai.com/index/disrupting-malicious-ai-uses)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Our latest threat report examines how malicious actors combine AI models with websites and social platforms—and what it means for detection and defense.
+
+</details>

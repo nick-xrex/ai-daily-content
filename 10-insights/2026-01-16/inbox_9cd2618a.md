@@ -33,3 +33,14 @@ OpenAI 公布廣告和擴大 ChatGPT 存取的策略，計畫在美國測試廣�
 - 優先保護隱私、信任和答案品質
 
 **原文：** [openai-blog](https://openai.com/index/our-approach-to-advertising-and-expanding-access)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI plans to test advertising in the U.S. for ChatGPT’s free and Go tiers to expand affordable access to AI worldwide, while protecting privacy, trust, and answer quality.
+
+</details>

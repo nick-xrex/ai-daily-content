@@ -33,3 +33,14 @@ OpenAI Academy 介紹客戶成功團隊如何利用 ChatGPT 進行帳戶管理�
 - 留存與擴展：使用 AI 分析續約機會與流失預防策略
 
 **原文：** [openai-blog](https://openai.com/academy/customer-success)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how customer success teams use ChatGPT to manage accounts, improve communication, reduce churn, and drive adoption and renewals.
+
+</details>

@@ -33,3 +33,14 @@ OpenAI Academy 展示運營團隊如何使用 ChatGPT 優化工作流、改進�
 - 流程優化：設計與記錄標準操作程序（SOP）與最佳實踐
 
 **原文：** [openai-blog](https://openai.com/academy/operations)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+Learn how operations teams use ChatGPT to streamline workflows, improve coordination, standardize processes, and drive faster execution.
+
+</details>

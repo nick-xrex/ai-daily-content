@@ -33,3 +33,14 @@ OpenAI 發佈 Agents SDK 的重要更新版本，新增原生沙盒執行和模�
 - 支援跨文件及工具的長時間運行智能代理
 
 **原文：** [openai-blog](https://openai.com/index/the-next-evolution-of-the-agents-sdk)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+OpenAI updates the Agents SDK with native sandbox execution and a model-native harness, helping developers build secure, long-running agents across files and tools.
+
+</details>
