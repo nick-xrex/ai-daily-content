@@ -4,18 +4,18 @@ date: 2026-04-18
 source_ref: "[[00-inbox/.../inbox_9ba714c9]]"
 title: "Changes in the system prompt between Claude Opus 4.6 and 4.7"
 url: https://simonwillison.net/2026/Apr/18/opus-system-prompt/#atom-everything
-source: (resumed)
+source: simon-willison
 published_at: 2026-04-18T23:59:40+00:00
-fetched_at: 2026-04-21T02:36:17.455466+00:00
+fetched_at: 2026-04-21T03:11:17.664885+00:00
 model: claude-haiku-4-5
 tokens_in: 0
 tokens_out: 0
-summary_zh: "Simon Willison 詳細分析 Claude Opus 4.7（4/16 發布）相比 4.6（2/5 發布）的系統提示變更。核心改動：新增 Claude in PowerPoint agent；兒童安全指示大幅擴展並用 `<critical_child_safety_instructions>` 標籤；強化主動性—鼓勵在資訊不完整時先嘗試而非先問，並在下「無存取」結論前先用 tool_search 檢查可用工具；強調簡潔回應；移除舊版行為限制（emotes、「genuinely」等）；新增 disordered eating 特定指引；防守「強制 yes/no」截圖攻擊。知識截點更新至 2026/1，移除 Trump 總統說明。系統可用工具逾 20 項，包括 tool_search、bash_tool、create_file、image_search 等。"
+summary_zh: "Simon Willison 分析 Claude Opus 4.7 與 4.6 的系統提示差異（4.7 發布於 2026-04-16）。主要變化包括：(1) 開發者平臺改名 Claude Platform，工具列表新增 Claude in PowerPoint（投影片 agent）、Claude in Excel、Claude in Chrome，Cowork 可呼叫這些工具；(2) 兒童安全指導大幅擴展，新增關鍵標籤與「進食障礙」特定防護；(3) 行為調整：不再強留欲結束對話的用戶，優先嘗試完成任務而非頻繁提問，自動呼叫 tool_search 檢查可用工具；(4) 減少冗長回應、防禦「是或否」截圖攻擊；(5) 知識截止日期更新至 2026-01，移除 Trump 總統過時特殊說明。工具列表增至 20+ 項。"
 key_points:
-  - "tool_search 機制：Claude 必在聲稱「無法存取」前檢查是否有可用工具解決問題"
-  - "行為調整：減少主動要求延續、強調主動嘗試解決、簡化冗長回應、強化安全防守"
-  - "安全加固：disordered eating 防守、截圖攻擊防衛、兒童安全擴展"
-tags: [claude, system-prompts, opus-4.7, behavior-changes, safety]
+  - "Opus 4.7 系統提示添加新工具：Claude in PowerPoint（投影片 agent）、tool_search（自動檢查可用工具）；兒童安全指導擴展，新增「進食障礙」特定防護與關鍵標籤"
+  - "行為更新：優先完成任務而非頻繁提問、自動呼叫 tool_search 而非假設能力缺失、不再強留用戶、減少冗長回應、防禦簡短答覆截圖攻擊"
+  - "知識截止日期更新至 2026-01；移除舊的不當行為警告；系統提示工具列表由前代隱含工具改為顯式公開 20+ 工具"
+tags: [claude-system-prompt, opus-4-7, behavior-change, tool-search, child-safety]
 topics: [foundation_models.claude]
 importance: 5
 novelty: 5
@@ -25,14 +25,14 @@ deep_dive_approved: false
 
 ## Changes in the system prompt between Claude Opus 4.6 and 4.7
 
-Simon Willison 詳細分析 Claude Opus 4.7（4/16 發布）相比 4.6（2/5 發布）的系統提示變更。核心改動：新增 Claude in PowerPoint agent；兒童安全指示大幅擴展並用 `<critical_child_safety_instructions>` 標籤；強化主動性—鼓勵在資訊不完整時先嘗試而非先問，並在下「無存取」結論前先用 tool_search 檢查可用工具；強調簡潔回應；移除舊版行為限制（emotes、「genuinely」等）；新增 disordered eating 特定指引；防守「強制 yes/no」截圖攻擊。知識截點更新至 2026/1，移除 Trump 總統說明。系統可用工具逾 20 項，包括 tool_search、bash_tool、create_file、image_search 等。
+Simon Willison 分析 Claude Opus 4.7 與 4.6 的系統提示差異（4.7 發布於 2026-04-16）。主要變化包括：(1) 開發者平臺改名 Claude Platform，工具列表新增 Claude in PowerPoint（投影片 agent）、Claude in Excel、Claude in Chrome，Cowork 可呼叫這些工具；(2) 兒童安全指導大幅擴展，新增關鍵標籤與「進食障礙」特定防護；(3) 行為調整：不再強留欲結束對話的用戶，優先嘗試完成任務而非頻繁提問，自動呼叫 tool_search 檢查可用工具；(4) 減少冗長回應、防禦「是或否」截圖攻擊；(5) 知識截止日期更新至 2026-01，移除 Trump 總統過時特殊說明。工具列表增至 20+ 項。
 
 ### 重點
-- tool_search 機制：Claude 必在聲稱「無法存取」前檢查是否有可用工具解決問題
-- 行為調整：減少主動要求延續、強調主動嘗試解決、簡化冗長回應、強化安全防守
-- 安全加固：disordered eating 防守、截圖攻擊防衛、兒童安全擴展
+- Opus 4.7 系統提示添加新工具：Claude in PowerPoint（投影片 agent）、tool_search（自動檢查可用工具）；兒童安全指導擴展，新增「進食障礙」特定防護與關鍵標籤
+- 行為更新：優先完成任務而非頻繁提問、自動呼叫 tool_search 而非假設能力缺失、不再強留用戶、減少冗長回應、防禦簡短答覆截圖攻擊
+- 知識截止日期更新至 2026-01；移除舊的不當行為警告；系統提示工具列表由前代隱含工具改為顯式公開 20+ 工具
 
-**原文：** [(resumed)](https://simonwillison.net/2026/Apr/18/opus-system-prompt/#atom-everything)
+**原文：** [simon-willison](https://simonwillison.net/2026/Apr/18/opus-system-prompt/#atom-everything)
 
 ---
 
@@ -40,6 +40,8 @@ Simon Willison 詳細分析 Claude Opus 4.7（4/16 發布）相比 4.6（2/5 發
 
 <details>
 <summary>點此展開 / 收合</summary>
+
+# Changes in the system prompt between Claude Opus 4.6 and 4.7
 
 <p>Anthropic are the only major AI lab to <a href="https://platform.claude.com/docs/en/release-notes/system-prompts">publish the system prompts</a> for their user-facing chat systems. Their system prompt archive now dates all the way back to Claude 3 in July 2024 and it's always interesting to see how the system prompt evolves as they publish new models.</p>
 <p>Opus 4.7 shipped the other day (April 16, 2026) with a <a href="https://claude.ai/">Claude.ai</a> system prompt update since Opus 4.6 (February 5, 2026).</p>

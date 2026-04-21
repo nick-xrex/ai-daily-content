@@ -4,9 +4,9 @@ date: 2026-04-15
 source_ref: "[[00-inbox/.../inbox_df1799d0]]"
 title: "Zig 0.16.0 release notes: &#34;Juicy Main&#34;"
 url: https://simonwillison.net/2026/Apr/15/juicy-main/#atom-everything
-source: (resumed)
+source: simon-willison
 published_at: 2026-04-15T01:59:21+00:00
-fetched_at: 2026-04-21T02:39:16.465712+00:00
+fetched_at: 2026-04-21T03:14:54.596114+00:00
 model: claude-haiku-4-5
 tokens_in: 0
 tokens_out: 0
@@ -26,7 +26,7 @@ deep_dive_approved: false
 
 ### 重點
 
-**原文：** [(resumed)](https://simonwillison.net/2026/Apr/15/juicy-main/#atom-everything)
+**原文：** [simon-willison](https://simonwillison.net/2026/Apr/15/juicy-main/#atom-everything)
 
 ---
 
@@ -34,6 +34,8 @@ deep_dive_approved: false
 
 <details>
 <summary>點此展開 / 收合</summary>
+
+# Zig 0.16.0 release notes: "Juicy Main"
 
 <p><strong><a href="https://ziglang.org/download/0.16.0/release-notes.html#Juicy-Main">Zig 0.16.0 release notes: &quot;Juicy Main&quot;</a></strong></p>
 Zig has <em>really good</em> release notes - comprehensive, detailed, and with relevant usage examples for each of the new features.</p>

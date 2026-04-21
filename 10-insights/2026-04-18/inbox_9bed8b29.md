@@ -4,35 +4,35 @@ date: 2026-04-18
 source_ref: "[[00-inbox/.../inbox_9bed8b29]]"
 title: "Adding a new content type to my blog-to-newsletter tool"
 url: https://simonwillison.net/guides/agentic-engineering-patterns/adding-a-new-content-type/#atom-everything
-source: (resumed)
+source: simon-willison
 published_at: 2026-04-18T03:15:36+00:00
-fetched_at: 2026-04-21T02:36:17.457693+00:00
+fetched_at: 2026-04-21T03:11:17.689852+00:00
 model: claude-haiku-4-5
 tokens_in: 0
 tokens_out: 0
-summary_zh: "Simon Willison 分享 agentic engineering 最佳實踐，展示用三行簡短提示讓 Claude Code 完成複雜任務的方法。案例：更新 blog-to-newsletter.html 工具以支援新內容類型「beats」（帶描述的外部內容連結）。關鍵做法包括：(1) 指示 agent 複製參考程式碼到 /tmp；(2) 準確指定目標檔案；(3) 參考現成實現（blog 的 Atom feed 邏輯）；(4) 提供驗證機制（python -m http.server + browser automation）；(5) 指示比較實時結果與預期。結果 PR 268 正確地新增 UNION SQL 子句，過濾草稿與無註解的 beats，展示高效 prompt engineering 可顯著減少 agent 誤解。"
+summary_zh: "Simon Willison 演示用一個精短提示通過 Claude Code 完成複雜功能：更新 blog-to-newsletter 工具以包含「beats」內容類型（外部發布內容匯總）。提示策略包括：(1) 克隆參考程式碼庫到 /tmp（便於理解又不誤提交）；(2) 指定具體檔案（blog-to-newsletter.html）和期望行為（類似部落格 Atom feed）；(3) 驗證機制（啟動本地伺服器、用 Rodney 瀏覽器自動化對標官方網站）。Claude Code 精準生成 SQL UNION 查詢，過濾草稿 beats 和空 note 欄位，PR 269 一次通過。此例展示 agent 提示工程最佳實踐：參考程式碼 + 明確指標 + 自驗證。"
 key_points:
-  - "參考程式碼克隆比逐行說明更高效，讓 agent 從實例推斷邏輯而非翻譯文字說明"
-  - "提供具體驗證機制（本地伺服器 + browser automation），使 agent 能自我驗證而非盲目執行"
-  - "引用現成功能模型而非重新說明，減少提示複雜度與歧義"
-tags: [agentic-engineering, claude-code, prompt-engineering, automation, best-practices]
-topics: [agents.mcp]
-importance: 3
-novelty: 3
+  - "Agent 提示三要素：克隆參考程式碼（保證 agent 理解業務邏輯但不誤提交）、指定修改目標和相似現有行為（部落格 Atom feed 過濾邏輯）、提供驗證機制（本地伺服器 + 瀏覽器自動化測試）"
+  - "短提示 + 高精度實現：僅 3 條指令生成正確的 SQL UNION 查詢，新增欄位 type、id、title、created、slug、json_object 包含 beat 後設資料，過濾 draft 與 null note"
+  - "Rodney 瀏覽器自動化作為驗證工具：agent 可自行啟動服務、開啟頁面對比結果，對標官網，確保實現準確"
+tags: [agentic-prompting, claude-code, prompt-engineering, agent-best-practices, newsletter-automation]
+topics: []
+importance: 2
+novelty: 2
 deep_dive_candidate: false
 deep_dive_approved: false
 ---
 
 ## Adding a new content type to my blog-to-newsletter tool
 
-Simon Willison 分享 agentic engineering 最佳實踐，展示用三行簡短提示讓 Claude Code 完成複雜任務的方法。案例：更新 blog-to-newsletter.html 工具以支援新內容類型「beats」（帶描述的外部內容連結）。關鍵做法包括：(1) 指示 agent 複製參考程式碼到 /tmp；(2) 準確指定目標檔案；(3) 參考現成實現（blog 的 Atom feed 邏輯）；(4) 提供驗證機制（python -m http.server + browser automation）；(5) 指示比較實時結果與預期。結果 PR 268 正確地新增 UNION SQL 子句，過濾草稿與無註解的 beats，展示高效 prompt engineering 可顯著減少 agent 誤解。
+Simon Willison 演示用一個精短提示通過 Claude Code 完成複雜功能：更新 blog-to-newsletter 工具以包含「beats」內容類型（外部發布內容匯總）。提示策略包括：(1) 克隆參考程式碼庫到 /tmp（便於理解又不誤提交）；(2) 指定具體檔案（blog-to-newsletter.html）和期望行為（類似部落格 Atom feed）；(3) 驗證機制（啟動本地伺服器、用 Rodney 瀏覽器自動化對標官方網站）。Claude Code 精準生成 SQL UNION 查詢，過濾草稿 beats 和空 note 欄位，PR 269 一次通過。此例展示 agent 提示工程最佳實踐：參考程式碼 + 明確指標 + 自驗證。
 
 ### 重點
-- 參考程式碼克隆比逐行說明更高效，讓 agent 從實例推斷邏輯而非翻譯文字說明
-- 提供具體驗證機制（本地伺服器 + browser automation），使 agent 能自我驗證而非盲目執行
-- 引用現成功能模型而非重新說明，減少提示複雜度與歧義
+- Agent 提示三要素：克隆參考程式碼（保證 agent 理解業務邏輯但不誤提交）、指定修改目標和相似現有行為（部落格 Atom feed 過濾邏輯）、提供驗證機制（本地伺服器 + 瀏覽器自動化測試）
+- 短提示 + 高精度實現：僅 3 條指令生成正確的 SQL UNION 查詢，新增欄位 type、id、title、created、slug、json_object 包含 beat 後設資料，過濾 draft 與 null note
+- Rodney 瀏覽器自動化作為驗證工具：agent 可自行啟動服務、開啟頁面對比結果，對標官網，確保實現準確
 
-**原文：** [(resumed)](https://simonwillison.net/guides/agentic-engineering-patterns/adding-a-new-content-type/#atom-everything)
+**原文：** [simon-willison](https://simonwillison.net/guides/agentic-engineering-patterns/adding-a-new-content-type/#atom-everything)
 
 ---
 
@@ -40,6 +40,8 @@ Simon Willison 分享 agentic engineering 最佳實踐，展示用三行簡短�
 
 <details>
 <summary>點此展開 / 收合</summary>
+
+# Adding a new content type to my blog-to-newsletter tool
 
 <p><em><a href="https://simonwillison.net/guides/agentic-engineering-patterns/">Agentic Engineering Patterns</a> &gt;</em></p>
     <p>Here's an example of a deceptively short prompt that got a quite a lot of work done in a single shot.</p>

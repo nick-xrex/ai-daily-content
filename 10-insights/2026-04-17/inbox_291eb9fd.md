@@ -4,29 +4,35 @@ date: 2026-04-17
 source_ref: "[[00-inbox/.../inbox_291eb9fd]]"
 title: "datasette 1.0a28"
 url: https://simonwillison.net/2026/Apr/17/datasette/#atom-everything
-source: (resumed)
+source: simon-willison
 published_at: 2026-04-17T04:01:56+00:00
-fetched_at: 2026-04-21T02:37:41.610462+00:00
+fetched_at: 2026-04-21T03:13:26.209881+00:00
 model: claude-haiku-4-5
 tokens_in: 0
 tokens_out: 0
-summary_zh: ""
+summary_zh: "Datasette 1.0a28 發布，主要修復了 1.0a27 版本引入的多個相容性問題。修正了 execute_write_fn() 回調函式的參數名稱相容性錯誤，新增了 database.close() 方法以同時關閉寫入連線，以及新增 datasette.close() 方法用於完整清理資料庫和相關資源。另外新增 pytest 外掛程式可自動清理測試中的臨時 Datasette 實例，避免在編寫大量外掛程式測試時耗盡檔案描述符。此版本的主要變更使用 Claude Code 和新發布的 Claude Opus 4.7 實現。"
 key_points:
-tags: []
-topics: []
-importance: 1
-novelty: 1
+  - "修復 execute_write_fn() 回調函式的相容性錯誤（issue #2691）"
+  - "新增 datasette.close() 方法和自動清理 pytest 外掛程式以防止資源洩漏"
+  - "使用 Claude Code 和 Claude Opus 4.7 實現版本變更"
+tags: [datasette, bug-fix, python, claude-code]
+topics: [foundation_models.claude]
+importance: 3
+novelty: 2
 deep_dive_candidate: false
 deep_dive_approved: false
 ---
 
 ## datasette 1.0a28
 
-
+Datasette 1.0a28 發布，主要修復了 1.0a27 版本引入的多個相容性問題。修正了 execute_write_fn() 回調函式的參數名稱相容性錯誤，新增了 database.close() 方法以同時關閉寫入連線，以及新增 datasette.close() 方法用於完整清理資料庫和相關資源。另外新增 pytest 外掛程式可自動清理測試中的臨時 Datasette 實例，避免在編寫大量外掛程式測試時耗盡檔案描述符。此版本的主要變更使用 Claude Code 和新發布的 Claude Opus 4.7 實現。
 
 ### 重點
+- 修復 execute_write_fn() 回調函式的相容性錯誤（issue #2691）
+- 新增 datasette.close() 方法和自動清理 pytest 外掛程式以防止資源洩漏
+- 使用 Claude Code 和 Claude Opus 4.7 實現版本變更
 
-**原文：** [(resumed)](https://simonwillison.net/2026/Apr/17/datasette/#atom-everything)
+**原文：** [simon-willison](https://simonwillison.net/2026/Apr/17/datasette/#atom-everything)
 
 ---
 
@@ -34,6 +40,8 @@ deep_dive_approved: false
 
 <details>
 <summary>點此展開 / 收合</summary>
+
+# datasette 1.0a28
 
 <p><strong>Release:</strong> <a href="https://github.com/simonw/datasette/releases/tag/1.0a28">datasette 1.0a28</a></p>
     <p>I was upgrading Datasette Cloud to <a href="https://simonwillison.net/2026/Apr/15/datasette/">1.0a27</a> and discovered a nasty collection of accidental breakages caused by changes in that alpha. This new alpha addresses those directly:</p>

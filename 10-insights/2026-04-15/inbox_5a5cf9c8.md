@@ -4,35 +4,35 @@ date: 2026-04-15
 source_ref: "[[00-inbox/.../inbox_5a5cf9c8]]"
 title: "Gemini 3.1 Flash TTS"
 url: https://simonwillison.net/2026/Apr/15/gemini-31-flash-tts/#atom-everything
-source: (resumed)
+source: simon-willison
 published_at: 2026-04-15T17:13:14+00:00
-fetched_at: 2026-04-21T02:39:16.462751+00:00
+fetched_at: 2026-04-21T03:14:54.586992+00:00
 model: claude-haiku-4-5
 tokens_in: 0
 tokens_out: 0
-summary_zh: "Google 發佈 Gemini 3.1 Flash TTS 文本轉語音模型，可透過 `gemini-3.1-flash-tts-preview` 模型 ID 經由標準 Gemini API 調用。該模型支持詳細的 prompt 工程，允許使用者定義說話者身份、口音、語調、說話風格、動態與節奏等特徵，實現高度可控的語音生成。示例展示同一段腳本可生成倫敦 Brixton 口音、Newcastle 口音、Devon 口音等多種區域方言的音頻檔案，證明模型對細微語音差異的掌控能力。模型僅輸出音頻檔案而不支持文本輸出。Simon Willison 並基於 Gemini 3.1 Pro 開發了交互式測試 UI，支持多說話者對話模式，便於使用者實驗不同配置。"
+summary_zh: "Google 於 2026 年 4 月 15 日發布 Gemini 3.1 Flash TTS 文字轉語音模型，使用模型 ID `gemini-3.1-flash-tts-preview`，可透過標準 Gemini API 調用。該模型首創之處在於支援基於結構化提示的精細控制，用戶可在提示中詳細描述角色檔案（如「Jaz R. 來自倫敦布里克斯頓」）、場景設定、聲學風格要求（如「vocal smile」、高動態投射、快速交付）與口音指定，模型據此生成符合描述的語音。模型支援多角色對話模式，使用者可定義多個角色並分別指定不同的語音。原文示例展示了倫敦、紐卡斯爾、德文郡等多種英國區域口音的輸出能力。模型目前限制為只輸出音訊檔案。Simon Willison 並開發了網頁版 UI 方便使用者試驗。"
 key_points:
-  - "Gemini 3.1 Flash TTS 模型 ID 為 `gemini-3.1-flash-tts-preview`，透過標準 Gemini API 調用，支持極其詳細的 prompt 工程（聲音特徵、口音、風格、速度、動態等可控）"
-  - "模型展示區域口音精確度：同一腳本可精確生成倫敦、Newcastle、Devon 等不同英倫口音的音頻輸出"
-  - "支持多說話者對話模式：可定義不同說話者名稱與聲音風格，模型根據腳本自動分配音頻"
-tags: [gemini-tts, text-to-speech, prompt-engineering, google-ai, audio-generation]
-topics: [foundation_models.gpt]
+  - "模型 ID：`gemini-3.1-flash-tts-preview`，需透過標準 Gemini API 呼叫，音訊輸出專用"
+  - "支援多角色對話模式且口音精確可控：示例展示倫敦、紐卡斯爾、德文郡等區域口音的差異"
+  - "提示引導極為詳細：包含 AUDIO PROFILE、THE SCENE、DIRECTOR'S NOTES、SAMPLE CONTEXT 等多層次結構化描述，精細控制聲調、節奏、角色情境"
+tags: [gemini, text-to-speech, prompt-engineering, google, api-release]
+topics: []
 importance: 4
-novelty: 4
+novelty: 5
 deep_dive_candidate: false
 deep_dive_approved: false
 ---
 
 ## Gemini 3.1 Flash TTS
 
-Google 發佈 Gemini 3.1 Flash TTS 文本轉語音模型，可透過 `gemini-3.1-flash-tts-preview` 模型 ID 經由標準 Gemini API 調用。該模型支持詳細的 prompt 工程，允許使用者定義說話者身份、口音、語調、說話風格、動態與節奏等特徵，實現高度可控的語音生成。示例展示同一段腳本可生成倫敦 Brixton 口音、Newcastle 口音、Devon 口音等多種區域方言的音頻檔案，證明模型對細微語音差異的掌控能力。模型僅輸出音頻檔案而不支持文本輸出。Simon Willison 並基於 Gemini 3.1 Pro 開發了交互式測試 UI，支持多說話者對話模式，便於使用者實驗不同配置。
+Google 於 2026 年 4 月 15 日發布 Gemini 3.1 Flash TTS 文字轉語音模型，使用模型 ID `gemini-3.1-flash-tts-preview`，可透過標準 Gemini API 調用。該模型首創之處在於支援基於結構化提示的精細控制，用戶可在提示中詳細描述角色檔案（如「Jaz R. 來自倫敦布里克斯頓」）、場景設定、聲學風格要求（如「vocal smile」、高動態投射、快速交付）與口音指定，模型據此生成符合描述的語音。模型支援多角色對話模式，使用者可定義多個角色並分別指定不同的語音。原文示例展示了倫敦、紐卡斯爾、德文郡等多種英國區域口音的輸出能力。模型目前限制為只輸出音訊檔案。Simon Willison 並開發了網頁版 UI 方便使用者試驗。
 
 ### 重點
-- Gemini 3.1 Flash TTS 模型 ID 為 `gemini-3.1-flash-tts-preview`，透過標準 Gemini API 調用，支持極其詳細的 prompt 工程（聲音特徵、口音、風格、速度、動態等可控）
-- 模型展示區域口音精確度：同一腳本可精確生成倫敦、Newcastle、Devon 等不同英倫口音的音頻輸出
-- 支持多說話者對話模式：可定義不同說話者名稱與聲音風格，模型根據腳本自動分配音頻
+- 模型 ID：`gemini-3.1-flash-tts-preview`，需透過標準 Gemini API 呼叫，音訊輸出專用
+- 支援多角色對話模式且口音精確可控：示例展示倫敦、紐卡斯爾、德文郡等區域口音的差異
+- 提示引導極為詳細：包含 AUDIO PROFILE、THE SCENE、DIRECTOR'S NOTES、SAMPLE CONTEXT 等多層次結構化描述，精細控制聲調、節奏、角色情境
 
-**原文：** [(resumed)](https://simonwillison.net/2026/Apr/15/gemini-31-flash-tts/#atom-everything)
+**原文：** [simon-willison](https://simonwillison.net/2026/Apr/15/gemini-31-flash-tts/#atom-everything)
 
 ---
 
@@ -40,6 +40,8 @@ Google 發佈 Gemini 3.1 Flash TTS 文本轉語音模型，可透過 `gemini-3.1
 
 <details>
 <summary>點此展開 / 收合</summary>
+
+# Gemini 3.1 Flash TTS
 
 <p><strong><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts/">Gemini 3.1 Flash TTS</a></strong></p>
 Google released Gemini 3.1 Flash TTS today, a new text-to-speech model that can be directed using prompts.</p>

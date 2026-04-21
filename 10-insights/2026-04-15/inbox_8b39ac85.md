@@ -4,29 +4,35 @@ date: 2026-04-15
 source_ref: "[[00-inbox/.../inbox_8b39ac85]]"
 title: "datasette 1.0a27"
 url: https://simonwillison.net/2026/Apr/15/datasette/#atom-everything
-source: (resumed)
+source: simon-willison
 published_at: 2026-04-15T23:16:34+00:00
-fetched_at: 2026-04-21T02:37:41.618388+00:00
+fetched_at: 2026-04-21T03:13:26.240488+00:00
 model: claude-haiku-4-5
 tokens_in: 0
 tokens_out: 0
-summary_zh: ""
+summary_zh: "Datasette 1.0a27 推出多項重大變更。首先摒棄 Django 風格的 CSRF 表單令牌，改用現代瀏覽器標頭方式進行 CSRF 防護，參考 Filippo Valsorda 的相關說明。其次新增 RenameTableEvent 事件，當表格重新命名時會觸發，允許外掛程式對表格重新命名做出相應反應並同步相關資料。第三，datasette.client 方法新增 actor= 參數，支援以特定身份執行內部請求，這對編寫自動化測試特別有用。第四，新增 Database(is_temp_disk=True) 選項改進臨時資料庫處理，解決記憶體中資料庫導致的死鎖問題。此外，/upsert API 拒絕空主鍵值提升資料完整性，/database.json 端點新增 \"ok\": true 鍵確保一致性，call_with_supported_arguments() 正式列為公開 API。"
 key_points:
-tags: []
+  - "摒棄 Django 風格 CSRF 令牌，改用現代瀏覽器標頭提升安全性並簡化集成"
+  - "新增 RenameTableEvent 和臨時磁碟資料庫選項，新增 actor= 參數支援身份模擬測試"
+  - "提升 /upsert API 驗證、API 端點一致性和公開 API 文檔完整性"
+tags: [datasette, security, api-changes, python, database]
 topics: []
-importance: 1
-novelty: 1
+importance: 4
+novelty: 4
 deep_dive_candidate: false
 deep_dive_approved: false
 ---
 
 ## datasette 1.0a27
 
-
+Datasette 1.0a27 推出多項重大變更。首先摒棄 Django 風格的 CSRF 表單令牌，改用現代瀏覽器標頭方式進行 CSRF 防護，參考 Filippo Valsorda 的相關說明。其次新增 RenameTableEvent 事件，當表格重新命名時會觸發，允許外掛程式對表格重新命名做出相應反應並同步相關資料。第三，datasette.client 方法新增 actor= 參數，支援以特定身份執行內部請求，這對編寫自動化測試特別有用。第四，新增 Database(is_temp_disk=True) 選項改進臨時資料庫處理，解決記憶體中資料庫導致的死鎖問題。此外，/upsert API 拒絕空主鍵值提升資料完整性，/database.json 端點新增 "ok": true 鍵確保一致性，call_with_supported_arguments() 正式列為公開 API。
 
 ### 重點
+- 摒棄 Django 風格 CSRF 令牌，改用現代瀏覽器標頭提升安全性並簡化集成
+- 新增 RenameTableEvent 和臨時磁碟資料庫選項，新增 actor= 參數支援身份模擬測試
+- 提升 /upsert API 驗證、API 端點一致性和公開 API 文檔完整性
 
-**原文：** [(resumed)](https://simonwillison.net/2026/Apr/15/datasette/#atom-everything)
+**原文：** [simon-willison](https://simonwillison.net/2026/Apr/15/datasette/#atom-everything)
 
 ---
 
@@ -34,6 +40,8 @@ deep_dive_approved: false
 
 <details>
 <summary>點此展開 / 收合</summary>
+
+# datasette 1.0a27
 
 <p><strong>Release:</strong> <a href="https://github.com/simonw/datasette/releases/tag/1.0a27">datasette 1.0a27</a></p>
     <p>Two major changes in this new Datasette alpha. I covered the first of those <a href="https://simonwillison.net/2026/Apr/14/replace-token-based-csrf/">in detail yesterday</a> - Datasette no longer uses Django-style CSRF form tokens, instead using modern browser headers <a href="https://words.filippo.io/csrf">as described by Filippo Valsorda</a>.</p>

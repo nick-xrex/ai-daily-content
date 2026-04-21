@@ -4,9 +4,9 @@ date: 2026-04-18
 source_ref: "[[00-inbox/.../inbox_b776a52d]]"
 title: "0.122.0-alpha.10"
 url: https://github.com/openai/codex/releases/tag/rust-v0.122.0-alpha.10
-source: (resumed)
+source: codex-releases
 published_at: 2026-04-18T06:26:56+00:00
-fetched_at: 2026-04-21T02:34:20.908270+00:00
+fetched_at: 2026-04-21T03:09:00.102545+00:00
 model: claude-haiku-4-5
 tokens_in: 0
 tokens_out: 0
@@ -26,7 +26,7 @@ deep_dive_approved: false
 
 ### 重點
 
-**原文：** [(resumed)](https://github.com/openai/codex/releases/tag/rust-v0.122.0-alpha.10)
+**原文：** [codex-releases](https://github.com/openai/codex/releases/tag/rust-v0.122.0-alpha.10)
 
 ---
 
@@ -34,6 +34,8 @@ deep_dive_approved: false
 
 <details>
 <summary>點此展開 / 收合</summary>
+
+# 0.122.0-alpha.10
 
 <p>Release 0.122.0-alpha.10</p>
 

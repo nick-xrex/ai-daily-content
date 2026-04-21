@@ -4,20 +4,20 @@ date: 2026-04-14
 source_ref: "[[00-inbox/.../inbox_9ce7b755]]"
 title: "datasette PR #2689: Replace token-based CSRF with Sec-Fetch-Site header protection"
 url: https://simonwillison.net/2026/Apr/14/replace-token-based-csrf/#atom-everything
-source: (resumed)
+source: simon-willison
 published_at: 2026-04-14T23:58:53+00:00
-fetched_at: 2026-04-21T02:40:32.031859+00:00
+fetched_at: 2026-04-21T03:15:52.263400+00:00
 model: claude-haiku-4-5
 tokens_in: 0
 tokens_out: 0
-summary_zh: "Datasette 框架更新了跨站請求偽造（CSRF）防護機制，從基於 Token 的方案改用 Sec-Fetch-Site 請求頭檢驗。這套方法參考 Go 1.25 及 Filippo Valsorda 的資安研究。新方案移除了模板中所有隱藏 CSRF Token 的 input 標籤，廢棄了原有的 `skip_csrf` 外掛鉤點，簡化開發者體驗。該 PR 由 Claude Code 在人工密切指導下完成共 10 個 commit。官方文件已更新升級指南。"
+summary_zh: "Datasette 專案將 CSRF 防護從傳統 token-based 改為 Sec-Fetch-Site header 方法。此變更完全移除隱藏的 CSRF token 輸入框及相關外掛鉤子，簡化了表單實作與 API 設計。改變參考 Go 1.25 及 Filippo Valsorda 的研究，由 Claude Code 在十個 commit 中協助完成，並已更新文件與升級指南。"
 key_points:
-  - "Sec-Fetch-Site 請求頭取代 Token 式防護，移除所有 `<input type=\"hidden\" name=\"csrftoken\">` 標籤"
-  - "廢棄 skip_csrf 外掛鉤點，統一安全策略實作"
-  - "Claude Code 輔助開發，人工複審把關，10 個 commit 重構完成"
-tags: [csrf-protection, web-security, datasette, sec-fetch-site, ai-assisted]
+  - "移除 <input type=\"hidden\" name=\"csrftoken\"> 標籤，模板不再需要 CSRF token 散佈"
+  - "採用 Sec-Fetch-Site header 檢查，遵循 Go 1.25 標準做法"
+  - "刪除 skip_csrf 外掛鉤子，API 無需特殊 CSRF 略過邏輯"
+tags: [csrf-protection, web-security, datasette, ai-assisted-code]
 topics: []
-importance: 3
+importance: 2
 novelty: 2
 deep_dive_candidate: false
 deep_dive_approved: false
@@ -25,14 +25,14 @@ deep_dive_approved: false
 
 ## datasette PR #2689: Replace token-based CSRF with Sec-Fetch-Site header protection
 
-Datasette 框架更新了跨站請求偽造（CSRF）防護機制，從基於 Token 的方案改用 Sec-Fetch-Site 請求頭檢驗。這套方法參考 Go 1.25 及 Filippo Valsorda 的資安研究。新方案移除了模板中所有隱藏 CSRF Token 的 input 標籤，廢棄了原有的 `skip_csrf` 外掛鉤點，簡化開發者體驗。該 PR 由 Claude Code 在人工密切指導下完成共 10 個 commit。官方文件已更新升級指南。
+Datasette 專案將 CSRF 防護從傳統 token-based 改為 Sec-Fetch-Site header 方法。此變更完全移除隱藏的 CSRF token 輸入框及相關外掛鉤子，簡化了表單實作與 API 設計。改變參考 Go 1.25 及 Filippo Valsorda 的研究，由 Claude Code 在十個 commit 中協助完成，並已更新文件與升級指南。
 
 ### 重點
-- Sec-Fetch-Site 請求頭取代 Token 式防護，移除所有 `<input type="hidden" name="csrftoken">` 標籤
-- 廢棄 skip_csrf 外掛鉤點，統一安全策略實作
-- Claude Code 輔助開發，人工複審把關，10 個 commit 重構完成
+- 移除 <input type="hidden" name="csrftoken"> 標籤，模板不再需要 CSRF token 散佈
+- 採用 Sec-Fetch-Site header 檢查，遵循 Go 1.25 標準做法
+- 刪除 skip_csrf 外掛鉤子，API 無需特殊 CSRF 略過邏輯
 
-**原文：** [(resumed)](https://simonwillison.net/2026/Apr/14/replace-token-based-csrf/#atom-everything)
+**原文：** [simon-willison](https://simonwillison.net/2026/Apr/14/replace-token-based-csrf/#atom-everything)
 
 ---
 
@@ -40,6 +40,8 @@ Datasette 框架更新了跨站請求偽造（CSRF）防護機制，從基於 To
 
 <details>
 <summary>點此展開 / 收合</summary>
+
+# datasette PR #2689: Replace token-based CSRF with Sec-Fetch-Site header protection
 
 <p><strong><a href="https://github.com/simonw/datasette/pull/2689">datasette PR #2689: Replace token-based CSRF with Sec-Fetch-Site header protection</a></strong></p>
 Datasette has long protected against CSRF attacks using CSRF tokens, implemented using my <a href="https://github.com/simonw/asgi-csrf">asgi-csrf</a> Python library. These are something of a pain to work with - you need to scatter forms in templates with <code>&lt;input type="hidden" name="csrftoken" value="{{ csrftoken() }}"&gt;</code> lines and then selectively disable CSRF protection for APIs that are intended to be called from outside the browser.</p>

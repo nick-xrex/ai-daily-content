@@ -4,18 +4,18 @@ date: 2026-04-20
 source_ref: "[[00-inbox/.../inbox_3dd12bfd]]"
 title: "Claude Token Counter, now with model comparisons"
 url: https://simonwillison.net/2026/Apr/20/claude-token-counts/#atom-everything
-source: (resumed)
+source: simon-willison
 published_at: 2026-04-20T00:50:45+00:00
-fetched_at: 2026-04-21T02:36:17.450863+00:00
+fetched_at: 2026-04-21T03:11:17.625237+00:00
 model: claude-haiku-4-5
 tokens_in: 0
 tokens_out: 0
-summary_zh: "Simon Willison 升級 Claude Token Counter 工具，支援多個模型版本比較。Opus 4.7 啟用新 tokenizer，對同樣內容產生 1.0–1.35 倍 tokens（系統提示測試為 1.46 倍）。高解析度圖像支援提升到 2,576px（~3.75MP），但同解析度成本相近。PDF 測試顯示 1.08 倍差異。儘管定價與 Opus 4.6 相同（$5/M input、$25/M output），token 膨脹預期造成約 40% 成本增加，開發者需重新評估預算。"
+summary_zh: "Simon Willison 升級 Claude Token Counter 工具，支持跨模型 token 計數對比。Claude Opus 4.7 採用新 tokenizer，輸入相同內容時 token 數增加 1.0–1.46 倍（官方公示 1.0–1.35 倍）；由於定價與 4.6 相同（輸入 $5/百萬 token），預期實際成本增加約 40%。Opus 4.7 支持更高分辨率圖像（最多 2,576 像素、~3.75 百萬像素），相比前代增加 3 倍。測試表明高分辨率圖像 token 成本增加 3.01 倍主要源於分辨率支持能力；低分辨率圖像成本基本相當；PDF 文檔增加倍數僅 1.08 倍，遠低於原始文本。"
 key_points:
-  - "Opus 4.7 tokenizer 變更：相同文本對應 1.46× tokens（vs 4.6），系統提示最為明顯"
-  - "高解析度圖像支援增至 3.75MP（vs 前版本 ~1MP），但標準解析度 token 成本無變化"
-  - "相同定價下實際成本增加 ~40%，長期 API 預算需重新評估"
-tags: [claude, tokenization, pricing, opus-4.7, cost-analysis]
+  - "Opus 4.7 tokenizer 導致相同輸入增加 1.0–1.46× token，定價相同但預期成本升高約 40%"
+  - "Opus 4.7 支持最高 2,576 像素/3.75 百萬像素圖像，較前代增加 3 倍；3.01× token 成本增加仅因分辨率能力，實際處理成本接近"
+  - "Token 增幅因內容類型異差：文本 1.46×、高分辨率圖像 3.01×、PDF 1.08×，說明新 tokenizer 對不同媒體影響不一"
+tags: [token-counting, claude-pricing, opus-4-7, tokenizer-changes, cost-analysis]
 topics: [foundation_models.claude]
 importance: 4
 novelty: 4
@@ -25,14 +25,14 @@ deep_dive_approved: false
 
 ## Claude Token Counter, now with model comparisons
 
-Simon Willison 升級 Claude Token Counter 工具，支援多個模型版本比較。Opus 4.7 啟用新 tokenizer，對同樣內容產生 1.0–1.35 倍 tokens（系統提示測試為 1.46 倍）。高解析度圖像支援提升到 2,576px（~3.75MP），但同解析度成本相近。PDF 測試顯示 1.08 倍差異。儘管定價與 Opus 4.6 相同（$5/M input、$25/M output），token 膨脹預期造成約 40% 成本增加，開發者需重新評估預算。
+Simon Willison 升級 Claude Token Counter 工具，支持跨模型 token 計數對比。Claude Opus 4.7 採用新 tokenizer，輸入相同內容時 token 數增加 1.0–1.46 倍（官方公示 1.0–1.35 倍）；由於定價與 4.6 相同（輸入 $5/百萬 token），預期實際成本增加約 40%。Opus 4.7 支持更高分辨率圖像（最多 2,576 像素、~3.75 百萬像素），相比前代增加 3 倍。測試表明高分辨率圖像 token 成本增加 3.01 倍主要源於分辨率支持能力；低分辨率圖像成本基本相當；PDF 文檔增加倍數僅 1.08 倍，遠低於原始文本。
 
 ### 重點
-- Opus 4.7 tokenizer 變更：相同文本對應 1.46× tokens（vs 4.6），系統提示最為明顯
-- 高解析度圖像支援增至 3.75MP（vs 前版本 ~1MP），但標準解析度 token 成本無變化
-- 相同定價下實際成本增加 ~40%，長期 API 預算需重新評估
+- Opus 4.7 tokenizer 導致相同輸入增加 1.0–1.46× token，定價相同但預期成本升高約 40%
+- Opus 4.7 支持最高 2,576 像素/3.75 百萬像素圖像，較前代增加 3 倍；3.01× token 成本增加仅因分辨率能力，實際處理成本接近
+- Token 增幅因內容類型異差：文本 1.46×、高分辨率圖像 3.01×、PDF 1.08×，說明新 tokenizer 對不同媒體影響不一
 
-**原文：** [(resumed)](https://simonwillison.net/2026/Apr/20/claude-token-counts/#atom-everything)
+**原文：** [simon-willison](https://simonwillison.net/2026/Apr/20/claude-token-counts/#atom-everything)
 
 ---
 
@@ -40,6 +40,8 @@ Simon Willison 升級 Claude Token Counter 工具，支援多個模型版本比�
 
 <details>
 <summary>點此展開 / 收合</summary>
+
+# Claude Token Counter, now with model comparisons
 
 <p><strong><a href="https://tools.simonwillison.net/claude-token-counter">Claude Token Counter, now with model comparisons</a></strong></p>
 I <a href="https://github.com/simonw/tools/pull/269">upgraded</a> my Claude Token Counter tool to add the ability to run the same count against different models in order to compare them.</p>
