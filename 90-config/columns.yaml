@@ -34,15 +34,48 @@ columns:
     min_items: 1
 
   - id: enterprise-ai-adoption
-    display_name: "🏢 企業導入 AI"
-    prompt: "企業 / 組織導入 AI 的案例、策略、治理、ROI、change management：包括大型企業 AI 部署（ChatGPT Enterprise、Claude for Enterprise）、產業應用（金融 / 醫療 / 製造 / 零售 / 法務）、AI 治理框架、合規、採購決策、組織變革、培訓。"
+    display_name: "🏢 企業導入 AI / 團隊實踐"
+    prompt: "企業 / 團隊導入 AI 的**實踐面**，不只是宣布而是 how：(1) 大型企業部署案例（ChatGPT Enterprise、Claude for Enterprise、Copilot Business）(2) 產業應用（金融 / 醫療 / 製造 / 零售 / 法務 / 教育）(3) **AI 團隊管理 / 組織設計**：誰負責 AI、AI champion、platform team、AI enablement (4) **MCP server / 內部工具整合**：企業如何用 MCP 接內部系統 (5) **技能養成 / training**：員工 AI literacy、評估框架、hiring rubric (6) **AI 治理 / 合規**：governance、data privacy、model policy (7) **ROI / 效益量化**：productivity study、cost model、case study"
     filter:
-      keywords: ["enterprise", "chatgpt enterprise", "claude for enterprise",
-                 "copilot for business", "ai governance", "ai adoption",
-                 "ai transformation", "roi", "case study", "deployment",
-                 "compliance", "企業", "導入", "部署", "治理", "合規",
-                 "金融", "fintech", "healthcare", "medical", "manufacturing",
-                 "retail", "legal"]
+      keywords: [
+        # Enterprise products + rollouts
+        "enterprise", "chatgpt enterprise", "claude for enterprise",
+        "copilot for business", "ai adoption", "ai transformation",
+        "deployment", "rollout", "case study", "pilot",
+        # Team + org design
+        "team", "team lead", "ai champion", "ai team", "platform team",
+        "ai enablement", "enablement", "center of excellence",
+        "ai strategy", "chief ai", "cado",
+        # Skills + training
+        "training", "upskill", "ai literacy", "workshop", "onboarding",
+        "evaluation framework", "hiring", "interview", "rubric",
+        "skill", "skills", "learning path",
+        # MCP + internal tooling
+        "mcp", "mcp server", "internal tool", "integration",
+        "knowledge base integration", "api gateway",
+        # Governance + compliance
+        "ai governance", "data privacy", "model policy", "compliance",
+        "responsible ai", "audit",
+        # ROI / metrics
+        "roi", "productivity", "cost model", "savings", "efficiency",
+        # Industries
+        "金融", "fintech", "healthcare", "medical", "manufacturing",
+        "retail", "legal", "education", "教育",
+        # Chinese
+        "企業", "導入", "部署", "治理", "合規", "團隊",
+        "組織", "培訓", "技能", "技能養成", "管理"
+      ]
+    min_items: 1
+
+  - id: ai-techniques
+    display_name: "🎓 AI 使用技巧 / 心法"
+    prompt: "實用的 AI 使用技巧、prompting 心法、workflow pattern、tool combination：包括 prompt engineering 技巧、context 管理、agent 工作流、multi-tool orchestration、model selection 策略、cost optimization、debug 方法、evaluation 技巧。重點在「讀完就可以馬上套用」的具體手法。"
+    filter:
+      keywords: ["prompt", "prompting", "technique", "trick", "tip", "pattern",
+                 "workflow", "recipe", "best practice", "how to", "guide",
+                 "context", "system prompt", "chain of thought", "few-shot",
+                 "agent pattern", "orchestration", "evaluation", "eval",
+                 "技巧", "心法", "手法", "套路", "方法"]
     min_items: 1
 
   - id: ai-security
