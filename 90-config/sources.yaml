@@ -1,0 +1,11 @@
+sources:
+  - name: anthropic-blog
+    kind: rss
+    url: https://www.anthropic.com/news/rss.xml
+    tier: 1
+    source_weight: 1.0
+  - name: hackernews
+    kind: hn
+    score_threshold: 200
+    tier: 2
+    source_weight: 0.4

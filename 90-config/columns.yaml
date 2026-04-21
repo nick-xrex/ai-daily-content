@@ -1,0 +1,53 @@
+# Daily digest columns (專欄) — user-curated scenario sections that appear on
+# every rollup below the 📚 分類摘要 section. Each column is populated by the
+# rollup LLM when insights match, and gets a "（今日無相關內容）" placeholder
+# otherwise. Order here = display order.
+#
+# Schema per column:
+#   id:           stable identifier (kebab-case)
+#   display_name: emoji + zh-TW heading (≤ 20 chars recommended)
+#   prompt:       one-line guide to the LLM about what content belongs here
+#   filter:       optional — topics/tags/keywords to narrow LLM selection
+#     topics:   list of topic_ids from keywords.yaml
+#     tags:     list of tag strings (substring match on insight.tags)
+#     keywords: list of substrings to match in summary_zh (case-insensitive)
+#   min_items:    minimum insights needed to populate (default 1)
+#
+# Example columns — edit freely. Leave list empty to hide the whole section.
+
+columns:
+  - id: claude-code-updates
+    display_name: "🛠 Claude Code / Codex 新功能"
+    prompt: "今天 Claude Code、Codex、或相關 coding-agent 工具的功能更新、release notes、實用技巧。每筆帶版本號或 commit hash。"
+    filter:
+      keywords: ["claude code", "codex", "cursor", "windsurf", "aider", "cline"]
+    min_items: 1
+
+  - id: frontier-models
+    display_name: "🚀 Frontier 模型動態"
+    prompt: "今天旗艦級 LLM（Claude / GPT / Gemini / Llama / DeepSeek / Qwen）的新版本、benchmark、重大能力變化。跳過週邊產品。"
+    filter:
+      topics: ["foundation_models"]
+    min_items: 1
+
+  - id: ai-security
+    display_name: "🔐 AI 安全 / 濫用"
+    prompt: "AI 相關的資安事件、濫用偵測、紅隊研究、對抗攻擊、prompt injection、模型供應鏈。對加密資產/金融詐騙場景特別重要。"
+    filter:
+      keywords: ["security", "exploit", "jailbreak", "red team", "adversarial",
+                 "prompt injection", "supply chain", "fraud", "scam"]
+    min_items: 1
+
+  # Add your own below. Example scaffolds (uncomment + customize):
+  #
+  # - id: taiwan-ai
+  #   display_name: "🇹🇼 台灣 AI 動態"
+  #   prompt: "台灣本地 AI 公司、研究、法規、活動。"
+  #   filter:
+  #     keywords: ["Taiwan", "台灣", "TSMC", "NTU", "國科會", "數位部"]
+  #
+  # - id: crypto-ai
+  #   display_name: "💰 Crypto × AI 交集"
+  #   prompt: "區塊鏈 + AI 交集：on-chain agent、DeFi LLM、AI-driven trading、AI 與 token 經濟。"
+  #   filter:
+  #     keywords: ["crypto", "blockchain", "DeFi", "on-chain", "web3", "trading"]

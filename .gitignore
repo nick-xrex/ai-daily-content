@@ -1,0 +1,12 @@
+# Obsidian internal
+.obsidian/
+.trash/
+.DS_Store
+
+# Workspace-local
+*.swp
+*.swo
+*~
+
+# Logs (if any vault-local logs appear)
+logs/

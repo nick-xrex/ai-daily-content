@@ -1,0 +1,14 @@
+topics:
+  foundation_models:
+    description: "Frontier LLMs and model releases"
+    keywords: ["GPT", "Claude", "Gemini", "Llama", "Mistral"]
+    children:
+      claude:
+        keywords: ["Claude", "Anthropic"]
+      gpt:
+        keywords: ["GPT", "ChatGPT", "OpenAI"]
+  agents:
+    keywords: ["agent framework", "tool use", "ReAct"]
+    children:
+      mcp:
+        keywords: ["MCP", "Model Context Protocol"]

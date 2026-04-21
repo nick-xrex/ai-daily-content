@@ -1,0 +1,4 @@
+channels: []
+min_duration_sec: 180
+max_duration_sec: 5400
+caption_preference: ["native", "asr"]
