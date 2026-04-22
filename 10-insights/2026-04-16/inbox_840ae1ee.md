@@ -36,6 +36,74 @@ Claude Code v2.1.111 於 2026 年 4 月 16 日發布，這是重大功能版本�
 
 ---
 
+
+
+<!-- deep-analysis:begin -->
+## 📌 摘要 (TL;DR)
+
+- **Claude Code v2.1.111** 新增 **Opus 4.7 xhigh** 努力等級，位於 `high` 與 `max` 之間，其他模型會 fallback 到 `high`
+- **Max 訂閱戶**現可對 Opus 4.7 使用 **auto mode**，且不再需要 `--enable-auto-mode` 旗標
+- 推出 `/ultrareview`：透過**雲端並行多代理**（parallel multi-agent）分析與批評，可審查當前分支或指定 PR（`/ultrareview <PR#>`）
+- 新增 `/less-permission-prompts` 技能：掃描對話紀錄中常見的唯讀 Bash 與 MCP 工具呼叫，並提議寫入 `.claude/settings.json` 的白名單
+- **Windows PowerShell tool** 逐步推出，Linux/macOS 可用 `CLAUDE_CODE_USE_POWERSHELL_TOOL=1` 啟用（需 `pwsh` 在 PATH）
+- Plan 檔名改為依提示內容生成（例：`fix-auth-race-snug-otter.md`），取代純隨機字串，提升可追蹤性
+
+## 🎯 核心概念
+
+- **努力等級**（effort level）：控制模型思考深度與回應速度的設定，此版新增 `xhigh`
+- **Auto mode**：依任務複雜度自動調整模型與 effort 的模式，本版對 Max 訂閱戶在 Opus 4.7 上開放
+- **Ultrareview**：雲端並行多代理程式碼審查，多個 agent 同時分析 PR 並相互批評（critique）
+
+## 📖 整理分析
+
+### 1. Opus 4.7 xhigh 與互動式 /effort 滑桿
+新的 `xhigh` 等級僅對 Opus 4.7 生效，位於 `high` 與 `max` 之間，其他模型沿用 `high`。`/effort` 不帶參數時會開啟互動式滑桿，方向鍵切換等級、Enter 確認；也可透過 `--effort` 旗標或 model picker 指定。對 Max 訂閱戶而言，Opus 4.7 的 auto mode 同時解禁，意謂日常任務可讓 Claude Code 自動權衡速度與推理深度。
+
+### 2. /ultrareview：雲端並行多代理審查
+`/ultrareview` 將程式碼審查搬到雲端，以多個 agent 平行分析並相互批評。無參數時審查當前分支；帶 PR 編號（`/ultrareview <PR#>`）則從 GitHub 抓取指定 PR。這代表審查不再佔用本機 context，而是由後端並行 pipeline 完成。
+
+### 3. /less-permission-prompts：減少白名單摩擦
+此技能會掃描使用者過往對話中常出現的**唯讀 Bash 與 MCP 工具呼叫**，排序後提議寫入 `.claude/settings.json` 的 allowlist。搭配本版另一項改動——帶 glob 的唯讀指令（如 `ls *.ts`）以及 `cd <project-dir> && …` 開頭的指令不再觸發權限提示——整體目的是降低開發者被反覆詢問 yes/no 的次數。
+
+### 4. Windows PowerShell tool 與跨平台選項
+Windows 上的 PowerShell tool 採漸進式推出（progressive rollout），可用 `CLAUDE_CODE_USE_POWERSHELL_TOOL` 明確 opt-in 或 opt-out；Linux/macOS 只要有 `pwsh` 在 PATH，設 `CLAUDE_CODE_USE_POWERSHELL_TOOL=1` 亦可啟用。Windows 另修正兩個長年痛點：`CLAUDE_ENV_FILE` 與 SessionStart hook 的環境檔終於會套用（先前是 no-op），且碟機代號大小寫不同的路徑現在會被視為同一路徑。
+
+### 5. 體驗改進與 25+ 項 bug 修復
+- **主題**：`/theme` 新增「Auto (match terminal)」自動跟隨終端深淺色
+- **快捷鍵**：`Ctrl+U` 改為清空整個輸入，`Ctrl+Y` 可還原；`Ctrl+L` 額外強制全畫面重繪
+- **Plan 命名**：改用提示內容 + 隨機字尾（`fix-auth-race-snug-otter.md`）
+- **可觀測性**：新增 `OTEL_LOG_RAW_API_BODIES` 可將完整 API request/response body 輸出為 OpenTelemetry log 事件
+- **重要修復**：iTerm2 + tmux 畫面撕裂、`/resume` tab 補全會直接跳入任意 session、LSP 在編輯前後時序錯亂害 Claude 重讀檔案、`/clear` 會丟失 `/rename` 設定的 session_name、Bedrock/Vertex/Foundry 的 429 錯誤誤引 `status.claude.com`
+- **回退**：v2.1.110 對非串流 fallback 重試的限制被 revert——它在 API 過載時雖減少等待但造成更多直接失敗
+
+## 🧠 Mindmap
+
+```mermaid
+mindmap
+  root((Claude Code v2.1.111))
+    Opus 4.7 能力擴張
+      xhigh effort 等級
+      Max 訂閱可用 auto mode
+      /effort 互動式滑桿
+    新指令與技能
+      /ultrareview 雲端多代理審查
+      /less-permission-prompts 白名單建議
+      /theme Auto match terminal
+    平台與工具
+      Windows PowerShell tool rollout
+      CLAUDE_CODE_USE_POWERSHELL_TOOL
+      Windows CLAUDE_ENV_FILE 修正
+    開發體驗
+      Plan 檔名依提示生成
+      Ctrl+U 清空整行 + Ctrl+Y 還原
+      OTEL_LOG_RAW_API_BODIES
+    穩定性修復
+      iTerm2 tmux 畫面撕裂
+      /resume tab 補全
+      LSP 時序錯誤
+      回退 v2.1.110 fallback 限制
+```
+<!-- deep-analysis:end -->
 ### 📄 原文內容
 
 <details>
