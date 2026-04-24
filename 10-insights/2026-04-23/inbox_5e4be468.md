@@ -1,0 +1,154 @@
+---
+id: inbox_5e4be468
+date: 2026-04-23
+source_ref: "[[00-inbox/2026-04-23/0246-codex-releases-0-124-0-9e9e]]"
+title: "0.124.0"
+url: https://github.com/openai/codex/releases/tag/rust-v0.124.0
+source: codex-releases
+published_at: 2026-04-23T18:30:23+00:00
+fetched_at: 2026-04-24T02:53:10.735993+00:00
+model: claude-haiku-4-5
+tokens_in: 0
+tokens_out: 0
+summary_zh: "OpenAI Codex 0.124.0 發布，帶來多項開發體驗改進。新增 Alt+, / Alt+. 快捷鍵調整推理等級，App-server 支持多環境及按轉向選擇工作目錄，便於多工作區開發。首次提供 Amazon Bedrock 一級支持（含 AWS SigV4 簽名和憑證認證），擴展模型選擇。Hooks 功能穩定化，可在 config.toml 內聯配置，支持監控 MCP tools 和長時間 Bash 會話。遠端插件市場改進列表和查詢，合格 ChatGPT 計畫預設 Fast 服務層。修復了 Cloudflare cookie、遠端 app-server 穩定性和權限漂移等問題。"
+key_points:
+  - "TUI 新增 Alt+, / Alt+. 快捷鍵調整推理等級，模型升級時自動重置為新預設"
+  - "App-server 支持多環境管理和按轉向選擇工作目錄，便於遠端開發"
+  - "Amazon Bedrock 一級支持加入 AWS SigV4 簽名，Hooks 穩定化支持 MCP tools 監控"
+tags: [codex, ai-tools, mcp, bedrock, aws]
+topics: [agents.mcp]
+importance: 4
+novelty: 3
+insight_quality: 3
+insight_type: announcement
+deep_dive_candidate: false
+deep_dive_approved: false
+---
+
+## 0.124.0
+
+OpenAI Codex 0.124.0 發布，帶來多項開發體驗改進。新增 Alt+, / Alt+. 快捷鍵調整推理等級，App-server 支持多環境及按轉向選擇工作目錄，便於多工作區開發。首次提供 Amazon Bedrock 一級支持（含 AWS SigV4 簽名和憑證認證），擴展模型選擇。Hooks 功能穩定化，可在 config.toml 內聯配置，支持監控 MCP tools 和長時間 Bash 會話。遠端插件市場改進列表和查詢，合格 ChatGPT 計畫預設 Fast 服務層。修復了 Cloudflare cookie、遠端 app-server 穩定性和權限漂移等問題。
+
+### 重點
+- TUI 新增 Alt+, / Alt+. 快捷鍵調整推理等級，模型升級時自動重置為新預設
+- App-server 支持多環境管理和按轉向選擇工作目錄，便於遠端開發
+- Amazon Bedrock 一級支持加入 AWS SigV4 簽名，Hooks 穩定化支持 MCP tools 監控
+
+**原文：** [codex-releases](https://github.com/openai/codex/releases/tag/rust-v0.124.0)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+<h2>New Features</h2>
+<ul>
+<li>The TUI now has quick reasoning controls: <code>Alt+,</code> lowers reasoning, <code>Alt+.</code> raises it, and accepted model upgrades now reset reasoning to the new model’s default instead of carrying over stale settings. (<a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18866">#18866</a>, <a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19085">#19085</a>)</li>
+<li>App-server sessions can now manage multiple environments and choose an environment and working directory per turn, which makes multi-workspace and remote setups easier to target precisely. (<a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18401">#18401</a>, <a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18416">#18416</a>)</li>
+<li>Added first-class Amazon Bedrock support for OpenAI-compatible providers, including AWS SigV4 signing and AWS credential-based auth. (<a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/17820">#17820</a>)</li>
+<li>Remote plugin marketplaces can now be listed and read directly, with more reliable detail lookups and larger result pages. (<a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18452">#18452</a>, <a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19079">#19079</a>)</li>
+<li>Hooks are now stable, can be configured inline in <code>config.toml</code> and managed <code>requirements.toml</code>, and can observe MCP tools as well as <code>apply_patch</code> and long-running Bash sessions. (<a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18893">#18893</a>, <a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18385">#18385</a>, <a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18391">#18391</a>, <a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18888">#18888</a>, <a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19012">#19012</a>)</li>
+<li>Eligible ChatGPT plans now default to the Fast service tier unless you explicitly opt out. (<a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19053">#19053</a>)</li>
+</ul>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Preserved Cloudflare cookies across approved ChatGPT hosts, reducing auth breakage in HTTP-backed ChatGPT flows. (<a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/17783">#17783</a>)</li>
+<li>Fixed remote app-server reliability issues so websocket events keep draining under load and shutdown no longer fails when the remote worker exits during cleanup. (<a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18932">#18932</a>, <a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18936">#18936</a>)</li>
+<li>Fixed permission-mode drift so <code>/permissions</code> changes survive side conversations and updated Full Access state is correctly reflected in MCP approval handling. (<a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18924">#18924</a>, <a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19033">#19033</a>)</li>
+<li>Fixed <code>wait_agent</code> so it returns promptly when mailbox work is already queued instead of waiting for a fresh notification or timing out. (<a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18968">#18968</a>)</li>
+<li>Fixed local stdio MCP launches for relative commands without an explicit <code>cwd</code>, bringing fallback path resolution in line with CLI behavior. (<a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19031">#19031</a>)</li>
+<li>Startup now fails less often on managed config edge cases: unknown feature requirements warn instead of aborting, and cloud-requirements errors are clearer about what failed. (<a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19038">#19038</a>, <a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19078">#19078</a>)</li>
+</ul>
+<h2>Changelog</h2>
+<p>Full Changelog: <a class="commit-link" href="https://github.com/openai/codex/compare/rust-v0.123.0...rust-v0.124.0"><tt>rust-v0.123.0...rust-v0.124.0</tt></a></p>
+<ul>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18870">#18870</a> Load app-server config through ConfigManager <a class="user-mention notranslate" href="https://github.com/pakrym-oai">@pakrym-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18866">#18866</a> feat(tui): shortcuts to change reasoning level temporarily <a class="user-mention notranslate" href="https://github.com/fcoury-oai">@fcoury-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18430">#18430</a> app-server: implement device key v2 methods <a class="user-mention notranslate" href="https://github.com/euroelessar">@euroelessar</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18757">#18757</a> fix: fully revert agent identity runtime wiring <a class="user-mention notranslate" href="https://github.com/efrazer-oai">@efrazer-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/17783">#17783</a> Preserve Cloudfare HTTP cookies in codex <a class="user-mention notranslate" href="https://github.com/shijie-oai">@shijie-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18876">#18876</a> [rollout_trace] Add rollout trace crate <a class="user-mention notranslate" href="https://github.com/cassirer-openai">@cassirer-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18401">#18401</a> Support multiple managed environments <a class="user-mention notranslate" href="https://github.com/starr-openai">@starr-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18797">#18797</a> Allow guardian bare allow output <a class="user-mention notranslate" href="https://github.com/maja-openai">@maja-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18886">#18886</a> Normalize /statusline &amp; /title items <a class="user-mention notranslate" href="https://github.com/canvrno-oai">@canvrno-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18768">#18768</a> [codex] Tighten external migration prompt tests <a class="user-mention notranslate" href="https://github.com/alexsong-oai">@alexsong-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18909">#18909</a> Update /statusline and /title snapshots <a class="user-mention notranslate" href="https://github.com/canvrno-oai">@canvrno-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18867">#18867</a> sandboxing: materialize cwd-relative permission globs <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18915">#18915</a> fix: windows snapshot for external_agent_config_migration::tests::prompt_snapshot did not match windows output <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18416">#18416</a> Add turn-scoped environment selections <a class="user-mention notranslate" href="https://github.com/starr-openai">@starr-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18391">#18391</a> fix(core): emit hooks for apply_patch edits <a class="user-mention notranslate" href="https://github.com/fcoury-oai">@fcoury-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18916">#18916</a> test(core): move prompt debug coverage to integration suite <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/17820">#17820</a> feat: add AWS SigV4 auth for OpenAI-compatible model providers <a class="user-mention notranslate" href="https://github.com/celia-oai">@celia-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18913">#18913</a> bazel: run wrapped Rust unit test shards <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18452">#18452</a> feat: Support remote plugin list/read. <a class="user-mention notranslate" href="https://github.com/xl-openai">@xl-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18936">#18936</a> Fix remote app-server shutdown race <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18871">#18871</a> refactor: add agent identity crate <a class="user-mention notranslate" href="https://github.com/efrazer-oai">@efrazer-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18276">#18276</a> exec-server: carry filesystem sandbox profiles <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18926">#18926</a> ci: keep argument comment lint checks materialized <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18935">#18935</a> Keep TUI status surfaces in sync <a class="user-mention notranslate" href="https://github.com/etraut-openai">@etraut-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18923">#18923</a> chore(tui) debug-config guardian_policy_config <a class="user-mention notranslate" href="https://github.com/dylan-hurd-oai">@dylan-hurd-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18943">#18943</a> tests: serialize process-heavy Windows CI suites <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18934">#18934</a> [codex] Clean guardian instructions <a class="user-mention notranslate" href="https://github.com/dylan-hurd-oai">@dylan-hurd-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18948">#18948</a> chore: remove unused Bedrock auth lazy loading <a class="user-mention notranslate" href="https://github.com/celia-oai">@celia-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18277">#18277</a> core: derive active permission profiles <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18785">#18785</a> feat: add explicit AgentIdentity auth mode <a class="user-mention notranslate" href="https://github.com/efrazer-oai">@efrazer-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18953">#18953</a> use long-lived sessions for codex sandbox windows <a class="user-mention notranslate" href="https://github.com/iceweasel-oai">@iceweasel-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18278">#18278</a> app-server: expose thread permission profiles <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/17693">#17693</a> [codex-analytics] guardian review analytics events emission <a class="user-mention notranslate" href="https://github.com/rhan-oai">@rhan-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/17695">#17695</a> [codex-analytics] guardian review truncation <a class="user-mention notranslate" href="https://github.com/rhan-oai">@rhan-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/17696">#17696</a> [codex-analytics] guardian review TTFT plumbing and emission <a class="user-mention notranslate" href="https://github.com/rhan-oai">@rhan-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18962">#18962</a> nit: expose lib <a class="user-mention notranslate" href="https://github.com/jif-oai">@jif-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18502">#18502</a> Support multiple cwd filters for thread list <a class="user-mention notranslate" href="https://github.com/acrognale-oai">@acrognale-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18968">#18968</a> fix: wait_agent timeout for queued mailbox mail <a class="user-mention notranslate" href="https://github.com/jif-oai">@jif-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18971">#18971</a> fix: cargo deny <a class="user-mention notranslate" href="https://github.com/jif-oai">@jif-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18973">#18973</a> chore: prep memories for AB <a class="user-mention notranslate" href="https://github.com/jif-oai">@jif-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18852">#18852</a> [codex] Update imagegen system skill <a class="user-mention notranslate" href="https://github.com/vb-openai">@vb-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18865">#18865</a> Stage publishable Python runtime wheels <a class="user-mention notranslate" href="https://github.com/sdcoffey">@sdcoffey</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18932">#18932</a> TUI: Keep remote app-server events draining <a class="user-mention notranslate" href="https://github.com/etraut-openai">@etraut-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18877">#18877</a> [rollout_trace] Record core session rollout traces <a class="user-mention notranslate" href="https://github.com/cassirer-openai">@cassirer-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18959">#18959</a> feat(auto-review) policy config <a class="user-mention notranslate" href="https://github.com/dylan-hurd-oai">@dylan-hurd-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18955">#18955</a> Add plumbing to approve stored Auto-Review denials <a class="user-mention notranslate" href="https://github.com/won-openai">@won-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18999">#18999</a> arg0: keep dispatch aliases alive during async main <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18925">#18925</a> feat: Fairly trim skill descriptions within context budget <a class="user-mention notranslate" href="https://github.com/xl-openai">@xl-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18890">#18890</a> feat(auto-review) short-circuit <a class="user-mention notranslate" href="https://github.com/dylan-hurd-oai">@dylan-hurd-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18279">#18279</a> app-server: accept permission profile overrides <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18582">#18582</a> [2/4] Implement executor HTTP request runner <a class="user-mention notranslate" href="https://github.com/aibrahim-oai">@aibrahim-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18197">#18197</a> feat: add guardian network approval trigger context <a class="user-mention notranslate" href="https://github.com/viyatb-oai">@viyatb-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19033">#19033</a> Fix MCP permission policy sync <a class="user-mention notranslate" href="https://github.com/leoshimo-oai">@leoshimo-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19016">#19016</a> exec-server: expose arg0 alias root to fs sandbox <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19036">#19036</a> Overlay state DB git metadata for filtered thread lists <a class="user-mention notranslate" href="https://github.com/joeytrasatti-openai">@joeytrasatti-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18956">#18956</a> [Codex] Register browser requirements feature keys <a class="user-mention notranslate" href="https://github.com/khoi-oai">@khoi-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19043">#19043</a> Update bundled OpenAI Docs skill freshness check <a class="user-mention notranslate" href="https://github.com/kkahadze-oai">@kkahadze-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18504">#18504</a> Rebrand approvals reviewer config to auto-review <a class="user-mention notranslate" href="https://github.com/won-openai">@won-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19046">#19046</a> exec-server: require explicit filesystem sandbox cwd <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18280">#18280</a> clients: send permission profiles to app-server <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18281">#18281</a> rollout: persist turn permission profiles <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18888">#18888</a> hooks: emit Bash PostToolUse when exec_command completes via write_stdin <a class="user-mention notranslate" href="https://github.com/eternal-openai">@eternal-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19056">#19056</a> Rename approvals reviewer variant to auto-review <a class="user-mention notranslate" href="https://github.com/won-openai">@won-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18583">#18583</a> [3/4] Add executor-backed RMCP HTTP client <a class="user-mention notranslate" href="https://github.com/aibrahim-oai">@aibrahim-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19059">#19059</a> core: box multi-agent wrapper futures <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19031">#19031</a> Fix relative stdio MCP cwd fallback <a class="user-mention notranslate" href="https://github.com/mzeng-openai">@mzeng-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19063">#19063</a> chore(auto-review) feature =&gt; stable <a class="user-mention notranslate" href="https://github.com/dylan-hurd-oai">@dylan-hurd-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19050">#19050</a> feat(request-permissions) approve with strict review <a class="user-mention notranslate" href="https://github.com/dylan-hurd-oai">@dylan-hurd-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19067">#19067</a> test: set Rust test thread stack size <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19072">#19072</a> tui: fix approvals popup disabled shortcut test <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18893">#18893</a> codex: support hooks in config.toml and requirements.toml <a class="user-mention notranslate" href="https://github.com/eternal-openai">@eternal-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18282">#18282</a> protocol: report session permission profiles <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19053">#19053</a> Default Fast service tier for eligible ChatGPT plans <a class="user-mention notranslate" href="https://github.com/shijie-oai">@shijie-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19055">#19055</a> Add safety check notification and error handling <a class="user-mention notranslate" href="https://github.com/etraut-openai">@etraut-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18283">#18283</a> app-server: accept command permission profiles <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19012">#19012</a> Mark codex_hooks stable <a class="user-mention notranslate" href="https://github.com/abhinav-oai">@abhinav-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18924">#18924</a> TUI: preserve permission state after side conversations <a class="user-mention notranslate" href="https://github.com/etraut-openai">@etraut-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19071">#19071</a> Add computer_use feature requirement key <a class="user-mention notranslate" href="https://github.com/leoshimo-oai">@leoshimo-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19079">#19079</a> Use remote plugin IDs for detail reads and enlarge list pages <a class="user-mention notranslate" href="https://github.com/xl-openai">@xl-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19038">#19038</a> feat: Warn and continue on unknown feature requirements <a class="user-mention notranslate" href="https://github.com/xl-openai">@xl-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19078">#19078</a> Clarify cloud requirements error messages <a class="user-mention notranslate" href="https://github.com/gverma-openai">@gverma-openai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19085">#19085</a> Persist target default reasoning on model upgrade <a class="user-mention notranslate" href="https://github.com/shijie-oai">@shijie-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19086">#19086</a> app-server: include filesystem entries in permission requests <a class="user-mention notranslate" href="https://github.com/bolinfest">@bolinfest</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/18385">#18385</a> Support MCP tools in hooks <a class="user-mention notranslate" href="https://github.com/abhinav-oai">@abhinav-oai</a></li>
+<li><a class="issue-link js-issue-link" href="https://github.com/openai/codex/pull/19113">#19113</a> Fix auto-review config compatibility across protocol and SDK <a class="user-mention notranslate" href="https://github.com/won-openai">@won-openai</a></li>
+</ul>
+
+</details>
