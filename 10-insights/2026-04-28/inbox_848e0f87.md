@@ -1,0 +1,42 @@
+---
+id: inbox_848e0f87
+date: 2026-04-28
+source_ref: "[[00-inbox/2026-04-28/0248-medium-tag-ai-claude-design-is-here-f9e2]]"
+title: "Claude Design Is Here"
+url: https://medium.com/codetodeploy/claude-design-is-here-67580bea451e?source=rss------artificial_intelligence-5
+source: medium-tag-ai
+published_at: 2026-04-28T02:34:02+00:00
+fetched_at: 2026-04-28T02:59:27.811098+00:00
+model: claude-haiku-4-5
+tokens_in: 0
+tokens_out: 0
+summary_zh: "無法取得完整內容"
+key_points:
+tags: [claude-design]
+topics: []
+importance: 1
+novelty: 1
+insight_quality: 1
+insight_type: none
+deep_dive_candidate: false
+deep_dive_approved: false
+---
+
+## Claude Design Is Here
+
+無法取得完整內容
+
+### 重點
+
+**原文：** [medium-tag-ai](https://medium.com/codetodeploy/claude-design-is-here-67580bea451e?source=rss------artificial_intelligence-5)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://medium.com/codetodeploy/claude-design-is-here-67580bea451e?source=rss------artificial_intelligence-5"><img src="https://cdn-images-1.medium.com/max/2600/1*k0ciwS_uez4SmusrQFVN8A.png" width="2816" /></a></p><p class="medium-feed-snippet">Explained in 5 minutes</p><p class="medium-feed-link"><a href="https://medium.com/codetodeploy/claude-design-is-here-67580bea451e?source=rss------artificial_intelligence-5">Continue reading on CodeToDeploy »</a></p></div>
+
+</details>
