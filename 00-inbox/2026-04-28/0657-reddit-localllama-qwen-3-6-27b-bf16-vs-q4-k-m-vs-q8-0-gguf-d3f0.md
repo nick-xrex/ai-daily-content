@@ -1,0 +1,18 @@
+---
+id: inbox_b1f394f5
+source: reddit-localllama
+source_type: rss
+url: "https://www.reddit.com/r/LocalLLaMA/comments/1sxzqry/qwen_36_27b_bf16_vs_q4_k_m_vs_q8_0_gguf_evaluation/"
+author: "/u/gvij"
+published_at: 2026-04-28T12:18:37+00:00
+fetched_at: 2026-04-29T06:57:59.377375+00:00
+content_hash: "d3f0d8aa315a10421c0f8530ae53ef7cc718953051fc9015ebda934fb0b8da1e"
+lang: en
+caption_quality: None
+raw: true
+topics: []
+---
+
+# Qwen 3.6 27B BF16 vs Q4_K_M vs Q8_0 GGUF evaluation
+
+<table> <tr><td> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1sxzqry/qwen_36_27b_bf16_vs_q4_k_m_vs_q8_0_gguf_evaluation/"> <img alt="Qwen 3.6 27B BF16 vs Q4_K_M vs Q8_0 GGUF evaluation" src="https://preview.redd.it/ncwdmp21bxxg1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=a5b4caef8b59ccd3aae4c95a42b00f9b14365e5e" title="Qwen 3.6 27B BF16 vs Q4_K_M vs Q8_0 GGUF evaluation" /> </a> </td><td> <!-- SC_OFF --><div class="md"><p>Evaluated Qwen 3.6 27B across BF16, Q4_K_M, and Q8_0 GGUF quant variants with llama-cpp-python using Neo AI Engineer.</p> <p>Benchmarks used:</p> <ul> <li>HumanEval: code generation</li> <li>HellaSwag: commonsense reasoning</li> <li>BFCL: function calling</li> </ul> <p>Total samples:</p> <ul> <li>HumanEval: 164</li> <li>HellaSwag: 100</li> <li>BFCL: 400</li> </ul> <p>Results:</p> <p><strong>BF16</strong></p> <ul> <li>HumanEval: 56.10% 92/164</li> <li>HellaSwag: 90.00% 90/100</li> <li>BFCL: 63.25% 253/400</li> <li>Avg accuracy: 69.78%</li> <li>Throughput: 15.5 tok/s</li> <li>Peak RAM: 54 GB</li> <li>Model size: 53.8 GB</li> </ul> <p><strong>Q4_K_M</strong></p> <ul> <li>HumanEval: 50.61% 83/164</li> <li>HellaSwag: 86.00% 86/100</li> <li>BFCL: 63.00% 252/400</li> <li>Avg accuracy: 66.54%</li> <li>Throughput: 22.5 tok/s</li> <li>Peak RAM: 28 GB</li> <li>Model size: 16.8 GB</li> </ul> <p><strong>Q8_0</strong></p> <ul> <li>HumanEval: 52.44% 86/164</li> <li>HellaSwag: 83.00% 83/100</li> <li>BFCL: 63.00% 252/400</li> <li>Avg accuracy: 66.15%</li> <li>Throughput: 18.0 tok/s</li> <li>Peak RAM: 42 GB</li> <li>Model size: 28.6 GB</li> </ul> <p><strong>What stood out:</strong></p> <p>Q4_K_M looks like the best practical variant here. It keeps BFCL almost identical to BF16, drops about 5.5 points on HumanEval, and is still only 4 points behind BF16 on HellaSwag.</p> <p>The tradeoff is pretty good:</p> <ul> <li>1.45x faster than BF16</li> <li>48% less peak RAM</li> <li>68.8% smaller model file</li> <li>nearly identical function calling score</li> </ul> <p>Q8_0 was a bit underwhelming in this run. It improved HumanEval over Q4_K_M by ~1.8 points, but used 42 GB RAM vs 28 GB and was slower. It also scored lower than Q4_K_M on HellaSwag in this eval.</p> <p>For local/CPU deployment, I would probably pick Q4_K_M unless the workload is heavily code-generation focused. For maximum quality, BF16 still wins.</p> <p>Evaluation setup:</p> <ul> <li>GGUF via llama-cpp-python</li> <li>n_ctx: 32768</li> <li>checkpointed evaluation</li> <li>HumanEval, HellaSwag, and BFCL all completed</li> <li>BFCL had 400 function calling samples</li> </ul> <p>This evaluation was done using Neo AI Engineer, which built the GGUF eval setup, handled checkpointed runs, and consolidated the benchmark results. I manually reviewed the outcome as well.</p> <p>Complete case study with benchmarking results, approach and code snippets in mentioned in the comments below 👇</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href="https://www.reddit.com/user/gvij"> /u/gvij </a> <br /> <span><a href="https://i.redd.it/ncwdmp21bxxg1.jpeg">[link]</a></span> &#32; <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1sxzqry/qwen_36_27b_bf16_vs_q4_k_m_vs_q8_0_gguf_evaluation/">[comments]</a></span> </td></tr></table>
