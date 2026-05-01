@@ -1,0 +1,18 @@
+---
+id: inbox_7a1ade63
+source: reddit-localllama
+source_type: rss
+url: "https://www.reddit.com/r/LocalLLaMA/comments/1t0l2c8/finetuning_dataset_claude_opus_4647_87k_chats/"
+author: "/u/AldebaranBefore"
+published_at: 2026-05-01T06:13:22+00:00
+fetched_at: 2026-05-01T12:57:17.659799+00:00
+content_hash: "89598057cc660e52bfe3273c3e1e1ba998c82caea5b45b3595934293d565c47f"
+lang: en
+caption_quality: None
+raw: true
+topics: []
+---
+
+# Finetuning Dataset: Claude Opus 4.6/4.7 - 8.7k Chats
+
+<!-- SC_OFF --><div class="md"><p><a href="https://huggingface.co/datasets/angrygiraffe/claude-opus-4.6-4.7-reasoning-8.7k">https://huggingface.co/datasets/angrygiraffe/claude-opus-4.6-4.7-reasoning-8.7k</a></p> <p>A synthetic fine-tuning dataset created from Claude 4.6/4.7. 8,706 total examples all with reasoning. I haven't reviewed the data but there was some basic cleaning applied. Refusals and safety should be repressed. I ended up with extra usage on a plan before it expired.</p> <pre><code>| Split | File | Examples | Contents | |-------|------|---------:|----------| | **Full** | `full_train.jsonl` | 8,706 | All examples across all 28 categories. | | **Instruct** | `instruct_train.jsonl` | 7,217 | All 24 instructional categories — coding, math, sciences, humanities, arts, finance, medicine, law, business, linguistics, creative writing, general. | | **Roleplay** | `roleplay_train.jsonl` | 1,489 | The four creative categories — `roleplay_hero`, `roleplay_villain`, `roleplay_crossover`, `narrative_prose`. | | **Code** | `code_train.jsonl` | 1,840 | `coding` + `math` only. For coding/math-focused fine-tunes. | ## Overall | Metric | Value | |---|---:| | Examples | 8,706 | | Tokens (estimated) | 17,013,533 | | Avg tokens / example | 1,954 | | Multi-turn | 3,454 (39.7%) | | Single-turn | 5,252 (60.3%) | ## Category Counts | Category | Examples | Tokens | Multi-turn % | |----------|---------:|-------:|-------------:| | coding | 1,628 | 2,545,221 | 30.4% | | humanities | 862 | 1,849,708 | 32.5% | | science | 737 | 1,681,346 | 37.4% | | roleplay_hero | 419 | 640,084 | 63.5% | | roleplay_villain | 378 | 635,984 | 60.8% | | narrative_prose | 377 | 710,807 | 43.0% | | roleplay_crossover | 315 | 581,188 | 56.8% | | creative_writing | 281 | 532,504 | 30.6% | | medicine | 280 | 519,662 | 22.1% | | biology | 277 | 541,013 | 21.3% | | general | 276 | 284,696 | 37.0% | | arts | 245 | 576,170 | 41.2% | | chemistry | 221 | 508,546 | 52.9% | | physics | 220 | 512,196 | 56.8% | | math | 212 | 394,907 | 54.2% | | geography | 155 | 358,321 | 42.6% | | history | 155 | 348,822 | 41.3% | | economics | 155 | 380,372 | 42.6% | | political_science | 154 | 374,901 | 38.3% | | sociology | 154 | 378,261 | 42.2% | | business | 152 | 315,065 | 38.2% | | earth_science | 152 | 358,209 | 41.4% | | finance | 151 | 328,607 | 38.4% | | philosophy | 150 | 335,514 | 41.3% | | linguistics | 150 | 306,889 | 39.3% | | literature | 150 | 299,606 | 38.7% | | psychology | 150 | 339,565 | 39.3% | | law | 150 | 375,360 | 41.3% | ## By Model | Model | Count | Share | Tokens | |---|---:|---:|---:| | claude-opus-4-6 | 4,675 | 53.7% | 6,304,169 | | claude-opus-4-7 | 4,031 | 46.3% | 10,709,363 | </code></pre> </div><!-- SC_ON --> &#32; submitted by &#32; <a href="https://www.reddit.com/user/AldebaranBefore"> /u/AldebaranBefore </a> <br /> <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1t0l2c8/finetuning_dataset_claude_opus_4647_87k_chats/">[link]</a></span> &#32; <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1t0l2c8/finetuning_dataset_claude_opus_4647_87k_chats/">[comments]</a></span>

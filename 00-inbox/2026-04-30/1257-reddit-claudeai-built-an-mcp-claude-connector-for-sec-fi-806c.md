@@ -1,0 +1,18 @@
+---
+id: inbox_51349a1e
+source: reddit-claudeai
+source_type: rss
+url: "https://www.reddit.com/r/ClaudeAI/comments/1t02ohf/built_an_mcp_claude_connector_for_sec_filings/"
+author: "/u/konamul"
+published_at: 2026-04-30T17:17:30+00:00
+fetched_at: 2026-05-01T12:57:19.134260+00:00
+content_hash: "806c47d103a76652f0c42f36e54e650658edb1c6e1275bc6260fc06ed48d8ad1"
+lang: en
+caption_quality: None
+raw: true
+topics: []
+---
+
+# Built an MCP Claude Connector for SEC filings after I nuked through my Claude usage limit
+
+<!-- SC_OFF --><div class="md"><p>I blew through my weekly Claude limit so many times I almost upgraded to the next tier. I knew the problem was because I was dumping the entire 10-Ks in there for context. My lazy ass could have just copied the specific section I cared about, but if I'm already going to the filing to do that, I might as well not have used Claude in the first place. So I just built the solution.</p> <p>The problem I kept running into with any SEC filing workflow was the same thing: raw filings are enormous, and my agent was reading all of it to answer something that lived in three paragraphs.</p> <p>A 10-K from a large-cap company can be 80 000+ tokens. If you're just dumping the filing into context and asking a question, you're paying for the whole document. It works, technically. It's just expensive and slow, and the answers get sloppier the more noise surrounds the relevant section.</p> <p>The other thing that bothered me was citations. Most approaches return text but give you no way to verify where it came from. You get an answer, you trust the model, and if it hallucinated a number from the footnotes, there goes future credibility. </p> <p><strong>What I built</strong></p> <p>Landed on an <a href="https://www.alphacreek.ai">approach </a>to create a navigation-map first and split the document into logical sections (preserving text under a title and linking it to the title based on formatting). Instead of returning the filing, you get a table of contents for the filing. The agent looks at the structure first, decides what it actually needs, and only then fetches those specific sections. Each chunk comes back with a reader_url that links directly to that passage in the original EDGAR HTML filing.</p> <p>Before: agent calls filing API, gets a wall of text, burns context, returns an answer with no traceable source.</p> <p>After: agent calls get_filing_toc, sees the map, navigates to the relevant node, pulls 2-4 paragraphs, cites the exact line.</p> <p>Token reduction in practice is around 85% vs. raw retrieval.</p> <ul> <li>6,000+ US public companies</li> <li>10-K, 10-Q. Working on bringing in 8-K (probably later this week or next) and then maybe earnings transcript (right after)</li> <li>Model agnostic (works with Claude, GPT, maybe Gemini but haven’t tested it)</li> </ul> <p>It’s free 😄 would love to get some honest feedback. Also remember to update claude instructions for optimal result!</p> <p>Check it out here: <a href="https://www.alphacreek.ai">https://www.alphacreek.ai</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href="https://www.reddit.com/user/konamul"> /u/konamul </a> <br /> <span><a href="https://www.reddit.com/r/ClaudeAI/comments/1t02ohf/built_an_mcp_claude_connector_for_sec_filings/">[link]</a></span> &#32; <span><a href="https://www.reddit.com/r/ClaudeAI/comments/1t02ohf/built_an_mcp_claude_connector_for_sec_filings/">[comments]</a></span>
