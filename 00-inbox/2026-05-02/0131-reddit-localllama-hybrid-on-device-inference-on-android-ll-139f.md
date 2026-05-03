@@ -1,0 +1,18 @@
+---
+id: inbox_1fa4ea97
+source: reddit-localllama
+source_type: rss
+url: "https://www.reddit.com/r/LocalLLaMA/comments/1t1l7xj/hybrid_ondevice_inference_on_android_llamacpp/"
+author: "/u/Healthy_Bedroom5837"
+published_at: 2026-05-02T09:31:55+00:00
+fetched_at: 2026-05-03T01:31:38.479390+00:00
+content_hash: "139f7552e615197f7a319c2e896aaa58bd64f4e283dc0bbba655410e77b94923"
+lang: en
+caption_quality: None
+raw: true
+topics: []
+---
+
+# Hybrid on-device inference on Android: llama.cpp + LiteRT + NPU/GPU routing
+
+<table> <tr><td> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1t1l7xj/hybrid_ondevice_inference_on_android_llamacpp/"> <img alt="Hybrid on-device inference on Android: llama.cpp + LiteRT + NPU/GPU routing" src="https://preview.redd.it/ty4as6o41pyg1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=9b178ddbe2328901a1128bf42ae9ddb13183af90" title="Hybrid on-device inference on Android: llama.cpp + LiteRT + NPU/GPU routing" /> </a> </td><td> <!-- SC_OFF --><div class="md"><p>Hi everyone,</p> <p>I’m the maintainer of <strong>Box</strong> — a fork of Google’s AI Edge Gallery that I’ve been extending into a fully offline AI assistant for Android.</p> <p>Full disclosure: I built this project.</p> <p>It runs entirely on-device (no cloud, no accounts, no external inference), and combines multiple local inference backends in a single app.</p> <hr /> <h2>What I’ve been experimenting with</h2> <p>The goal was to see how far a <em>fully offline mobile AI stack</em> could be pushed using:</p> <ul> <li>llama.cpp (GGUF LLM inference)</li> <li>whisper.cpp (on-device STT)</li> <li>stable-diffusion.cpp (image generation)</li> <li>LiteRT (Google’s on-device runtime)</li> </ul> <p>All running on Android with hardware acceleration where available (GPU / NPU / TPU).</p> <hr /> <h2>Current capabilities</h2> <ul> <li>Voice-to-voice conversation (streaming style, hands-free loop)</li> <li>Vision + voice (live camera frame + natural language Q&amp;A)</li> <li>On-device image generation (Stable Diffusion via GGUF)</li> <li>Document ingestion into context (local files)</li> <li>Custom GGUF model import</li> <li>Runs across CPU / GPU / NPU / TPU (auto-selected)</li> </ul> <hr /> <h2>Architecture focus</h2> <p>What I’ve found interesting while building this:</p> <ul> <li>LiteRT + llama.cpp hybrid inference works better than expected on newer Snapdragon/Pixel NPUs</li> <li>Model routing matters more than raw model size on mobile</li> <li>Whisper.cpp is still the most stable STT layer for fully offline setups</li> <li>Memory + persistence becomes the real bottleneck before compute in many cases</li> </ul> <hr /> <h2>Repo (for reference)</h2> <p><a href="https://github.com/jegly/Box">https://github.com/jegly/Box</a></p> <hr /> <h2>Why I’m posting this here</h2> <p>I’m mainly sharing this for feedback from people also working on local inference systems, especially around:</p> <ul> <li>mobile quantization strategies</li> <li>hybrid runtime routing (CPU/GPU/NPU)</li> <li>multimodal on-device pipelines</li> <li>performance tuning on constrained hardware</li> </ul> <p>Not trying to push adoption — more interested in technical critique than anything else.</p> <hr /> <p>Happy to answer questions or go deeper into any part of the stack if useful.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href="https://www.reddit.com/user/Healthy_Bedroom5837"> /u/Healthy_Bedroom5837 </a> <br /> <span><a href="https://i.redd.it/ty4as6o41pyg1.png">[link]</a></span> &#32; <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1t1l7xj/hybrid_ondevice_inference_on_android_llamacpp/">[comments]</a></span> </td></tr></table>

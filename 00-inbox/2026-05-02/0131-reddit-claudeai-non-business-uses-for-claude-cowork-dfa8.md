@@ -1,0 +1,18 @@
+---
+id: inbox_b031f65d
+source: reddit-claudeai
+source_type: rss
+url: "https://www.reddit.com/r/ClaudeAI/comments/1t22v8r/nonbusiness_uses_for_claude_cowork/"
+author: "/u/ilikethestuff"
+published_at: 2026-05-02T21:49:14+00:00
+fetched_at: 2026-05-03T01:31:39.493769+00:00
+content_hash: "dfa874498a6e4ce1e17a95676a60f12900779b6de215c34e3c2a0c88c4e265c3"
+lang: en
+caption_quality: None
+raw: true
+topics: []
+---
+
+# Non-business uses for Claude Cowork
+
+<!-- SC_OFF --><div class="md"><p>I see a lot of posts about how people are using Claude for business, so I thought I'd post something different. I use Claude almost exclusively for personal use and have zero intention to make any money off of my projects. </p> <ol> <li>I have it build a local HTML page to visualize any major project I'm working on, whether analyzing my investments, planning how to teach my kids, or dealing with my taxes.</li> <li>I have it pull data from multiple sources into a folder it has access to, which I called One Source of Truth</li> <li>The data is pulled from gmail emails and attachments, Apple Health, my downloads folder, and my screenshots folder. </li> <li>I have automated processes to read my emails/data/files, rename the files as needed, and file them in a easy to use folder system. It also creates a log of all files that are renamed and moved in case I lose something. </li> <li>Then I have automated processes to update my HTMLs. This includes showing completion amounts for tax documents, updated stats on my number of steps, body weight, etc. </li> <li>I have it build rules to analyze the data and output to the HTML things that I think are interesting, like a Longevity Score (based on research) to tell me how healthy I am relative to other people my age. </li> </ol> <p>My biggest accomplishments so far:</p> <ol> <li>I have a single page that tracks my emails, calendar, tasks, daily routines, and milestones. I can press buttons to generate a Claude-written response to emails, edit, and then send. I can turn an email into a task with subtasks. I can schedule an email or task via drag and drop.</li> <li>My entire health profile is visualized and audited on a daily basis. Giving me the top 3 things that I can change to live longer. </li> <li>My entire investment details are analyzed with recommendations and a calculator I built to determine how and when to dollar-cost-average into the market. </li> <li>I have built a queue for tasks to send to Claude. It keeps a log of prompts, I can select the ones I want to have it work on, press one button to copy. And then, I can paste the prompt into Claude and it generates a sub agent for each tasks, so they all get completed simultaneously </li> <li>I have a detailed page of all of my family information, so I can quickly find anything that I want. </li> <li>I've built a homeschooling app to use with my wife and nanny that suggests activities for the kids based on their developmental needs. It also helps me track height and weight against reseaech-based percentiles, so I can make sure they're growing appropriately. </li> </ol> <p>Wondering if anyone else is doing this kind of thing?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href="https://www.reddit.com/user/ilikethestuff"> /u/ilikethestuff </a> <br /> <span><a href="https://www.reddit.com/r/ClaudeAI/comments/1t22v8r/nonbusiness_uses_for_claude_cowork/">[link]</a></span> &#32; <span><a href="https://www.reddit.com/r/ClaudeAI/comments/1t22v8r/nonbusiness_uses_for_claude_cowork/">[comments]</a></span>
