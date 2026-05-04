@@ -1,0 +1,42 @@
+---
+id: inbox_35e25b70
+date: 2026-05-04
+source_ref: "[[00-inbox/2026-05-04/1338-infoq-ai-ml-article-from-batch-to-micro-batch-stream-38f6]]"
+title: "Article: From Batch to Micro-Batch Streaming: Lessons Learned the Hard Way in a Delta Index Pipeline"
+url: https://www.infoq.com/articles/micro-batch-streaming-lessons-learned/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering
+source: infoq-ai-ml
+published_at: 2026-05-04T11:00:00+00:00
+fetched_at: 2026-05-04T13:43:47.563555+00:00
+model: claude-haiku-4-5
+tokens_in: 0
+tokens_out: 0
+summary_zh: ""
+key_points:
+tags: []
+topics: []
+importance: 1
+novelty: 1
+insight_quality: 1
+insight_type: none
+deep_dive_candidate: false
+deep_dive_approved: false
+---
+
+## Article: From Batch to Micro-Batch Streaming: Lessons Learned the Hard Way in a Delta Index Pipeline
+
+
+
+### 重點
+
+**原文：** [infoq-ai-ml](https://www.infoq.com/articles/micro-batch-streaming-lessons-learned/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+<img src="https://res.infoq.com/articles/micro-batch-streaming-lessons-learned/en/headerimage/micro-batch-streaming-lessons-learned-header-1777381781538.jpg" /><p>This article describes how a production delta-index pipeline migrated from scheduled batch to micro-batch Spark Structured Streaming. It covers why record-level streaming was rejected, how partition-based watermarks replaced fragile S3 completion markers,  overlap-window correctness, and restart-as-design strategies for better predictability in object-store–based ingestion systems.</p> <i>By Parveen Saini</i>
+
+</details>
