@@ -1,0 +1,18 @@
+---
+id: inbox_d8c40f8c
+source: reddit-claudeai
+source_type: rss
+url: "https://www.reddit.com/r/ClaudeAI/comments/1t3osat/built_a_plugin_so_my_parallel_claude_code/"
+author: "/u/vildanbina"
+published_at: 2026-05-04T17:38:22+00:00
+fetched_at: 2026-05-05T08:19:22.492501+00:00
+content_hash: "c3406afc15e128f4182bc94ed9724d3dcceebd997a9585473d3b28d8fa85a5fb"
+lang: en
+caption_quality: None
+raw: true
+topics: []
+---
+
+# built a plugin so my parallel Claude Code sessions can message each other instead of me alt-tabbing
+
+<table> <tr><td> <a href="https://www.reddit.com/r/ClaudeAI/comments/1t3osat/built_a_plugin_so_my_parallel_claude_code/"> <img alt="built a plugin so my parallel Claude Code sessions can message each other instead of me alt-tabbing" src="https://preview.redd.it/68xdfr1qn5zg1.gif?width=640&amp;crop=smart&amp;s=94d86da7bf9e40c6bd1410fbd6acd18bf4896ca9" title="built a plugin so my parallel Claude Code sessions can message each other instead of me alt-tabbing" /> </a> </td><td> <!-- SC_OFF --><div class="md"><p>I usually have two or more Claude Code sessions open at once. One in the backend repo, one in the frontend. Half the time I'd be in the frontend asking &quot;wait, what shape did the user object end up as?&quot;, then alt-tab, ask the backend session, copy the answer, alt-tab back, paste.</p> <p>The other Claude was right there. It already knew. I was the bottleneck.</p> <p>So I wrote a plugin called Relay. In the frontend window I just say:</p> <p>▎ask the backend session what the user object looks like</p> <p>The backend session sees the question between turns, answers it, and the reply pops up in my frontend session as a notification. No window switching. No copy-paste. Works for broadcasts too, like &quot;ask everyone what they're working on&quot;, and the replies trickle in one at a time.</p> <p>The mechanism is simpler than it sounds. Claude Code shipped a channels capability a while back that lets MCP servers push messages into a session between turns. Relay piggybacks on that. Each session runs a tiny MCP server, a single hub daemon on your machine routes between them over a unix socket, and inbound asks land as channel notifications so Claude reacts to them naturally on its next turn. First session you start spawns the hub. It self-exits about 5 min after the last session disconnects. Same machine only, no auth, nothing leaves your box.</p> <p>I know there are other &quot;make Claudes coordinate&quot; projects. Most of them are orchestration frameworks where one boss Claude bosses worker Claudes around. This isn't that. It's just messaging between sessions you already have open, doing whatever you already had them doing. Closer to slack-for-your-claudes than to a swarm runner.</p> <p>Repo with install steps: <a href="https://github.com/innestic/claude-relay">https://github.com/innestic/claude-relay</a> (MIT)</p> <p>It's day-one open source so the rough edges are real. If you run multi-session workflows already, what's the dumb friction you keep hitting? That's what I want to fix next.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href="https://www.reddit.com/user/vildanbina"> /u/vildanbina </a> <br /> <span><a href="https://i.redd.it/68xdfr1qn5zg1.gif">[link]</a></span> &#32; <span><a href="https://www.reddit.com/r/ClaudeAI/comments/1t3osat/built_a_plugin_so_my_parallel_claude_code/">[comments]</a></span> </td></tr></table>

@@ -1,0 +1,18 @@
+---
+id: inbox_dad5b0d9
+source: reddit-localllama
+source_type: rss
+url: "https://www.reddit.com/r/LocalLLaMA/comments/1t3nh7d/the_first_ai_model_in_egypt/"
+author: "/u/assemsabryy"
+published_at: 2026-05-04T16:53:36+00:00
+fetched_at: 2026-05-05T08:19:21.029310+00:00
+content_hash: "491b02422ad03ccdcb5d41d68d9c3995251ebbf766f7aa59de03212da1c8aee4"
+lang: en
+caption_quality: None
+raw: true
+topics: []
+---
+
+# The first AI Model in Egypt 🇪🇬
+
+<table> <tr><td> <a href="https://www.reddit.com/r/LocalLLaMA/comments/1t3nh7d/the_first_ai_model_in_egypt/"> <img alt="The first AI Model in Egypt 🇪🇬" src="https://external-preview.redd.it/b3sW-Zrc1oU7OY8C5e_91cmEQMY4TmcVd7CiQ-GBjkA.png?width=140&amp;height=75&amp;auto=webp&amp;s=adfd3b23cde1eb499af20ae82951a13e9809edf4" title="The first AI Model in Egypt 🇪🇬" /> </a> </td><td> <!-- SC_OFF --><div class="md"><p>Following up on the Horus project — the first fully built-from-scratch language model in Egypt.</p> <p>If this is your first time hearing about Horus: it’s a fully built-from-scratch language model, and it’s open-source.</p> <p><a href="https://preview.redd.it/v0lw20vuh5zg1.jpg?width=3267&amp;format=pjpg&amp;auto=webp&amp;s=10af499b2c5aab925c549a64cd6a6149217c490a">https://preview.redd.it/v0lw20vuh5zg1.jpg?width=3267&amp;format=pjpg&amp;auto=webp&amp;s=10af499b2c5aab925c549a64cd6a6149217c490a</a></p> <p><a href="https://preview.redd.it/3blbewtuh5zg1.jpg?width=1459&amp;format=pjpg&amp;auto=webp&amp;s=fc7ce3c706ba94bc776305f8f172169a69c00818">https://preview.redd.it/3blbewtuh5zg1.jpg?width=1459&amp;format=pjpg&amp;auto=webp&amp;s=fc7ce3c706ba94bc776305f8f172169a69c00818</a></p> <p>Hugging Face repo: <a href="https://huggingface.co/tokenaii/horus">https://huggingface.co/tokenaii/horus</a></p> <p>About a week ago, the source code used to train the model was also released, making it available for developers to explore, use, and build on.</p> <p><a href="https://github.com/tokenaii/horus-1.0">https://github.com/tokenaii/horus-1.0</a></p> <p>This makes Horus the first fully trained-from-scratch LLM in Egypt, developed by Assem Sabry and TokenAI.</p> <p>Today, I’m sharing some early details about the next version: Horus 1.5 Instruct.</p> <p>This new version is expected to be 5x better than Horus 1.0, with a 64K context length, which is 8x larger than the 8K context in Horus 1.0 4B.</p> <p>But it’s not just about scaling — Horus 1.5 comes with major improvements in architecture and overall capability, pushing the model to a completely different level.</p> <p>Also, there are updates about a new cybersecurity model from TokenAI.</p> <p>A specialized model designed to detect vulnerabilities and fix them instantly. It’s planned to be a large-scale model, trained on trillions of highly specialized security-related data, which puts us in front of something extremely powerful.</p> <p>All of this is fully built in Egypt, in the field of AI.</p> <p>TokenAI is starting to seriously shift the AI scene in Egypt and the Arab world, and what we're building is honestly something exceptional.</p> <p>More official announcements are coming soon about the next Horus models </p> <p>bigger, stronger, and significantly more efficient.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href="https://www.reddit.com/user/assemsabryy"> /u/assemsabryy </a> <br /> <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1t3nh7d/the_first_ai_model_in_egypt/">[link]</a></span> &#32; <span><a href="https://www.reddit.com/r/LocalLLaMA/comments/1t3nh7d/the_first_ai_model_in_egypt/">[comments]</a></span> </td></tr></table>
