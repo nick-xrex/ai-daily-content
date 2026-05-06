@@ -1,0 +1,18 @@
+---
+id: inbox_d6704275
+source: reddit-claudeai
+source_type: rss
+url: "https://www.reddit.com/r/ClaudeAI/comments/1t4gchn/i_asked_claude_to_investigate_its_own_token_burn/"
+author: "/u/AlexZan"
+published_at: 2026-05-05T14:00:32+00:00
+fetched_at: 2026-05-06T10:02:18.158168+00:00
+content_hash: "3ebf5ce679e81f82d109d09411af46680edbd642e5839b913a1f875f803ebb5a"
+lang: en
+caption_quality: None
+raw: true
+topics: []
+---
+
+# I asked Claude to investigate its own token burn. The receipts go back six months.
+
+<!-- SC_OFF --><div class="md"><p>If you've been wondering why your Max plan exhausts faster than it should, you're not crazy and it's not your imagination.</p> <p>I asked a Claude Opus 4.7 agent to investigate its own token usage. After 8 turns it had been billed for 127K tokens for ~25K of unique content. It noticed the discrepancy and started reading<br /> its own session logs. It surfaced GitHub issues going back to mid-December 2025, two reverse-engineered bugs in the Claude Code binary, and a community-written patch the company hasn't shipped. </p> <p><strong>The tl;dr:</strong> </p> <ul> <li><strong>Bug A</strong> — billing-word substitution in the binary trips on common terminology and forces a full uncached rebuild every turn (10-20× cost impact)<br /></li> <li><strong>Bug B</strong> — <code>claude --resume</code> and <code>--continue</code> invalidate the cache the moment you resume, paying full freight on the first turn</li> <li><strong>Telemetry coupling</strong> — disabling telemetry silently disables the 1-hour cache TTL (privacy users get penalized)<br /></li> <li><strong>Peak-hour throttle</strong> — Anthropic confirmed only after press contact; never published the magnitude<br /></li> <li><p><strong>None of the cache bugs are acknowledged in any Anthropic release note</strong> despite six weeks of acute reports </p> <p>The data needed to detect this is already on your machine — Anthropic just doesn't surface it in the UI. I built a 50-line statusline tool that reads the same JSONL Claude Code already writes<br /> locally and shows your per-turn cache hit rate in real time. My book-writing chat had <strong>128 cache flush events</strong> when I deployed it. </p> <p><strong>Tool:</strong> <a href="https://github.com/AlexZan/cc-cache-monitor">https://github.com/AlexZan/cc-cache-monitor</a> </p> <p><strong>Full writeup with timeline + sources:</strong> <a href="https://medium.com/@alexzanfir/claude-diagnosed-its-own-cache-bug-a-six-month-timeline-332f577e1fe9">https://medium.com/@alexzanfir/claude-diagnosed-its-own-cache-bug-a-six-month-timeline-332f577e1fe9</a> </p> <p><strong>Mitigations until Anthropic ships a fix:</strong> </p></li> <li><p>Avoid the GMT peak window (1pm-7pm GMT / 5am-11am PT weekdays) </p></li> <li><p>Don't use <code>--resume</code> or <code>--continue</code></p></li> <li><p>One Claude Code session at a time during dense work </p></li> <li><p>Don't disable telemetry (counterintuitive but real) </p></li> <li><p>Run cc-cache-monitor in your statusline so you see the bug fire in real time </p> <p>I'm explicitly <em>not</em> recommending &quot;switch to Sonnet&quot; — if you paid for Opus, you paid for Opus. &quot;Use a worse model&quot; subsidizes the broken state. The article goes deeper into why.</p></li> </ul> </div><!-- SC_ON --> &#32; submitted by &#32; <a href="https://www.reddit.com/user/AlexZan"> /u/AlexZan </a> <br /> <span><a href="https://www.reddit.com/r/ClaudeAI/comments/1t4gchn/i_asked_claude_to_investigate_its_own_token_burn/">[link]</a></span> &#32; <span><a href="https://www.reddit.com/r/ClaudeAI/comments/1t4gchn/i_asked_claude_to_investigate_its_own_token_burn/">[comments]</a></span>
