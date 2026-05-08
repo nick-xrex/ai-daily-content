@@ -1,0 +1,18 @@
+---
+id: inbox_7eff77db
+source: reddit-localllama
+source_type: rss
+url: "https://www.reddit.com/r/LocalLLaMA/comments/1t6bsil/two_related_prompts_different_results_qwen_35_and/"
+author: "/u/Excellent_Jelly2788"
+published_at: 2026-05-07T14:14:11+00:00
+fetched_at: 2026-05-08T07:37:41.360979+00:00
+content_hash: "e500d4861778506989e4a3ac33ac02234308f773f0344d1a0bef002aa7855a28"
+lang: en
+caption_quality: None
+raw: true
+topics: []
+---
+
+# Two related prompts, different results: Qwen 3.5 and Gemma 4 need different prompting than Qwen 3.6
+
+With every new model release there's the &quot;better than Opus 6.13&quot; guys vs the &quot;this is so bad, why did they even release it&quot; camp and I'm always wondering which one is using it wrong. So I did a little test with 2 related prompts, 3 models and ran each combination 10 times. Short prompt: Mike grew up as one of 6 siblings and has 3 sisters. He has $25 and bought 5 boxes of apples for his organic apples business. To support him, his siblings also gifted some apples, with each of his brothers giving him 4 boxes and his sisters 2 boxes each. One of the brothers bought the cheap apples for Mike which were not organic, so Mike can't sell them and returned them. In his first week, Mike sold all boxes of apples and using all the money he earned from that bought twice the amount of apples for the second week. How much money would Mike earn in the second week if he was able to sell all of them? Expected Answer: 300. Assumption: shorter prompt = better. The longer version contains more fluff, not more facts. Qwen 3.6 &gt; Qwen 3.5 IQ2 dumb Result: Most wrong answers were assuming &quot;one box is $5&quot; no matter if buying or selling and answered 150 instead of 300 (except Qwen 3.6 IQ2 which, in the longer story, 50% of the time ignored the sibling boxes and said $25*2=$50). Gemma 4 really liked the longer version. With the story around it, Gemma 4 saw it more as a &quot;business&quot; with different buying and selling prices instead of a purely mathematical, assumption based question. Qwen 3.6 performed surprisingly bad with the long prompt, even in Q8. It mostly either missed the business part and said $150 or forgot about the sibling boxes and said $50. IQ2 was surprisingly good I was really surprised by this, turns out there's not just good prompts and bad prompts but even apparently similar models (Qwen 3.5 vs 3.6) can require different prompting styles. For context: the other prompt contains the exact same sentences, but embedded in a longer story: The Organic Apple Enterprise The sun barely peeked over the rolling hills of the valley when Mike was already awake, brewing his morning coffee and lacing up his work boots. The peaceful, quiet calm of the dawn was a stark contrast to the memories of his childhood home. It had always been a loud, energetic household, filled with constant chatter, shared chores, and the occasional battle over the television remote. Mike grew up as one of 6 siblings and has 3 sisters. Growing up in such a bustling environment taught him the value of hard work, compromise, and the sheer determination required to stand out... The full long prompt can be found here The full data of the comparison (token in- and output numbers, model answers etc): https://evaluateai.ai/app/comparisons/7d1baf23-49d0-484b-8c59-854dcc2e4f64/results/ Disclaimer: that's my website, I created it specifically to compare (local) LLMs. You can create one or several prompts, point it at your local endpoint and then compare the results. &#32; submitted by &#32; /u/Excellent_Jelly2788 [link] &#32; [comments]

@@ -2,6 +2,9 @@ channels:
   - id: UCLKPca3kwwd-B59HNr-_lvA
     name: AI Engineer
     tier: 1
+  - id: UC6t1O76G0jYXOAoYCm153dA
+    name: Lenny's Podcast
+    tier: 1
 
 # Duration filter: skip super-short (ads) and super-long (all-day conf recordings)
 min_duration_sec: 180
