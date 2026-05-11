@@ -17,10 +17,16 @@
 
 columns:
   - id: claude-code-updates
-    display_name: "🛠 Claude Code / Codex 新功能"
-    prompt: "今天 Claude Code、Codex、或相關 coding-agent 工具的功能更新、release notes、實用技巧。每筆帶版本號或 commit hash。"
+    display_name: "🛠 Claude Code 最新 release"
+    prompt: "Claude Code 官方 release notes，按發布時間倒序，顯示最近 7 天版本。bug-fix 也要顯示。"
+    # chronological mode: bypass Sonnet curation + bypass quality gate.
+    # Pull directly from `filter.sources` feed(s), sort by published_at DESC.
+    # Use this for release-notes-style feeds where "latest" matters more
+    # than "highest importance score".
+    selection_mode: chronological
+    lookback_days: 7
     filter:
-      keywords: ["claude code", "codex", "cursor", "windsurf", "aider", "cline"]
+      sources: [claude-code-releases]
     min_items: 1
 
   - id: ai-knowledge-mgmt
