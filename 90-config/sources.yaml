@@ -57,6 +57,40 @@ sources:
     tier: 2
     source_weight: 0.7
 
+  # ─── Tier 1: practitioner deep-dives (lessons-learned / engineering) ──
+  - name: eugene-yan
+    kind: rss
+    url: https://eugeneyan.com/rss/
+    tier: 1
+    source_weight: 0.9
+  - name: hamel-husain
+    kind: rss
+    url: https://hamel.dev/index.xml
+    tier: 1
+    source_weight: 0.9
+  - name: chip-huyen
+    kind: rss
+    url: https://huyenchip.com/feed.xml
+    tier: 1
+    source_weight: 0.9
+  - name: lilian-weng
+    kind: rss
+    url: https://lilianweng.github.io/index.xml
+    tier: 1
+    source_weight: 0.9
+  - name: sebastian-raschka
+    kind: rss
+    url: https://magazine.sebastianraschka.com/feed
+    tier: 1
+    source_weight: 0.85
+
+  # ─── Tier 2: additional first-party AI labs / publications ──────────
+  - name: the-gradient
+    kind: rss
+    url: https://thegradient.pub/rss/
+    tier: 2
+    source_weight: 0.6
+
   # ─── Tier 1: InfoQ (high-signal engineering journalism) ────────────
   - name: infoq-main
     kind: rss
@@ -86,11 +120,16 @@ sources:
     url: https://towardsdatascience.com/feed
     tier: 2
     source_weight: 0.6
-  - name: medium-tag-ai
-    kind: rss
-    url: https://medium.com/feed/tag/artificial-intelligence
-    tier: 2
-    source_weight: 0.5
+  # disabled: medium-tag-ai is open to any author posting `ai`-tagged content,
+  # which is heavily polluted with Persian "شماره خاله" spam + listicles. The
+  # Arabic-script filter in rss.py blocks the spam, but the remaining items are
+  # mostly low-quality clickbait. medium-tag-llm / medium-tag-claude cover the
+  # actual AI signal from Medium.
+  # - name: medium-tag-ai
+  #   kind: rss
+  #   url: https://medium.com/feed/tag/artificial-intelligence
+  #   tier: 2
+  #   source_weight: 0.5
   - name: medium-tag-llm
     kind: rss
     url: https://medium.com/feed/tag/large-language-models
@@ -101,11 +140,14 @@ sources:
     url: https://medium.com/feed/tag/claude
     tier: 2
     source_weight: 0.7
-  - name: medium-stackademic
-    kind: rss
-    url: https://medium.com/feed/stackademic
-    tier: 2
-    source_weight: 0.5
+  # disabled: medium-stackademic is mostly listicles ("10 things you should
+  # know about X") that contribute noise to the rollup without enough signal
+  # to justify a Haiku call.
+  # - name: medium-stackademic
+  #   kind: rss
+  #   url: https://medium.com/feed/stackademic
+  #   tier: 2
+  #   source_weight: 0.5
 
   # ─── Tier 2: community viral signal (Reddit) ────────────────────────
   - name: reddit-localllama

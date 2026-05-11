@@ -1,0 +1,18 @@
+---
+id: inbox_d5f05951
+source: reddit-localllama
+source_type: rss
+url: "https://www.reddit.com/r/LocalLLaMA/comments/1t9lbcm/ran_some_llamacpp_rpc_test_to_see_if_its_worth_it/"
+author: "/u/lemondrops9"
+published_at: 2026-05-10T22:43:59+00:00
+fetched_at: 2026-05-11T01:50:43.425042+00:00
+content_hash: "17feeaea679ff02f27a144731f3a83d8bbcf1744f670d944e5a0fe06a9573225"
+lang: en
+caption_quality: None
+raw: true
+topics: []
+---
+
+# Ran some Llama.cpp RPC test to see if its worth it. And if 10Gbe needed.
+
+Let me first say I am not doing anything with parallelism so these benchmarks and tests are not for you. That said if your hobbyist like me that is left wondering if can I use the GPUs my other PCs then I have some answers and but I'm still learning. There is probably a better config for Llama.cpp but haven't see any huge gains, in fact flash attention seems to slow things down a bit so I didn't test with on. Also I'm sure if someone has better than consumer level networking they could get their latency down more which should improve things. I just don't have that kind of hardware. On my main AI PC (see gpu details below) as the main for these tests. The 2nd PC has a 5070 and 3080 I tested this PC on WIndows 11, WSL, and Native Linux. And for fun one go around with a 3rd PC with a 5060ti 16gb. Here is the results. I did double check to be sure the RPC server was in fact being used on each run. Start off with the main PC only as a control to see how RPC does work. You can see my config and hardware used. For some reason I didn't need to rearrange my gpu order for the llama.bench to work good. All my test this PC is the main and is running Linux Mint with Nvidia driver 590.48.0.1 with Cuda toolkit 13.1 on a 2.5gbe connection. Edit; In case people don't want to math. 120GB of Vram on main, 22GB on 2nd PC, and 16GB on 3rd PC. edit2: When watching the network it bounced between 3-10.8MBps for the most part but did peak out at 22MBps a few times very quickly. Control This is the 2nd PC is running native Linux on 2.5gbe connection. 2nd PC is running 5070 &amp; 3080 Next is the same setup but with a 1gbe connection. https://preview.redd.it/o877jcagxd0h1.png?width=1268&amp;format=png&amp;auto=webp&amp;s=f8298f9d0faa4653e200c70fcbc715a051e5619a Windows 11 595 Cuda toolkit 13.1 2.5gbe connection.. 2nd PC is running 5070 &amp; 3080 WSL with Nvidia 595, Cuda toolkit 13.1. 2.5gbe connection 5070 &amp; 3080 Same as above but used a 1gbe connection. https://preview.redd.it/vhl1ujsvyd0h1.png?width=1246&amp;format=png&amp;auto=webp&amp;s=fdb0d6f52f7010a3434497972effe94561119323 Sill using WSL, back on 2.5gbe but using only the 3080 3080 only Same specs but only the 5070 this time around. 5070 only Same as above but on a 1gbe connection. 5070 only - 1gbe connection Finally thought I would throw a 3rd PC into the mix. The 2nd PC is running both gpus in native Linux for this test. The 3rd PC is running Windows 11 with a 5060ti 16gb on a 2.5gbe connection. https://preview.redd.it/xcdbzm1szd0h1.png?width=1278&amp;format=png&amp;auto=webp&amp;s=c8d8f79a7c5fcc3e535c03379a555c8dd4090e6e I don't know if the Windows issue is because the 3080 is running as the primary for Windows. But I've had a lot of weird issues with Windows. The main take away after testing is RPC is quite viable at least with a smaller context and a lot better when both running Linux. I'm waiting for some parts so I can add the 5060ti to the 2nd PC for larger context and I'm curious how it might scale up from here. Oh and on a side note I did have an issue with Linux because it installed a generic network driver. I was getting pings around 1.5-3ms but this was fixed before the tests. &#32; submitted by &#32; /u/lemondrops9 [link] &#32; [comments]

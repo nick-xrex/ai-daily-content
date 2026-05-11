@@ -5,6 +5,12 @@ channels:
   - id: UC6t1O76G0jYXOAoYCm153dA
     name: Lenny's Podcast
     tier: 1
+  - id: UCXUPKJO5MZQN11PqgIvyuvQ
+    name: Andrej Karpathy
+    tier: 1
+  - id: UCZHmQk67mSJgfCCTn7xBfew
+    name: Yannic Kilcher
+    tier: 2
 
 # Duration filter: skip super-short (ads) and super-long (all-day conf recordings)
 min_duration_sec: 180

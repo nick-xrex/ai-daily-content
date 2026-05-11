@@ -96,7 +96,7 @@ columns:
 
   - id: blockchain-crypto
     display_name: "⛓️ 區塊鏈 / Web3"
-    prompt: "區塊鏈、加密貨幣、Web3：公鏈動態（Ethereum/Solana/Bitcoin L2）、L2（Arbitrum/Optimism/Base）、DeFi protocols（lending/DEX/derivatives）、MEV、validator economics、on-chain data、token 經濟、NFT、DAO、Web3 infrastructure、restaking、RWA tokenization。AI 與區塊鏈的交集（on-chain agents、TEE、decentralized AI）優先。"
+    prompt: "**只**收明確涉及以下主題的內容：公鏈動態（Bitcoin / Ethereum / Solana / L2）、smart contract、DeFi protocol、MEV、validator / staking economics、on-chain data 分析、token 經濟學、NFT、DAO、stablecoin issuance、RWA tokenization、Web3 wallet。沒有符合 → 整個 column 寧可空白也不要硬塞。\n\n**❌ 絕對禁收**（即使候選文章標題或 summary 含相關關鍵字）：\n- ML model 的 tokenizer / embedding / NLP — 跟 crypto tokenization / RWA tokenization **完全無關**\n- AI agent / LLM agent / coding agent — 除非該 agent 主要任務是執行 on-chain transaction、與 smart contract 互動，否則屬於 AI Flow column\n- 公司名巧合（CyberAgent、Crypto.com 以外提到 crypto 字的廣告/AI 公司）— 看的是文章主題不是公司名\n- 任何「企業導入 ChatGPT / Codex」案例 — 那是企業導入 AI column\n- 純 AI 安全研究（即使對加密資產可能有間接影響）— 屬於 AI 安全 column\n\n判定標準：問自己「這篇文章如果不提任何 AI / ML，剩下的內容還跟區塊鏈直接相關嗎？」如果答案是不，就不要收。"
     filter:
       keywords: [
         "blockchain", "crypto", "bitcoin", "ethereum", "solana",
@@ -136,6 +136,38 @@ columns:
     filter:
       keywords: ["security", "exploit", "jailbreak", "red team", "adversarial",
                  "prompt injection", "supply chain", "fraud", "scam"]
+    min_items: 1
+
+  - id: ai-flow-adoption
+    display_name: "🛤️ AI Flow 導入心得 / 技術分享"
+    prompt: "工程師 / 團隊把 AI 真正導入工作流（dev workflow / customer support / data pipeline / content / coding agent）的**親身經歷**：\n- How we built X with [Claude / Codex / Cursor / agents] — 含實際碰到的坑、資料流、prompt 演進、cost 觀察\n- AI workflow retrospective / postmortem / lessons learned — 「我們花了 3 個月做這個，這些走過頭、那些沒預期到」\n- Tooling integration 心得：MCP server 建構、IDE plugin、CI 自動化、agent orchestration 真實落地\n- Productivity case study：1 人 / 小團隊用 AI 達成了平常 N 倍的事，配可量化的指標\n- 短影片 / 演講分享（YouTube / podcast）裡面有具體 how、不只是 hype\n忽略單純的 product announcement、純 tutorial 文（除非帶實作心得）。優先 first-person 視角。"
+    filter:
+      keywords: [
+        # English — implementation / lessons / sharing
+        "how we built", "how i built", "lessons learned", "lessons from",
+        "retrospective", "postmortem", "post mortem", "case study",
+        "journey", "behind the scenes", "deep dive into",
+        "real world", "in production", "in practice",
+        "what we learned", "what i learned", "year of using",
+        "month with", "weeks with", "switching from",
+        "rebuilding", "rewrote", "ported", "migrating to",
+        "developer experience", "dx",
+        "ai adoption", "ai integration", "ai workflow",
+        "agent workflow", "agent orchestration", "agentic workflow",
+        "production agent", "shipping agent", "agent in production",
+        "mcp server", "internal tool", "automation",
+        "reflections", "review of", "after using",
+        "playbook", "runbook", "team adopted",
+        # Chinese — 心得 / 經驗 / 導入
+        "心得", "經驗", "經驗談", "感想", "回顧", "復盤", "復盘",
+        "踩坑", "坑點", "教訓", "走過的坑",
+        "導入", "落地", "上線", "實戰", "實作", "實踐", "上手",
+        "我如何", "我們如何", "我用", "我們用",
+        "親身", "親自", "親手", "親身體驗",
+        "上手指南", "從零開始", "從 0 到 1", "從 0 到",
+        "真實", "真實案例", "實際應用",
+        "案例分享", "技術分享", "經驗分享", "實作分享"
+      ]
     min_items: 1
 
   # Add your own below. Example scaffolds (uncomment + customize):

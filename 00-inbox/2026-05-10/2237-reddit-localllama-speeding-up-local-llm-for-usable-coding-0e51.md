@@ -1,0 +1,18 @@
+---
+id: inbox_870363b5
+source: reddit-localllama
+source_type: rss
+url: "https://www.reddit.com/r/LocalLLaMA/comments/1t96kfh/speeding_up_local_llm_for_usable_coding_agent/"
+author: "/u/CodProfessional3712"
+published_at: 2026-05-10T13:11:42+00:00
+fetched_at: 2026-05-10T22:37:14.492725+00:00
+content_hash: "0e5112e4929344f0d9604ecf6c4eeb5a9c0abb120e0087e8a99e3b67dce00e44"
+lang: en
+caption_quality: None
+raw: true
+topics: []
+---
+
+# Speeding up local LLM for usable coding agent
+
+TL;DR: Qwen 3.6 35B-A3B (Q4_K_M) is running slow at around 9 t/s with 72% filled context (36147 tokens window) and a total response time of 77s including prefill and token generation. Ran this using LM Studio on Windows with the attached image settings, on a 5060 Ti (16GB VRAM) + 32GB system RAM. I don't consider this performance great for my planned coding agent use case, so how can I speed this up? If I can't meaningfully speed it up, what other still-useful, faster LLMs do you suggest for my hardware specs? Hello! As I see prices becoming tighter around cloud LLMs, I decided to look into local AI coding as a backup in case of a cloud LLM &quot;apocalypse&quot; or whenever I need to work with critical private software (I'm aware AI coding agents shouldn't be completely trusted around such things, I know the precautions to take). I have a 5060 Ti (16GB VRAM) + 32 GB system RAM. To test if my hardware is capable of hosting a competitive local AI, I decided to load Qwen 3.6 35B-A3B into LM Studio, which uses a llama.cpp backend. Loading it with around 32K context window, it runs at a decent speed of 17 t/s with just a simple &quot;Hi&quot; prompt. However, if you've used coding agents before, you'll know they often come with a hefty system prompt on top of the code that's shoved into the context window, so I need to test if the LLM is usable at high context load. I used 4-bit quantization for KV cache, why? I've read online that TurboQuant's speed advantage is not too different from 4-bit KV Cache quantization (space gains are very much real though), so I decided to triage that first using LM Studio's easy setup. I gave it a chunk of Frankenstein's text from Project Gutenberg to fill its context to 72%, it took 77s to generate a response, with a decent chunk of it being in the &quot;Processing&quot; of the prompt (I assume this is the &quot;prefill&quot;, which comes before token generation itself). Token generation speed was 9 t/s. The issue here is that speed is obviously not the best, which does not bode well for coding agents, where you're meant to iterate quickly. Better to fail fast with less capable agents so you can steer them better while knowing their limitations. I was wondering if you could give me insight into how to speed up this LLM or if this version of Qwen is simply out of the league for my hardware specs. If it's out of my league, what usable coding LLMs would you recommend for my hardware? I know &quot;usable&quot; may not be specific, so I mean something like 90%-80% of what cloud agents can do or at the very least what the Qwen model I already tested can do. For more details on how I'm running this particular model, see the image I've attached. It's my LM Studio configuration, not exactly a terminal command setup. If running the llama.cpp backend without the LM Studio frontend offers a better speed-up, please let me know! I'm running this on Windows. LM Studio config, Windows, 5060 Ti (16GB VRAM) + 32 GB RAM &#32; submitted by &#32; /u/CodProfessional3712 [link] &#32; [comments]
