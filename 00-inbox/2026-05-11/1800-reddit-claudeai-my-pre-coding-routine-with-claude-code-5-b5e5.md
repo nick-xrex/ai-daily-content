@@ -1,0 +1,18 @@
+---
+id: inbox_236f354d
+source: reddit-claudeai
+source_type: rss
+url: "https://www.reddit.com/r/ClaudeAI/comments/1ta3a9x/my_precoding_routine_with_claude_code_5_mcp/"
+author: "/u/studiomeyer_io"
+published_at: 2026-05-11T13:26:49+00:00
+fetched_at: 2026-05-11T18:00:40.249203+00:00
+content_hash: "b5e5e3dc13763e049d81bff5da063fc974c9ccb4d8c4eda855dc607bdf544c13"
+lang: en
+caption_quality: None
+raw: true
+topics: []
+---
+
+# My pre-coding routine with Claude Code, 5 MCP servers before I write a single line
+
+Been running this routine for months now. Started because I was losing too much time to Claude just guessing. Halluzinated class names, outdated SDK methods, advice that didn't match the codebase I was actually in. So I built a routine I run before I let it write anything. Takes maybe 60-90 seconds. Saved me hundreds of hours by now. Start the session and load memory. A memory MCP carries context across sessions. Last sprint, open decisions, recent learnings, why we picked X over Y three months ago. Without this, every session starts cold and Claude rebuilds my reasoning from scratch, usually wrong. Index the codebase as a graph. A codebase-memory server builds a knowledge graph of the repo. Functions, callers, dependencies, cycles. When Claude needs to know what calls processOrder, it queries the graph instead of grepping blind. One tool call replaces dozens of file reads. Search with Tavily for current practice. Before any non-trivial decision I let it search what people are actually doing right now. Training data is old. Best practices from a year ago aren't always still best practices. Clean answer with sources, not a wall of SEO spam. Load Context7 for library docs. Context7 fetches current docs for whatever library I'm about to touch. Anthropic SDK, Next.js, Prisma, whatever. The training cutoff means the model cheerfully invents API methods that got renamed two versions ago. Loading the actual current docs ended that whole category of bug months ago. Now write code. At this point Claude has memory, codebase structure, current ecosystem context, and accurate library docs. The output is dramatically different. Less &quot;let me try this and see&quot;, more &quot;based on the call graph and the v5 docs, the change goes here&quot;. Hooks are the other piece nobody talks about. The single most important one for me is a read-before-edit guard. It refuses any edit on a file the session hasn't actually read first. Yes, it costs extra tokens up front because the model has to load the file properly instead of guessing what's in it. Those extra tokens are nothing compared to the tokens you burn cleaning up edits that were made blind. Same idea with a safety guard that blocks destructive commands, and a hook that triggers a re-index after edits so the graph stays in sync. And then the loop closes. Whatever worked goes back into memory. Decisions, patterns, traps we hit, fixes that stuck. Next session starts with all of that already loaded. The system gets sharper every week, not because the model changed, but because the context around it keeps compounding. The bigger pattern I figured out over the past few months is that I stopped treating the model as the source of knowledge. The model is the orchestrator. The MCP servers and the hooks are the system. Memory remembers, the graph knows the code, search knows the present, Context7 knows the docs, hooks keep the model honest. The model just connects them. Curious what other people stack before they start a session. Anyone doing this with different servers or hooks? &#32; submitted by &#32; /u/studiomeyer_io [link] &#32; [comments]
