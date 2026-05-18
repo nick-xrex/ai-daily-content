@@ -155,11 +155,14 @@ sources:
     url: https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day
     tier: 2
     source_weight: 0.6
-  - name: reddit-claudeai
-    kind: rss
-    url: https://www.reddit.com/r/ClaudeAI/top/.rss?t=day
-    tier: 2
-    source_weight: 0.5
+  # disabled 2026-05-12: short titles + noisy bodies cause Haiku batch JSON
+  # to drop items (id-set mismatch), triggering whole-batch needs_review.
+  # Signal-to-noise too low to justify the reliability cost.
+  # - name: reddit-claudeai
+  #   kind: rss
+  #   url: https://www.reddit.com/r/ClaudeAI/top/.rss?t=day
+  #   tier: 2
+  #   source_weight: 0.5
 
   # ─── Tier 2: Substack subscriptions (user's 'Reads' list) ──────────
   # URLs are best-effort guesses; feedparser silently tolerates 404s so
