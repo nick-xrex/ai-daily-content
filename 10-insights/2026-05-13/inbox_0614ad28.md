@@ -1,0 +1,50 @@
+---
+id: inbox_0614ad28
+date: 2026-05-13
+source_ref: "[[00-inbox/.../inbox_0614ad28]]"
+title: "MI50s Qwen 3.6 27B @52.8 tps TG @1569 tps PP (no MTP, no Quant)"
+url: https://www.reddit.com/r/LocalLLaMA/comments/1tc9j6u/mi50s_qwen_36_27b_528_tps_tg_1569_tps_pp_no_mtp/
+source: reddit-localllama
+published_at: 2026-05-13T19:08:24+00:00
+fetched_at: 2026-05-19T02:40:36.980475+00:00
+model: claude-haiku-4-5
+tokens_in: 0
+tokens_out: 0
+summary_zh: "用戶在舊版 AMD MI50s 卡上運行 Qwen 3.6 27B 模型，全精度無量化下達成 52.8 tok/s（token generation）和 1569 tok/s（prefill）。使用 vllm fork v0.20.1 搭配 rocm7.2.1，並提供完整 Docker 配置和優化參數。該成果展示舊硬體仍可有效運行大規模模型，為成本受限的使用者提供參考方案。"
+key_points:
+  - "Qwen 3.6 27B 在 AMD MI50s 上達成 52.8 tok/s（全精度）及 1569 tok/s 預填充"
+  - "vllm fork v0.20.1 + rocm7.2.1 支援 TP8 配置（降速至 34 tok/s）"
+  - "完整的 Docker 命令和優化參數可直接套用"
+tags: [qwen-3.6, amd-mi50s, vllm, rocm, inference-performance]
+topics: []
+importance: 4
+novelty: 4
+insight_quality: 4
+insight_type: data-point
+deep_dive_candidate: false
+deep_dive_approved: false
+---
+
+## MI50s Qwen 3.6 27B @52.8 tps TG @1569 tps PP (no MTP, no Quant)
+
+用戶在舊版 AMD MI50s 卡上運行 Qwen 3.6 27B 模型，全精度無量化下達成 52.8 tok/s（token generation）和 1569 tok/s（prefill）。使用 vllm fork v0.20.1 搭配 rocm7.2.1，並提供完整 Docker 配置和優化參數。該成果展示舊硬體仍可有效運行大規模模型，為成本受限的使用者提供參考方案。
+
+### 重點
+- Qwen 3.6 27B 在 AMD MI50s 上達成 52.8 tok/s（全精度）及 1569 tok/s 預填充
+- vllm fork v0.20.1 + rocm7.2.1 支援 TP8 配置（降速至 34 tok/s）
+- 完整的 Docker 命令和優化參數可直接套用
+
+**原文：** [reddit-localllama](https://www.reddit.com/r/LocalLLaMA/comments/1tc9j6u/mi50s_qwen_36_27b_528_tps_tg_1569_tps_pp_no_mtp/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# MI50s Qwen 3.6 27B @52.8 tps TG @1569 tps PP (no MTP, no Quant)
+
+TL;DR Results from the title are for single inference with 2 prompt of 1k and 15k tokens. So no MTP (as it’s slower for big prompt), no DFlash (working too but slower for big prompt), no quant used (full precision wanted) and the results are pretty good for a 2018 card. (Bench has been done with TP8, but the model not quantized fits also with TP2 and works pretty fast too, around 34 tps TG) IMO, fully usable with Claude Code or Hermes or any other agentic harness. I think there’s still room to go higher (by updating the software &amp; hardware stacks, eg. use of pcie switch with lower latency, more optimized dflash/mtp without overhead for rocm/gfx906, etc) Inference engine used (vllm fork v0.20.1 with rocm7.2.1) : https://github.com/ai-infos/vllm-gfx906-mobydick/tree/main Huggingface Quants used: Qwen/Qwen3.6-27B Main commands to run : docker run -it --name vllm-gfx906-mobydick -v /llm:/llm --network host --device=/dev/kfd --device=/dev/dri --group-add video --group-add $(getent group render | cut -d: -f3) --ipc=host aiinfos/ vllm-gfx906-mobydick:v0.20.1rc0.x-rocm7.2.1-pytorch2.11.0 FLASH_ATTENTION_TRITON_AMD_ENABLE=&quot;TRUE&quot; VLLM_LOGGING_LEVEL=DEBUG vllm serve \ /llm/models/Qwen3.6-27B \ --served-model-name Qwen3.6-27B \ --dtype float16 \ --max-model-len auto \ --max-num-batched-tokens 8192 \ --block-size 64 \ --gpu-memory-utilization 0.98 \ --enable-auto-tool-choice \ --tool-call-parser qwen3_coder \ --reasoning-parser qwen3 \ --mm-processor-cache-gb 1 \ --limit-mm-per-prompt.image 1 --limit-mm-per-prompt.video 1 --skip-mm-profiling \ --default-chat-template-kwargs '{&quot;min_p&quot;: 0.0, &quot;presence_penalty&quot;: 0.0, &quot;repetition_penalty&quot;: 1.0}' \ --tensor-parallel-size 8 \ --host 0.0.0.0 \ --port 8000 2&gt;&amp;1 | tee log.txt FLASH_ATTENTION_TRITON_AMD_ENABLE=&quot;TRUE&quot; VLLM_LOGGING_LEVEL=DEBUG vllm bench serve \ --dataset-name random \ --random-input-len 10000 \ --random-output-len 1000 \ --num-prompts 4 \ --request-rate 10000 \ --ignore-eos 2&gt;&amp;1 | tee logb.txt RESULTS: ============ Serving Benchmark Result ============ Successful requests: 4 Failed requests: 0 Request rate configured (RPS): 10000.00 Benchmark duration (s): 121.54 Total input tokens: 40000 Total generated tokens: 4000 Request throughput (req/s): 0.03 Output token throughput (tok/s): 32.91 Peak output token throughput (tok/s): 56.00 Peak concurrent requests: 4.00 Total token throughput (tok/s): 362.03 ---------------Time to First Token---------------- Mean TTFT (ms): 32874.56 Median TTFT (ms): 35622.63 P99 TTFT (ms): 47843.84 -----Time per Output Token (excl. 1st token)------ Mean TPOT (ms): 88.66 Median TPOT (ms): 85.94 P99 TPOT (ms): 108.67 ---------------Inter-token Latency---------------- Mean ITL (ms): 88.66 Median ITL (ms): 73.61 P99 ITL (ms): 74.26 ================================================== &#32; submitted by &#32; /u/ai-infos [link] &#32; [comments]
+
+</details>

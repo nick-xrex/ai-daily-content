@@ -1,0 +1,50 @@
+---
+id: inbox_0c850d87
+date: 2026-05-18
+source_ref: "[[00-inbox/.../inbox_0c850d87]]"
+title: "Benchmarking the new b9200 update: Optimizing Qwen 3.6 27B mtp for Hermes Agent on a single RTX 3090"
+url: https://www.reddit.com/r/LocalLLaMA/comments/1tg6j9u/benchmarking_the_new_b9200_update_optimizing_qwen/
+source: reddit-localllama
+published_at: 2026-05-18T00:20:20+00:00
+fetched_at: 2026-05-19T02:36:18.274395+00:00
+model: claude-haiku-4-5
+tokens_in: 0
+tokens_out: 0
+summary_zh: "llama.cpp b9200 修復 batch 中 logits 複製開銷，配合激進參數調優（--parallel 1, --spec-draft-n-max 3）實現 MTP agent 1.5-1.8 倍加速。RTX 3090 上 Qwen 3.6-27B MTP 生成速度從 9.5 t/s 升至 13.69 t/s（重上下文），短任務 27.44 t/s；64K 上下文、200W 功耗達成 ~39 t/s 的極限效率。"
+key_points:
+  - "b9200 update 修復 logits 複製開銷，記憶體流量優化明顯"
+  - "MTP agent 優化：--parallel 1, --spec-draft-n-max 3 達 92.9% 接受率"
+  - "RTX 3090 27B model 於 200W 下達 39 t/s 生成（64K 上下文）"
+tags: [mtp, llama-cpp, qwen, agent-optimization, benchmarking]
+topics: []
+importance: 4
+novelty: 4
+insight_quality: 5
+insight_type: framework
+deep_dive_candidate: false
+deep_dive_approved: false
+---
+
+## Benchmarking the new b9200 update: Optimizing Qwen 3.6 27B mtp for Hermes Agent on a single RTX 3090
+
+llama.cpp b9200 修復 batch 中 logits 複製開銷，配合激進參數調優（--parallel 1, --spec-draft-n-max 3）實現 MTP agent 1.5-1.8 倍加速。RTX 3090 上 Qwen 3.6-27B MTP 生成速度從 9.5 t/s 升至 13.69 t/s（重上下文），短任務 27.44 t/s；64K 上下文、200W 功耗達成 ~39 t/s 的極限效率。
+
+### 重點
+- b9200 update 修復 logits 複製開銷，記憶體流量優化明顯
+- MTP agent 優化：--parallel 1, --spec-draft-n-max 3 達 92.9% 接受率
+- RTX 3090 27B model 於 200W 下達 39 t/s 生成（64K 上下文）
+
+**原文：** [reddit-localllama](https://www.reddit.com/r/LocalLLaMA/comments/1tg6j9u/benchmarking_the_new_b9200_update_optimizing_qwen/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Benchmarking the new b9200 update: Optimizing Qwen 3.6 27B mtp for Hermes Agent on a single RTX 3090
+
+UPDATED (POST b9200) ------------------------------------------------------------------------------- important Update: I never mentioned my power situation and that's probably what's been throwing everyone off comparing numbers. My VRM thermal pads are cooked right now (got the card right before the AI boom refurb but $650...so yeah), so I'm hard-capped at 55% board power, sometimes dropping to 42%. The memory subsystem alone pulls ~104W during generation, which basically eats my whole budget and starves the core down to 500-800mhz. I'm sure I'd hit 50ish+ t/s no problem, but my Memories would actually fry before I get around to repasting. (I have everything just lazy lol and am fine running for now at these reduced settings for my gpu). Also I have this posted in the r/hermesagent with some tweaks mentioned there with suggestions to drop to --spec-draft-n-max 2 That turned out to be the absolute sweet spot for strict agent syntax. My draft acceptance rate shot up to 92.9%, boosting generation to ~39 t/s even while heavily power-starved. also a suggestion to switch to q4_0 KV cache to see it would free up power budget for the core. It cut the memory power draw nearly in half (down to ~56W) and boosted prompt ingestion from 604 t/s to 728 t/s while dropping hot spot temperatures significantly. 55% power 400MHz range, the processor doesn't have the compute performance to handle the continuous on-the-fly dequantization math quickly... So for my current hardware constraint q4_0 with a q8_0 cache at a 55% power limit gives me the best overall performance pocket (~39 t/s gen). If I run non-MTP models, I can bump the core up a bit, but I rarely push past a 50% power target anyway. Getting ~39 t/s on a dense 27B model at 64K context under 200W is still an incredible efficiency win. ----------------------------------------------------------------------------- Okay, here is the updated version using the new Qwen 3.6 27B mtp gguf from Unsloth, running it as the backend for the hermes agent. While dialing it in, I noticed that the currently recommended Unsloth mtp flags actually bottleneck performance and tank draft acceptance rates for strict, multi-turn agentic workflows. Pairing a custom config with today's brand new llama.cpp b9200 release — which specifically fixes mtp memory traffic overhead — completely turns that around. Hardware/Software * RTX 3090 (24GB VRAM) — currently undervolted to keep temps down * Ryzen 7 5700G / 64GB * Qwen3.6-27B-IQ4_NL.gguf * llama-server (b9200+ compiled from source, commit #23234) * hermes agent (64K context) max to limit spillover The problem with default mtp settings Running the standard recommended mtp flags (--spec-draft-n-max 6 and --spec-draft-p-min 0.75) gave poor results for agentic loops. Generation speeds sat around 7–8 t/s, and the mtp draft acceptance rate hovered around 22–26%. Agent workflows are rigid. A 6-token lookahead frequently guesses the wrong punctuation, the main model rejects the draft, and the GPU throws out the math and recalculates — completely negating the mtp speed boost. Without explicitly declaring parallel slots, llama-server also defaults to 4, eating up memory bandwidth managing unused context slots. The fix and the b9200 boost For agent workflows on a 24GB card, limit to a single slot, drop the lookahead to 3, and remove the p-min threshold so it doesn't hesitate on rigid syntax. Combined with the b9200 release — which stops copying the full logits for every token in the batch during prompt processing — the optimized launch command looks like this: .\build\bin\Release\llama-server.exe ^ -m D:\models\Qwen3.6-27B-IQ4_NL.gguf ^ --spec-type draft-mtp ^ --spec-draft-n-max 3 ^ --ctx-size 65536 ^ --parallel 1 ^ --flash-attn on ^ --cache-type-k q8_0 ^ --cache-type-v q8_0 ^ --port 8081 Results (Prior to the update vs. Post-b9200) Prior to the update (but with the optimized flags): * Prompt processing sat around ~560 t/s. ***FIXED NUMBERS...*** * Token generation hit 17.06 t/s on short tasks and ~9.5 t/s during heavy context reasoning loops. * Draft acceptance rate climbed to 77% (proving a shorter lookahead works better for strict formatting). After the b9200 update: * Prompt processing stabilized around ~611 t/s. **Updated Numbers** The real magic of the memory traffic fix paired with --parallel 1 is that it unclogs the VRAM bus so the text generation phase can actually breathe. * Token generation hit a peak of 27.44 t/s on short tasks and stabilized at a highly usable 13.69 t/s during heavy context loops where the agent is actively switching between tool calls and main memory. * Draft acceptance rate maintained a solid ~70% on standard turns. When your VRAM bus isn't clogged by ghost parallel slots or 6-token lookahead rejections, an undervolted 3090 can still push nearly 30 t/s on a dense 27B model! &#32; submitted by &#32; /u/swizzcheezegoudaSWFA [link] &#32; [comments]
+
+</details>

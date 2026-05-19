@@ -54,6 +54,84 @@ graph LR
 
 ---
 
+
+
+<!-- deep-analysis:begin -->
+## 📌 摘要 (TL;DR)
+
+- Cactus 團隊開源 **Needle**：26M 參數函式呼叫（function calling）模型，從 Gemini 蒸餾而來，MIT 授權
+- 消費級裝置實測：預填充（prefill）6000 tok/s、解碼（decode）1200 tok/s，目標跑在手機、手錶、眼鏡
+- 架構創新：**純注意力網路（Simple Attention Networks）**，整個模型只有 attention 與 gating，**完全移除 MLP / FFN 層**
+- 核心洞察：工具呼叫本質是「檢索-組裝」（match tool name、抽參數、輸出 JSON），不是推理 → 不需要 FFN 存事實
+- 訓練成本極低：16 個 TPU v6e 上預訓練 200B token（27 小時）+ 2B token Gemini 合成資料微調（45 分鐘）
+- 單次函式呼叫（single-shot）勝過 FunctionGemma-270M、Qwen-0.6B、Granite-350M、LFM2.5-350M
+
+## 🎯 核心概念
+
+- **函式呼叫 / 工具呼叫** (function calling / tool use)：模型把使用者意圖轉成結構化 JSON（工具名 + 參數）
+- **純注意力網路** (Simple Attention Networks, SAN)：移除 Transformer 的 FFN/MLP 層，只留 attention + gating
+- **FFN** (Feed-Forward Network)：Transformer 中存事實知識的 MLP 區塊，傳統占大半參數
+- **單次呼叫** (single-shot)：一輪對話內完成工具選擇與參數抽取，非多輪 agent loop
+
+## 📖 整理分析
+
+### 1. 動機：手機端 agent 模型空缺
+
+Henry（Cactus 創辦人）觀察到業界投入到「跑在便宜手機上的 agent 模型」太少。多數 function calling 模型在 270M~600M 級別（FunctionGemma、Qwen、Granite、LFM2.5），對手錶、眼鏡等穿戴裝置仍太重。Needle 把參數壓到 26M，比現有最小選項再小 10 倍。
+
+### 2. 關鍵洞察：工具呼叫 ≠ 推理
+
+團隊主張工具呼叫的本質是 **retrieval-and-assembly**：把 query 對到 tool name、抽出參數值、組成 JSON。這操作只需要 cross-attention 把 input 中的 token 拷貝/重組到 output，**不需要 FFN 存的世界知識**。如果工具描述已在 input 中提供，模型沒必要用 FFN 權重去記憶這些事實。
+
+### 3. 架構：移除 MLP 的純注意力網路
+
+Needle 整個模型只剩 **attention + gating**，沒有任何 MLP 層。傳統 Transformer 中 FFN 通常占 60-70% 參數；移除後同樣的參數預算可堆更多 attention 容量，且推理時 memory bandwidth 壓力顯著下降，這是達到 6000 tok/s prefill 的關鍵。
+
+### 4. 訓練 pipeline
+
+- **預訓練**：200B token，16 顆 TPU v6e，27 小時
+- **後訓練**：2B token 函式呼叫合成資料，45 分鐘
+- **資料合成**：用 Gemini 生成涵蓋 15 個工具類別（timer、messaging、navigation、smart home 等）的 function calling 樣本
+
+總算力極低，顯示小模型 + 高品質合成資料的可行性。
+
+### 5. Benchmark 與限制
+
+Needle 在 **single-shot** function calling 上超越 FunctionGemma-270M、Qwen-0.6B、Granite-350M、LFM2.5-350M。但團隊明確聲明：那些模型**容量更大**，在多輪對話、開放式對談場景仍勝出。Needle 是專用單發工具呼叫器，不是通用聊天模型。
+
+### 6. 推廣假設：FFN 對 RAG 類任務皆可省
+
+團隊主張「移除 FFN」這個發現可推廣到任何**模型能取得外部結構化知識**的任務——RAG、tool use、retrieval-augmented generation 都適用。若事實在 input 中，FFN 權重就是浪費。這是比 Needle 本身更大的架構主張，需更多後續驗證。
+
+## 🧠 Mindmap
+
+```mermaid
+mindmap
+  root((Needle 26M))
+    動機
+      手機/手錶/眼鏡 agent
+      現有模型過大
+    核心洞察
+      工具呼叫=檢索組裝
+      非推理任務
+      FFN 對此無用
+    架構 SAN
+      只有 attention + gating
+      移除所有 MLP
+      6000 prefill / 1200 decode
+    訓練
+      200B token 預訓練 27h
+      2B token Gemini 合成微調 45min
+      16 TPU v6e
+    成果
+      勝 FunctionGemma-270M
+      勝 Qwen-0.6B / Granite-350M
+      僅限 single-shot
+    推廣
+      無 FFN 假設可擴及 RAG
+      事實在 input 即不需 memorize
+```
+<!-- deep-analysis:end -->
 ### 📄 原文內容
 
 <details>
