@@ -150,11 +150,15 @@ sources:
   #   source_weight: 0.5
 
   # ─── Tier 2: community viral signal (Reddit) ────────────────────────
-  - name: reddit-localllama
-    kind: rss
-    url: https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day
-    tier: 2
-    source_weight: 0.6
+  # disabled 2026-05-19: 132 items/7 days, ~80% hardware (GPU benchmarks, RAM
+  # prices, ROCm setup, home-lab inference rigs). User reads digest for
+  # AI/software-engineering signal, not local-LLM hardware tinkering.
+  # Hardware-tag blocklist in digest/llm/rollup.py catches any stragglers.
+  # - name: reddit-localllama
+  #   kind: rss
+  #   url: https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day
+  #   tier: 2
+  #   source_weight: 0.6
   # disabled 2026-05-12: short titles + noisy bodies cause Haiku batch JSON
   # to drop items (id-set mismatch), triggering whole-batch needs_review.
   # Signal-to-noise too low to justify the reliability cost.
