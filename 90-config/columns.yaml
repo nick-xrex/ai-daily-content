@@ -16,17 +16,28 @@
 # Example columns — edit freely. Leave list empty to hide the whole section.
 
 columns:
-  - id: claude-code-updates
-    display_name: "🛠 Claude Code 最新 release"
-    prompt: "Claude Code 官方 release notes，按發布時間倒序，顯示最近 7 天版本。bug-fix 也要顯示。"
+  - id: release-tracker
+    display_name: "🛠 工具版本追蹤 / Release"
+    prompt: "被追蹤工具的官方 release notes，按發布時間倒序，顯示最近 7 天版本。bug-fix 也要顯示。"
     # chronological mode: bypass Sonnet curation + bypass quality gate.
     # Pull directly from `filter.sources` feed(s), sort by published_at DESC.
     # Use this for release-notes-style feeds where "latest" matters more
     # than "highest importance score".
+    #
+    # To track another repo: add an RSS source on its
+    # github.com/OWNER/REPO/releases.atom feed in sources.yaml, then append
+    # that source name below. Each rendered item is prefixed with a repo
+    # label (derived from the source name) so a merged feed stays readable.
     selection_mode: chronological
     lookback_days: 7
+    max_items: 12
     filter:
-      sources: [claude-code-releases]
+      sources:
+        - claude-code-releases
+        - gitnexus-releases
+        - hermes-agent-releases
+        - ecc-releases
+        - ruflo-releases
     min_items: 1
 
   - id: ai-knowledge-mgmt

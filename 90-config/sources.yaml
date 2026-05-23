@@ -23,6 +23,34 @@ sources:
     tier: 1
     source_weight: 1.0
 
+  # ─── Tier 1: tracked tool release feeds ─────────────────────────────
+  # GitHub releases.atom feeds — each entry carries the release notes body,
+  # which Haiku summarizes into "what changed". Surfaced by the
+  # `release-tracker` chronological column. Add a repo here + in that
+  # column's filter.sources to start tracking its versions.
+  - name: gitnexus-releases
+    kind: rss
+    url: https://github.com/abhigyanpatwari/GitNexus/releases.atom
+    tier: 1
+    source_weight: 1.0
+  - name: hermes-agent-releases
+    kind: rss
+    url: https://github.com/nousresearch/hermes-agent/releases.atom
+    tier: 1
+    source_weight: 1.0
+  # affaan-m/everything-claude-code was renamed to affaan-m/ECC; canonical
+  # URL used directly so the feed doesn't depend on a 301 redirect.
+  - name: ecc-releases
+    kind: rss
+    url: https://github.com/affaan-m/ECC/releases.atom
+    tier: 1
+    source_weight: 1.0
+  - name: ruflo-releases
+    kind: rss
+    url: https://github.com/ruvnet/ruflo/releases.atom
+    tier: 1
+    source_weight: 1.0
+
   # ─── Tier 1: other frontier labs ────────────────────────────────────
   - name: deepmind-blog
     kind: rss
