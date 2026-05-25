@@ -38,6 +38,9 @@ columns:
         - hermes-agent-releases
         - ecc-releases
         - ruflo-releases
+        - claude-mem-releases
+        - superpowers-releases
+        - rtk-releases
     min_items: 1
 
   - id: ai-knowledge-mgmt

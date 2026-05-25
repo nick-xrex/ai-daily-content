@@ -50,6 +50,21 @@ sources:
     url: https://github.com/ruvnet/ruflo/releases.atom
     tier: 1
     source_weight: 1.0
+  - name: claude-mem-releases
+    kind: rss
+    url: https://github.com/thedotmack/claude-mem/releases.atom
+    tier: 1
+    source_weight: 1.0
+  - name: superpowers-releases
+    kind: rss
+    url: https://github.com/obra/superpowers/releases.atom
+    tier: 1
+    source_weight: 1.0
+  - name: rtk-releases
+    kind: rss
+    url: https://github.com/rtk-ai/rtk/releases.atom
+    tier: 1
+    source_weight: 1.0
 
   # ─── Tier 1: other frontier labs ────────────────────────────────────
   - name: deepmind-blog
