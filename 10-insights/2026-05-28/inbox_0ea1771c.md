@@ -1,132 +1,49 @@
 ---
-id: inbox_3e446899
-date: 2026-05-27
-source_ref: "[[00-inbox/2026-05-27/2345-gitnexus-releases-release-candidate-v1-6-6-rc-74-9d0a]]"
-title: "Release Candidate v1.6.6-rc.74"
-url: https://github.com/abhigyanpatwari/GitNexus/releases/tag/v1.6.6-rc.74
+id: inbox_0ea1771c
+date: 2026-05-28
+source_ref: "[[00-inbox/2026-05-28/0000-gitnexus-releases-release-candidate-v1-6-6-rc-77-ac26]]"
+title: "Release Candidate v1.6.6-rc.77"
+url: https://github.com/abhigyanpatwari/GitNexus/releases/tag/v1.6.6-rc.77
 source: gitnexus-releases
-published_at: 2026-05-27T06:43:36+00:00
-fetched_at: 2026-05-27T23:50:57.791710+00:00
+published_at: 2026-05-28T05:08:32+00:00
+fetched_at: 2026-05-29T00:05:51.497050+00:00
 model: claude-haiku-4-5
 tokens_in: 0
 tokens_out: 0
-summary_zh: "GitNexus v1.6.6-rc.74 發佈重大更新，核心遷移 KuzuDB 至 LadybugDB v0.15（升至 0.15.2 且移除 segfault workarounds），新增 Phase 4-9 語言感知型別解析系統（支持 nullable 展開、for-loop 型別推論、pattern matching、field/property 型別解析、ACCESSES 邊追蹤）。完整新增 Swift/iOS（含 SPM import 解析）、Kotlin（Spring HTTP patterns）、Ruby（HAS_METHOD 邊、dispatch 表）、PHP 8+/Laravel（Eloquent 模型追蹤）語言支援。基礎設施新增 HTTP embedding 後端（遠端/自託管）、Docker 容器支持、git commit 後自動重新索引（保留 embeddings）。修復 ENOTEMPTY 全局升級錯誤、parse cache 持久化、MCP 平行工具呼叫崩潰、Python enumerate() nested tuple patterns。"
+summary_zh: "GitNexus v1.6.6-rc.77 發布。RC 版本內容同前序，為每日自動化構建。主要功能：HTTP 嵌入後端（支援自託管/遠端）、Docker 部署、完整 Swift/Ruby/PHP/Kotlin 語言支持、LadybugDB v0.15 遷移、Phase 4-9 類型解析、MCP 啟動改進、git commit 後自動重索引。重點修復包含升級時 ENOTEMPTY 錯誤、緩存目錄權限設置、大型倉庫解析崩潰。"
 key_points:
-  - "KuzuDB → LadybugDB v0.15 遷移，@ladybugdb/core 升至 0.15.2，消除 segfault workarounds；git commit 後自動重新索引保留 embeddings 狀態"
-  - "Phase 4-9 漸進式型別解析：④ nullable 展開/for-loop/assignment chains、⑤ chained calls/pattern matching/class-as-receiver、⑥ for-loop Tier 1c/container descriptors (10 語言覆蓋)、⑦ return-aware loop/PHP property iterables、⑧ field/property 型別、⑨ return-type-aware variable binding"
-  - "新增語言完整支援（Swift/Kotlin/Ruby/PHP）及多項 bug 修復（ENOTEMPTY cleanup、user-writable cache dir、parallel MCP tool crash、Python same-dir imports）；HTTP embedding 後端 + Docker 容器化 + index 命令註冊現有索引"
-tags: [gitnexus-release, type-resolution-framework, multi-language-support, database-migration, mcp-improvements]
-topics: [agents.mcp]
-importance: 5
-novelty: 4
-insight_quality: 4
+  - "HTTP 嵌入後端與 Docker 支援，便於自託管和遠端部署"
+  - "從 KuzuDB 遷移至 LadybugDB v0.15，支援 Phase 4-9 類型推斷覆蓋 10+ 語言"
+  - "修復升級流程中的檔案系統錯誤和大型倉庫效能問題"
+tags: [gitnexus, release-candidate, embedding-backend, docker-support]
+topics: []
+importance: 3
+novelty: 1
+insight_quality: 2
 insight_type: announcement
-deep_dive_candidate: true
+deep_dive_candidate: false
 deep_dive_approved: false
 ---
 
-## Release Candidate v1.6.6-rc.74
+## Release Candidate v1.6.6-rc.77
 
-GitNexus v1.6.6-rc.74 發佈重大更新，核心遷移 KuzuDB 至 LadybugDB v0.15（升至 0.15.2 且移除 segfault workarounds），新增 Phase 4-9 語言感知型別解析系統（支持 nullable 展開、for-loop 型別推論、pattern matching、field/property 型別解析、ACCESSES 邊追蹤）。完整新增 Swift/iOS（含 SPM import 解析）、Kotlin（Spring HTTP patterns）、Ruby（HAS_METHOD 邊、dispatch 表）、PHP 8+/Laravel（Eloquent 模型追蹤）語言支援。基礎設施新增 HTTP embedding 後端（遠端/自託管）、Docker 容器支持、git commit 後自動重新索引（保留 embeddings）。修復 ENOTEMPTY 全局升級錯誤、parse cache 持久化、MCP 平行工具呼叫崩潰、Python enumerate() nested tuple patterns。
+GitNexus v1.6.6-rc.77 發布。RC 版本內容同前序，為每日自動化構建。主要功能：HTTP 嵌入後端（支援自託管/遠端）、Docker 部署、完整 Swift/Ruby/PHP/Kotlin 語言支持、LadybugDB v0.15 遷移、Phase 4-9 類型解析、MCP 啟動改進、git commit 後自動重索引。重點修復包含升級時 ENOTEMPTY 錯誤、緩存目錄權限設置、大型倉庫解析崩潰。
 
 ### 重點
-- KuzuDB → LadybugDB v0.15 遷移，@ladybugdb/core 升至 0.15.2，消除 segfault workarounds；git commit 後自動重新索引保留 embeddings 狀態
-- Phase 4-9 漸進式型別解析：④ nullable 展開/for-loop/assignment chains、⑤ chained calls/pattern matching/class-as-receiver、⑥ for-loop Tier 1c/container descriptors (10 語言覆蓋)、⑦ return-aware loop/PHP property iterables、⑧ field/property 型別、⑨ return-type-aware variable binding
-- 新增語言完整支援（Swift/Kotlin/Ruby/PHP）及多項 bug 修復（ENOTEMPTY cleanup、user-writable cache dir、parallel MCP tool crash、Python same-dir imports）；HTTP embedding 後端 + Docker 容器化 + index 命令註冊現有索引
+- HTTP 嵌入後端與 Docker 支援，便於自託管和遠端部署
+- 從 KuzuDB 遷移至 LadybugDB v0.15，支援 Phase 4-9 類型推斷覆蓋 10+ 語言
+- 修復升級流程中的檔案系統錯誤和大型倉庫效能問題
 
-**原文：** [gitnexus-releases](https://github.com/abhigyanpatwari/GitNexus/releases/tag/v1.6.6-rc.74)
+**原文：** [gitnexus-releases](https://github.com/abhigyanpatwari/GitNexus/releases/tag/v1.6.6-rc.77)
 
 ---
 
-
-
-<!-- deep-analysis:begin -->
-## 📌 摘要 (TL;DR)
-
-- GitNexus 發布 v1.6.6-rc.74，可透過 `npm install gitnexus@rc` 取得；source commit `ca3e175`、release commit `a7a5389`，rc 編號 #74。
-- 核心資料庫從 KuzuDB 遷移到 LadybugDB v0.15（PR #275），並升級到 0.15.2 移除原本針對 segfault 的 workaround（PR #374）。
-- 型別解析系統一次補上 Phase 4 到 Phase 9，新增 nullable 展開、for-loop 推論、pattern matching、chained calls、class-as-receiver、return-aware loop、PHP class-property iterables、欄位/屬性型別解析與 `ACCESSES` edge。
-- 完整新增 Swift/iOS（SPM import 解析，PR #94）、Kotlin（Spring HTTP，PR #84）、Ruby（HAS_METHOD edges + dispatch table，PR #111 / #278）、PHP 8+/Laravel（Eloquent 模型追蹤，PR #64）四種語言支援。
-- 基礎設施加入 HTTP embedding 後端（PR #395）、Docker 容器支援（PR #848）、git commit 後自動重新索引並保留 embeddings（PR #205）。
-- 修掉全域升級 `ENOTEMPTY` 錯誤（#843、#846）、大型 repo 的 parse cache 持久化（#1580）、MCP 平行工具呼叫崩潰（#349）、Python `enumerate()` 配 nested tuple pattern 的 for-loop（#356）。
-
-## 🎯 核心概念
-
-- **知識圖譜（knowledge graph）**：GitNexus 把 repo 解析成節點與邊（CALLS、HAS_METHOD、OVERRIDES、ACCESSES 等），供 agent 做 impact analysis。
-- **LadybugDB**：取代 KuzuDB 的嵌入式圖資料庫後端，0.15.2 版本不再需要 segfault workaround。
-- **型別解析（type resolution）Phase 4-9**：跨語言的靜態型別推論流水線，從局部變數 nullable 展開一路推進到 field/property 與容器元素型別。
-- **MCP（Model Context Protocol）**：GitNexus 用 MCP server 把圖譜查詢能力暴露給 Claude Code、Cursor 等 coding agent。
-- **ACCESSES edge**：本版新增的關係邊，追蹤欄位的 read/write 存取，用於更精準的 impact analysis。
-
-## 📖 整理分析
-
-### 1. 資料庫後端遷移到 LadybugDB
-PR #275 把核心圖儲存從 KuzuDB 改成 LadybugDB v0.15，PR #374 隨即升到 0.15.2 並移除舊版針對 macOS/Linux segfault 的繞道處理。先前 PR #51 預設關閉 embeddings、PR #192 在 analyze 後 force-exit 來避開 KuzuDB hang，本次遷移把這些補丁都歸還給上游解決。整合測試（PR #209）也針對 KuzuDB fork crash 補上覆蓋。
-
-### 2. Phase 4-9 型別解析系統
-本版把語言感知型別推論一次推到 Phase 9：Phase 4（PR #310）處理 nullable unwrap、for-loop typing、assignment chain；Phase 5（PR #315）加入 chained call、pattern matching、class-as-receiver；Phase 6（PR #318）擴到 10 種語言覆蓋與 container descriptor；Phase 7（PR #341）支援 return-aware loop inference 與 PHP class-property iterables；Phase 8（PR #354）解決 field/property 型別；Phase 9 連同 PR #372 新增 `ACCESSES` edge，分辨欄位 read 與 write。另外 PR #238、#274、#284 補上 MRO、constructor discrimination、TypeEnvironment API、return type inference 與 doc-comment 解析。
-
-### 3. 新語言支援：Swift、Kotlin、Ruby、PHP
-Swift/iOS（PR #94、#408）含 SPM import 解析、export detection、implicit imports、constructor resolution；PR #188 額外處理 native Swift parser 缺席時的退場路徑。Kotlin（PR #84）導入完整 AST 與 Spring HTTP 模式抽取，可給 REST client 使用。Ruby（PR #111、#278）加入 method-level call resolution、`HAS_METHOD` edges 與 dispatch table。PHP 8+/Laravel（PR #64、#133）覆蓋 Eloquent 模型追蹤。C/C++/C#/Rust 則由 PR #237 從六個重疊 PR 中整併出來。
-
-### 4. 基礎設施與部署能力
-PR #395 新增 HTTP embedding 後端，讓自託管或遠端 endpoint 都能掛接；PR #848 加入 Docker 支援；PR #205 在 git commit hook 後自動 re-index 並保留既有 embeddings；PR #66 已先行支援 remote server 模式與多 repo 切換。CLI 端 PR #402 新增 `gitnexus index` 命令，把既有的 `.gitnexus/` 資料夾註冊回系統；PR #171 提供 `npx gitnexus analyze --skills`，從分析結果自動產生 skill。PR #231 讓 ingestion 尊重 `.gitignore` 與 `.gitnexusignore`。
-
-### 5. 穩定性與安全修補
-MCP 端 PR #207 改善啟動相容性並 lazy-load CLI 命令，PR #349 修掉 MCP server 在平行工具呼叫下崩潰，PR #96 處理沒有任何 repo 索引時 server 不再 crash，PR #99 把 embeddings 改為 lazy import 以避開 Node v24+ 的 onnxruntime crash。安裝層面 PR #843、#846 解決全域升級時的 `ENOTEMPTY`（後者特別 devendor `tree-sitter-proto` install lifecycle），PR #845 把 `env.cacheDir` 移到使用者可寫入位置，PR #1580 修好大型 repo 的 parse cache shard 持久化。其他重點包含 PR #356 加入 Python `enumerate()` 與 nested tuple pattern 的 for-loop 推論、PR #350 把 `HAS_METHOD` 與 `OVERRIDES` 補進 `VALID_RELATION_TYPES`、PR #345 讓 impact 命令回傳結構化錯誤與部分結果而非崩潰。
-
-## 🧭 流程圖 / 架構圖
-
-```mermaid
-flowchart LR
-    A[Source Repo] -->|.gitignore / .gitnexusignore| B[Ingestion]
-    B --> C[AST + tree-sitter<br/>Swift / Kotlin / Ruby / PHP / Python / TS ...]
-    C --> D[Type Resolution<br/>Phase 4-9]
-    D --> E[(LadybugDB v0.15.2)]
-    E --> F[MCP Server]
-    F --> G[Claude Code / Cursor / Agent]
-    B -. git commit hook .-> H[Auto Re-index<br/>保留 embeddings]
-    H --> E
-    I[HTTP Embedding Backend] --> E
-```
-
-## 🧠 Mindmap
-
-```mermaid
-mindmap
-  root((GitNexus v1.6.6-rc.74))
-    資料庫遷移
-      KuzuDB → LadybugDB v0.15
-      升級 0.15.2
-      移除 segfault workaround
-    型別解析 Phase 4-9
-      nullable 展開
-      for-loop / pattern matching
-      field/property
-      ACCESSES edge
-    新語言支援
-      Swift / iOS + SPM
-      Kotlin + Spring HTTP
-      Ruby HAS_METHOD
-      PHP 8 / Laravel Eloquent
-    基礎設施
-      HTTP embedding 後端
-      Docker 容器
-      git commit 自動 re-index
-      gitnexus index CLI
-    穩定性修補
-      ENOTEMPTY 全域升級
-      parse cache 持久化
-      MCP 平行呼叫崩潰
-      Python enumerate tuple
-```
-<!-- deep-analysis:end -->
 ### 📄 原文內容
 
 <details>
 <summary>點此展開 / 收合</summary>
 
-Automated release candidate build from main .\n\n npm: npm install gitnexus@rc \n Version: 1.6.6-rc.74 \n Target base: 1.6.6 (rc #74 )\n Source commit (main): ca3e175 \n Release commit (versioned tree): a7a5389 \n\nRelease candidates are pre-stable builds intended for early testing. Stable releases remain on the latest dist-tag. 
+Automated release candidate build from main .\n\n npm: npm install gitnexus@rc \n Version: 1.6.6-rc.77 \n Target base: 1.6.6 (rc #77 )\n Source commit (main): 99168be \n Release commit (versioned tree): 59a612b \n\nRelease candidates are pre-stable builds intended for early testing. Stable releases remain on the latest dist-tag. 
 
  What's Changed 
  🚨 Security 
