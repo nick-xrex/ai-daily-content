@@ -1,0 +1,41 @@
+---
+id: inbox_b43c7d1c
+source: claude-code-releases
+source_type: rss
+url: "https://github.com/anthropics/claude-code/releases/tag/v2.1.178"
+author: "ashwin-ant"
+published_at: 2026-06-15T21:35:55+00:00
+fetched_at: 2026-06-15T22:12:27.381767+00:00
+content_hash: "e706ef6eec211ea0cc6c4c7490aced556c30840d3b832221821836e89e26a651"
+lang: en
+caption_quality: None
+raw: true
+topics: []
+---
+
+# v2.1.178
+
+What's changed 
+ 
+ Added Tool(param:value) syntax for permission rules to match a tool's input parameters (with * wildcard), e.g. Agent(model:opus) to block Opus subagents 
+ Skills in nested .claude/skills directories now load when working on files there; on a name clash, the nested skill appears as &lt;dir&gt;:&lt;name&gt; so both stay available 
+ Nested .claude/ directories: the agent, workflow, and output-style closest to the working directory now wins when names collide; project-scope workflow saves now target the closest existing .claude/workflows/ 
+ Improved auto mode: subagent spawns are now evaluated by the classifier before launch, closing a gap where a subagent could request a blocked action without review 
+ Improved /doctor with consistent flat tree layout across all sections, clearer section status icons, and highlighted command names 
+ Improved the skill listing truncation warning to show how many skill descriptions are affected 
+ Changed the workflow prompt keyword to use a purple shimmer highlight and trigger only on explicit phrases like "run a workflow" or "workflow:", not on any mention of the word 
+ Improved Remote Control error messages: connection failures now show a persistent red "/rc failed" indicator in the footer, and the "not yet enabled" error now explains whether it's a gate, a check failure, stale entitlement, or org policy 
+ /bug now requires a description before submitting, and no longer uses model-refusal text as the GitHub issue title 
+ Fixed a crash (out-of-memory) when the CLI inherits a stale websocket/OAuth file-descriptor environment variable from a parent process 
+ Fixed Claude in Chrome silently failing to connect when the OAuth token belongs to a different account than the Claude Code login 
+ Fixed nested .claude/skills skills with directory-qualified names being blocked by permission prompts in non-interactive runs 
+ Fixed several subagent issues: viewing a subagent's transcript now shows tool results and live progress, messages sent while it finishes its turn are no longer dropped, and backgrounding a running subagent (ctrl+b) no longer restarts it from scratch 
+ Fixed claude agents workers failing with 401 Invalid bearer token when the daemon was started from a shell with a custom API gateway via ANTHROPIC_BASE_URL and ANTHROPIC_AUTH_TOKEN 
+ Fixed compaction not honoring --fallback-model : compaction now falls back to the configured fallback model chain on overload or model-availability errors 
+ Fixed model requests continuing to fail with auth errors after credentials were refreshed outside the session, due to a stale cached request configuration 
+ Fixed background sessions created with /bg or ←← after a turn finished showing "Working" forever in the agents list 
+ Fixed CLAUDE_CODE_PLUGIN_KEEP_MARKETPLACE_ON_FAILURE=1 preventing fresh marketplace installs from cloning 
+ Fixed MCP server-level specs ( mcp__server , mcp__server__* , mcp__* ) in subagent disallowedTools being silently ignored 
+ Fixed vim mode undo: u now steps through NORMAL/VISUAL-mode commands one at a time instead of merging commands in quick succession into a single undo step 
+ Fixed statusline links with custom URI schemes (e.g. vscode:// ) not opening when clicked in claude agents 
+ [VSCode] Fixed pressing Esc to dismiss a CJK IME candidate window canceling the running Claude task
