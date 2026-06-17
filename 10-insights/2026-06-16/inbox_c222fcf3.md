@@ -1,0 +1,42 @@
+---
+id: inbox_c222fcf3
+date: 2026-06-16
+source_ref: "[[00-inbox/2026-06-16/2200-latent-space-ainews-satya-on-loopcraft-building-front-c30e]]"
+title: "[AINews] Satya on Loopcraft: Building Frontier Ecosystems"
+url: https://www.latent.space/p/ainews-satya-on-loopcraft-building
+source: latent-space
+published_at: 2026-06-16T02:29:29+00:00
+fetched_at: 2026-06-16T22:08:51.878942+00:00
+model: claude-haiku-4-5
+tokens_in: 0
+tokens_out: 0
+summary_zh: "無法進行有意義的摘要。"
+key_points:
+tags: []
+topics: []
+importance: 1
+novelty: 1
+insight_quality: 1
+insight_type: none
+deep_dive_candidate: false
+deep_dive_approved: false
+---
+
+## [AINews] Satya on Loopcraft: Building Frontier Ecosystems
+
+無法進行有意義的摘要。
+
+### 重點
+
+**原文：** [latent-space](https://www.latent.space/p/ainews-satya-on-loopcraft-building)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+a quiet day lets us report on Satya's hit essay
+
+</details>
