@@ -1,0 +1,50 @@
+---
+id: inbox_0ae6506e
+date: 2026-06-21
+source_ref: "[[00-inbox/.../inbox_0ae6506e]]"
+title: "Anthropic Reports Claude Now Handles 95% of Internal Analytics Queries"
+url: https://www.infoq.com/news/2026/06/anthropic-claude-analytics/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture+%26+Design
+source: infoq-architecture
+published_at: 2026-06-21T16:47:00+00:00
+fetched_at: 2026-06-22T01:24:07.875902+00:00
+model: claude-haiku-4-5
+tokens_in: 0
+tokens_out: 0
+summary_zh: "Anthropic 報告指 Claude 現已處理公司內部約 95% 的分析查詢，員工可獨立查詢業務數據，無須依賴數據團隊。該成果的驅動因素並非模型進展，而是數據治理、語意定義和運營紀律的完善。此案例展示了 LLM 在企業內部應用中，基礎設施和流程設計遠比模型能力本身更決定了成功。對其他企業採用 Claude 進行自助式 BI 具有強參考價值。"
+key_points:
+  - "Claude 處理 95% 內部分析查詢，員工自助查詢業務數據無需資料團隊協助"
+  - "成功根源：數據治理、語意定義、運營紀律，而非模型進展本身——infrastructure 優於 model capability"
+  - "展示 LLM 在企業 BI 應用中的實際成效，跨組織可複製的模式"
+tags: [claude, analytics, data-governance, enterprise-application, self-service-bi]
+topics: [foundation_models.claude]
+importance: 4
+novelty: 4
+insight_quality: 5
+insight_type: pattern
+deep_dive_candidate: true
+deep_dive_approved: false
+---
+
+## Anthropic Reports Claude Now Handles 95% of Internal Analytics Queries
+
+Anthropic 報告指 Claude 現已處理公司內部約 95% 的分析查詢，員工可獨立查詢業務數據，無須依賴數據團隊。該成果的驅動因素並非模型進展，而是數據治理、語意定義和運營紀律的完善。此案例展示了 LLM 在企業內部應用中，基礎設施和流程設計遠比模型能力本身更決定了成功。對其他企業採用 Claude 進行自助式 BI 具有強參考價值。
+
+### 重點
+- Claude 處理 95% 內部分析查詢，員工自助查詢業務數據無需資料團隊協助
+- 成功根源：數據治理、語意定義、運營紀律，而非模型進展本身——infrastructure 優於 model capability
+- 展示 LLM 在企業 BI 應用中的實際成效，跨組織可複製的模式
+
+**原文：** [infoq-architecture](https://www.infoq.com/news/2026/06/anthropic-claude-analytics/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Architecture+%26+Design)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+# Anthropic Reports Claude Now Handles 95% of Internal Analytics Queries
+
+Anthropic recently reported that Claude now handles around 95% of its internal analytics requests, letting employees query business data independently instead of relying on data teams. The company attributes this result less to advances in models and more to data governance, semantic definitions, and operational discipline. By Renato Losio
+
+</details>
