@@ -1,10 +1,10 @@
 sources:
   # ─── Tier 1: Anthropic / Claude ─────────────────────────────────────
-  - name: anthropic-blog
-    kind: rss
-    url: https://www.anthropic.com/news/rss.xml
-    tier: 1
-    source_weight: 1.0
+#  - name: anthropic-blog
+#    kind: rss
+#    url: https://www.anthropic.com/news/rss.xml
+#    tier: 1
+#    source_weight: 1.0
   - name: claude-code-releases
     kind: rss
     url: https://github.com/anthropics/claude-code/releases.atom
@@ -233,11 +233,11 @@ sources:
     url: https://engineercodex.substack.com/feed
     tier: 2
     source_weight: 0.6
-  - name: substack-hybrid-hacker
-    kind: rss
-    url: https://newsletter.hybridhacker.email/feed
-    tier: 2
-    source_weight: 0.6
+#  - name: substack-hybrid-hacker
+#    kind: rss
+#    url: https://newsletter.hybridhacker.email/feed
+#    tier: 2
+#    source_weight: 0.6
   - name: substack-register-spill
     kind: rss
     url: https://registerspill.thorstenball.com/feed
@@ -253,11 +253,11 @@ sources:
     url: https://grokkingpython.substack.com/feed
     tier: 3
     source_weight: 0.4
-  - name: substack-python-trends
-    kind: rss
-    url: https://weekly.pythoncat.top/feed
-    tier: 3
-    source_weight: 0.4
+#  - name: substack-python-trends
+#    kind: rss
+#    url: https://weekly.pythoncat.top/feed
+#    tier: 3
+#    source_weight: 0.4
   - name: substack-vutrinh
     kind: rss
     url: https://vutr.substack.com/feed
@@ -270,38 +270,38 @@ sources:
     source_weight: 0.4
 
   # — Explicit AI/ML —
-  - name: substack-aidatatools
-    kind: rss
-    url: https://aidatatools.substack.com/feed
-    tier: 1
-    source_weight: 0.8
+#  - name: substack-aidatatools
+#    kind: rss
+#    url: https://aidatatools.substack.com/feed
+#    tier: 1
+#    source_weight: 0.8
 
   # — Engineering leadership / management —
-  - name: substack-eng-enablement-abi
-    kind: rss
-    url: https://newsletter.abinoda.com/feed
-    tier: 2
-    source_weight: 0.5
+#  - name: substack-eng-enablement-abi
+#    kind: rss
+#    url: https://newsletter.abinoda.com/feed
+#    tier: 2
+#    source_weight: 0.5
   - name: substack-eng-leadership
     kind: rss
     url: https://newsletter.eng-leadership.com/feed
     tier: 2
     source_weight: 0.5
-  - name: substack-engineering-manager
-    kind: rss
-    url: https://newsletter.theengineeringmanager.com/feed
-    tier: 2
-    source_weight: 0.5
+#  - name: substack-engineering-manager
+#    kind: rss
+#    url: https://newsletter.theengineeringmanager.com/feed
+#    tier: 2
+#    source_weight: 0.5
   - name: substack-developing-dev
     kind: rss
     url: https://www.developing.dev/feed
     tier: 2
     source_weight: 0.5
-  - name: substack-high-growth-engineer
-    kind: rss
-    url: https://newsletter.highgrowthengineer.com/feed
-    tier: 2
-    source_weight: 0.5
+#  - name: substack-high-growth-engineer
+#    kind: rss
+#    url: https://newsletter.highgrowthengineer.com/feed
+#    tier: 2
+#    source_weight: 0.5
   - name: substack-dev-leader
     kind: rss
     url: https://devleader.substack.com/feed
@@ -317,11 +317,11 @@ sources:
     url: https://europeanengineer.substack.com/feed
     tier: 3
     source_weight: 0.4
-  - name: substack-techlead-mentor
-    kind: rss
-    url: https://techleadmentor.substack.com/feed
-    tier: 3
-    source_weight: 0.4
+#  - name: substack-techlead-mentor
+#    kind: rss
+#    url: https://techleadmentor.substack.com/feed
+#    tier: 3
+#    source_weight: 0.4
 
   # — Product / PM —
   - name: substack-lennys-newsletter
@@ -344,11 +344,11 @@ sources:
     url: https://newsletter.posthog.com/feed
     tier: 2
     source_weight: 0.5
-  - name: substack-pm-lead
-    kind: rss
-    url: https://thepmlead.substack.com/feed
-    tier: 3
-    source_weight: 0.4
+#  - name: substack-pm-lead
+#    kind: rss
+#    url: https://thepmlead.substack.com/feed
+#    tier: 3
+#    source_weight: 0.4
 
   # — Crypto / Web3 / Payment (for new blockchain + payment columns) —
   - name: substack-crypto-hayes
@@ -371,16 +371,16 @@ sources:
     url: https://moneyevolution.substack.com/feed
     tier: 2
     source_weight: 0.6
-  - name: substack-re7-research
-    kind: rss
-    url: https://research.re7capital.com/feed
-    tier: 2
-    source_weight: 0.6
-  - name: substack-viktoria-crypto-lab
-    kind: rss
-    url: https://viktoriacryptotradinglab.substack.com/feed
-    tier: 3
-    source_weight: 0.4
+#  - name: substack-re7-research
+#    kind: rss
+#    url: https://research.re7capital.com/feed
+#    tier: 2
+#    source_weight: 0.6
+#  - name: substack-viktoria-crypto-lab
+#    kind: rss
+#    url: https://viktoriacryptotradinglab.substack.com/feed
+#    tier: 3
+#    source_weight: 0.4
   - name: substack-web3matters
     kind: rss
     url: https://web3matters.substack.com/feed
@@ -396,23 +396,23 @@ sources:
     url: https://likecoin.substack.com/feed
     tier: 3
     source_weight: 0.3
-  - name: substack-dhk-post
-    kind: rss
-    url: https://dhk.ckxpress.com/feed
-    tier: 3
-    source_weight: 0.3
-  - name: substack-vincent-cw
-    kind: rss
-    url: https://vincentcw.substack.com/feed
-    tier: 3
-    source_weight: 0.3
+#  - name: substack-dhk-post
+#    kind: rss
+#    url: https://dhk.ckxpress.com/feed
+#    tier: 3
+#    source_weight: 0.3
+#  - name: substack-vincent-cw
+#    kind: rss
+#    url: https://vincentcw.substack.com/feed
+#    tier: 3
+#    source_weight: 0.3
 
   # — Stock / Finance (payment column adjacency) —
-  - name: substack-drhon-stocks
-    kind: rss
-    url: https://drhon.substack.com/feed
-    tier: 3
-    source_weight: 0.3
+#  - name: substack-drhon-stocks
+#    kind: rss
+#    url: https://drhon.substack.com/feed
+#    tier: 3
+#    source_weight: 0.3
 
   # — Chinese-language tech / newsletter —
   - name: substack-codefarmer-tw
@@ -430,36 +430,36 @@ sources:
     url: https://darrentechtalk.substack.com/feed
     tier: 3
     source_weight: 0.4
-  - name: substack-explainthis
-    kind: rss
-    url: https://weekly.explainthis.io/feed
-    tier: 3
-    source_weight: 0.4
+#  - name: substack-explainthis
+#    kind: rss
+#    url: https://weekly.explainthis.io/feed
+#    tier: 3
+#    source_weight: 0.4
   - name: substack-seanpost
     kind: rss
     url: https://seanpost.substack.com/feed
     tier: 3
     source_weight: 0.4
-  - name: substack-wanqu
-    kind: rss
-    url: https://wanqu.co/feed
-    tier: 3
-    source_weight: 0.4
-  - name: substack-master-of-none
-    kind: rss
-    url: https://sunnyismi.substack.com/feed
-    tier: 3
-    source_weight: 0.3
+#  - name: substack-wanqu
+#    kind: rss
+#    url: https://wanqu.co/feed
+#    tier: 3
+#    source_weight: 0.4
+#  - name: substack-master-of-none
+#    kind: rss
+#    url: https://sunnyismi.substack.com/feed
+#    tier: 3
+#    source_weight: 0.3
   - name: substack-anatomind
     kind: rss
     url: https://anatomind.substack.com/feed
     tier: 3
     source_weight: 0.3
-  - name: substack-michael-feng
-    kind: rss
-    url: https://michaelfeng.substack.com/feed
-    tier: 3
-    source_weight: 0.3
+#  - name: substack-michael-feng
+#    kind: rss
+#    url: https://michaelfeng.substack.com/feed
+#    tier: 3
+#    source_weight: 0.3
   - name: substack-the-cocoons
     kind: rss
     url: https://thecocoons.substack.com/feed
@@ -472,11 +472,11 @@ sources:
     url: https://bytesizeddesign.substack.com/feed
     tier: 3
     source_weight: 0.3
-  - name: substack-designtips-today
-    kind: rss
-    url: https://designtipstoday.substack.com/feed
-    tier: 3
-    source_weight: 0.3
+#  - name: substack-designtips-today
+#    kind: rss
+#    url: https://designtipstoday.substack.com/feed
+#    tier: 3
+#    source_weight: 0.3
 
   # — Misc / other —
   - name: substack-overthinking-everything
@@ -484,11 +484,11 @@ sources:
     url: https://drmaciver.substack.com/feed
     tier: 3
     source_weight: 0.3
-  - name: substack-roadmap-sh
-    kind: rss
-    url: https://roadmap.sh/rss.xml
-    tier: 3
-    source_weight: 0.3
+#  - name: substack-roadmap-sh
+#    kind: rss
+#    url: https://roadmap.sh/rss.xml
+#    tier: 3
+#    source_weight: 0.3
 
   # ─── Tier 3: HN (threshold raised to reduce link-only noise) ────────
   - name: hackernews
