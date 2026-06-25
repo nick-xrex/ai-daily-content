@@ -41,6 +41,7 @@ columns:
         - claude-mem-releases
         - superpowers-releases
         - rtk-releases
+        - repowise-releases
     min_items: 1
 
   - id: ai-knowledge-mgmt

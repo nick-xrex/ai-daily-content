@@ -65,6 +65,11 @@ sources:
     url: https://github.com/rtk-ai/rtk/releases.atom
     tier: 1
     source_weight: 1.0
+  - name: repowise-releases
+    kind: rss
+    url: https://github.com/repowise-dev/repowise/releases.atom
+    tier: 1
+    source_weight: 1.0
 
   # ─── Tier 1: other frontier labs ────────────────────────────────────
   - name: deepmind-blog
