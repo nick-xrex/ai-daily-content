@@ -70,6 +70,11 @@ sources:
     url: https://github.com/repowise-dev/repowise/releases.atom
     tier: 1
     source_weight: 1.0
+  - name: serena-releases
+    kind: rss
+    url: https://github.com/oraios/serena/releases.atom
+    tier: 1
+    source_weight: 1.0
 
   # ─── Tier 1: other frontier labs ────────────────────────────────────
   - name: deepmind-blog

@@ -42,6 +42,7 @@ columns:
         - superpowers-releases
         - rtk-releases
         - repowise-releases
+        - serena-releases
     min_items: 1
 
   - id: ai-knowledge-mgmt
