@@ -1,0 +1,55 @@
+---
+id: inbox_31622e2c
+date: 2026-06-26
+source_ref: "[[00-inbox/.../inbox_31622e2c]]"
+title: "Claude Mythos 5 and Fable 5 Suspended Globally: What Happened, Why, and What’s Next"
+url: https://medium.com/illumination/claude-mythos-5-and-fable-5-suspended-globally-what-happened-why-and-whats-next-6c49431716ec?source=rss------claude-5
+source: medium-tag-claude
+published_at: 2026-06-26T19:18:53+00:00
+fetched_at: 2026-06-29T01:04:53.730573+00:00
+model: claude-haiku-4-5
+tokens_in: 0
+tokens_out: 0
+summary_zh: ""
+key_points:
+tags: []
+topics: [foundation_models.claude]
+importance: 1
+novelty: 1
+insight_quality: 1
+insight_type: none
+deep_dive_candidate: false
+deep_dive_approved: false
+---
+
+## Claude Mythos 5 and Fable 5 Suspended Globally: What Happened, Why, and What’s Next
+
+
+
+### 重點
+
+**原文：** [medium-tag-claude](https://medium.com/illumination/claude-mythos-5-and-fable-5-suspended-globally-what-happened-why-and-whats-next-6c49431716ec?source=rss------claude-5)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+---claude-5"
+author: "Pankaj Yadav"
+published_at: 2026-06-26T19:18:53+00:00
+fetched_at: 2026-06-26T22:32:41.743294+00:00
+content_hash: "7e520be3cd7ff75015a399c5f3b2850002163cdf74e0d1e3950cc9d0522701fd"
+lang: en
+caption_quality: None
+raw: true
+topics: []
+---
+
+# Claude Mythos 5 and Fable 5 Suspended Globally: What Happened, Why, and What’s Next
+
+On June 12, 2026, the AI world experienced something unprecedented. Anthropic, the company behind Claude, abruptly suspended access to its&#x2026; Continue reading on ILLUMINATION »
+
+</details>
