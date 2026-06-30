@@ -1,0 +1,565 @@
+---
+id: inbox_c8de71dc
+date: 2026-06-29
+source_ref: "[[00-inbox/2026-06-29/2234-hamel-husain-its-hard-to-eval-is-a-product-smell-b82a]]"
+title: "“It’s Hard to Eval” Is a Product Smell"
+url: https://hamel.dev/blog/posts/eval-smell/
+source: hamel-husain
+published_at: 2026-06-29T07:00:00+00:00
+fetched_at: 2026-06-29T23:12:02.429915+00:00
+model: claude-haiku-4-5
+tokens_in: 0
+tokens_out: 0
+summary_zh: "Hamel Husain 於 3 年 AI evals 實務後提出「難以 eval」是產品設計反模式的論點：使用者難以驗證的工件對產品本身也造成問題，應先設計易驗證性再構建 evals。以 AI 資料代理為例，改善設計需提供可檢查工件（假設、中間計算、維度分解、SQL 審查、未驗證項標註）而非單純答案，參考資料科學家驗證指標的 6 大技巧：與可信來源比較、確認指標定義、sanity check 相關量、檢視聚合下的分布、讀查詢語句、標註無信任參照的部分。該原則可應用於資料分析、內容生成等產品類型。"
+key_points:
+  - "eval 難度 = 產品驗證設計缺陷；應先設計易驗證、再建 evals"
+  - "6 大驗證技巧：與可信源比較、確認定義、sanity check 關聯量、分解維度、審查 SQL、標註未驗證項"
+  - "可檢查工件設計（假設、中間值、分布、未驗證清單）比單一答案更易被使用者驗證"
+tags: [ai-evals, product-design, verification, llm-products, data-validation]
+topics: []
+importance: 4
+novelty: 4
+insight_quality: 5
+insight_type: framework
+deep_dive_candidate: false
+deep_dive_approved: false
+---
+
+## “It’s Hard to Eval” Is a Product Smell
+
+Hamel Husain 於 3 年 AI evals 實務後提出「難以 eval」是產品設計反模式的論點：使用者難以驗證的工件對產品本身也造成問題，應先設計易驗證性再構建 evals。以 AI 資料代理為例，改善設計需提供可檢查工件（假設、中間計算、維度分解、SQL 審查、未驗證項標註）而非單純答案，參考資料科學家驗證指標的 6 大技巧：與可信來源比較、確認指標定義、sanity check 相關量、檢視聚合下的分布、讀查詢語句、標註無信任參照的部分。該原則可應用於資料分析、內容生成等產品類型。
+
+### 重點
+- eval 難度 = 產品驗證設計缺陷；應先設計易驗證、再建 evals
+- 6 大驗證技巧：與可信源比較、確認定義、sanity check 關聯量、分解維度、審查 SQL、標註未驗證項
+- 可檢查工件設計（假設、中間值、分布、未驗證清單）比單一答案更易被使用者驗證
+
+**原文：** [hamel-husain](https://hamel.dev/blog/posts/eval-smell/)
+
+---
+
+### 📄 原文內容
+
+<details>
+<summary>點此展開 / 收合</summary>
+
+For the past 3 years, AI evals have been my professional focus. 1 The most common objection I hear to evals is “our product is hard to eval”. 
+ This objection is a product smell. Artifacts that are hard for you to verify are often hard for users too. In the worst case, users have to redo the work from scratch to verify the output. More importantly, designing your product for ease of verification should come before building evals. 
+ In this post, I’ll walk through three products I advised on that faced this issue. I’ll also show before and after sketches to demonstrate design principles. After these examples, I’ll discuss how to apply this general pattern to your product. 
+ 
+ Example 1: the AI data agent 
+ Almost every company I’ve worked with builds an internal AI data agent. You ask it a business question, like what was net revenue for Product A last quarter, and it finds relevant data sources, runs the queries, and provides an answer. The goal of this agent is to reduce dependency on data analysts. 
+ A common mistake when building AI data agents is to make the answer the only output, as illustrated below. 
+ 
+ 
+ 
+ Data Agent 
+ 
+ What was net revenue for Product A last quarter? 
+ Net revenue for Product A last quarter was $4.21M . 
+ Ask anything about your business... ➤ 
+ 
+ 
+ Since the only output is the answer, there is nothing here to check. 
+ 
+ In the sketch above, the user has no way to verify the answer beyond redoing work. 2 A better design is to provide the user with checkable artifacts, informed by how a domain expert might validate the output. Here are techniques I use to validate metrics as a data scientist: 
+ 
+ Compare the quantity and any intermediate calculations against a trusted source, like a vetted dashboard or report, or a similar analysis a colleague has already vetted. 3 
+ Confirm the metric definition precisely. A number like net revenue can include or exclude things like returns and discounts. 
+ Sanity-check a related quantity. If I can’t verify the number directly, I pull a related number that should move with it, like units sold or unique customers, and check if the combination is plausible. 
+ Look at what is beneath the aggregate. A total can hide problems, so I break it down by dimensions like region or time period and sanity-check the distribution. 
+ Read the query. For an important number I look at the SQL to confirm it does what I think, and I tweak it and rerun to test my assumptions. 
+ Note anything I could not verify. If a step has no trusted reference to check it against, I flag it instead of presenting it as settled. 
+ 
+ Here’s what a better interface might look like. The two tabs below show the same answer at two levels of detail. The chat reply surfaces the details worth seeing up front, and the notebook holds the full analysis behind the answer. Use the tabs to switch between them. 
+ 
+ Chat Notebook 
+ 
+ 
+ 
+ 
+ 
+ Data Agent 
+ 
+ What was net revenue for Product A last quarter? 
+ Net revenue for Product A last quarter was $4.21M . i 
+
+ 
+ 
+ 
+ Details 
+ 
+
+ 
+ 
+ Adapted from “Quarterly revenue review” authored by Priya Nair · Jun 28, 2026 
+ Open ↗ 
+ 
+
+ 
+ Assumptions 
+ 
+ Metric definition gross − returns − discounts 
+ matches governed definition 
+ 
+ 
+
+ 
+ Intermediate calculations 
+ 
+ Returns netted out −$0.7M 
+ no trusted source i 
+ 
+ 
+ Unique customers 12,480 
+ 183 unmatched i , CRM ↔ Billing 
+ 
+ 
+
+ 
+ Open as notebook 
+ 
+ 
+ 
+ 
+ 
+ 
+ The agent surfaces the important details behind the answer. Select the Notebook tab above to see the full analysis generated by the agent. 
+ 
+
+ 
+ 
+ 
+ This is the notebook the agent worked in while producing its answer. Scroll within the figure to see all the cells. The sidebar has a Contents tab for jumping between sections and an Assistant tab for asking follow-ups. 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ net_revenue_product_a .ipynb 
+ 
+ 
+ ▶ Run all 
+ ↑ Publish 
+ 
+
+ 
+ ◫ 
+ Adapted from Quarterly revenue review ↗ , authored by Priya Nair · Jun 28, 2026 
+ 
+
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ Markdown B i H 🔗 ☰ 
+ 
+ Net revenue — Product A, Q4 FY25 
+ “What was net revenue for Product A last quarter?” 
+ Short answer: $4.21M . This notebook shows how that number was built and what was checked against a trusted source. 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 1. Metric definition 
+ Net revenue is gross − returns − discounts . Read the definition from the governed metrics layer so this matches what finance reports. 
+ 
+ 
+ 
+
+ 
+ [1] 
+ 
+ Python ▶ Code collapsed ✦ Ask AI ⌘K 
+ import yaml
+
+defn = yaml . safe_load ( open ( "metrics/net_revenue.yml" ))
+defn [ "expr" ] , defn [ "source" ] 
+ 
+ ( 'gross - returns - discounts' , 'finance.order_lines' ) 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 2. Net revenue for Product A 
+ Pull net revenue for Product A for the quarter, straight from the order lines. 
+ 
+ 
+ 
+
+ 
+ [2] 
+ 
+ SQL ▶ Code collapsed ✦ Ask AI ⌘K 
+ SELECT SUM (gross - returns - discounts) AS net_revenue
+ FROM finance . order_lines
+ WHERE product = 'Product A' 
+ AND fiscal_quarter = 'Q4-FY25' ; 
+ 
+ 
+ 
+ 
+ 
+ net_revenue 
+ 
+ 
+ 4,210,442 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ That's the $4.21M the chat answer reported. 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 3. Sanity-check the distribution 
+ Break Product A down by region, then plot it. Nothing should look out of place against last quarter's mix. 
+ 
+ 
+ 
+
+ 
+ [3] 
+ 
+ SQL ▶ Code collapsed ✦ Ask AI ⌘K 
+ SELECT region,
+ SUM (gross - returns - discounts) AS net_revenue
+ FROM finance . order_lines
+ WHERE product = 'Product A' 
+ AND fiscal_quarter = 'Q4-FY25' 
+ GROUP BY region; 
+ 
+ 
+ 
+ 
+ 
+ region 
+ net_revenue 
+ 
+ 
+ West 
+ 1,740,000 
+ 
+ 
+ Central 
+ 1,160,000 
+ 
+ 
+ East 
+ 890,000 
+ 
+ 
+ Intl 
+ 420,000 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ [4] 
+ 
+ Python ▶ Code collapsed ✦ Ask AI ⌘K 
+ m = by_region . set_index ( "region" ) [ "net_revenue" ] / 1e6 
+m . plot . barh (title = "Net revenue by region · Q4 FY25" ) 
+ 
+ 
+ Net revenue by region · Q4 FY25 
+ 
+ 
+ West 1.74 
+ Central 1.16 
+ East 0.89 
+ Intl 0.42 
+ 
+ 
+ 0 0.5 1.0 1.5 2.0 
+ net revenue ($M) 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ West and Central drive most of the revenue, with International a small tail. 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 4. What I could not verify 
+ Two inputs have no trusted source to check against. Instead of treating them as settled, each is left below as a cell you can run and edit to dig in. 
+ 
+ 
+ 
+
+ 
+ [5] 
+ 
+ SQL ▶ Code collapsed ✦ Ask AI ⌘K 
+ -- the agent's -$0.7M returns figure is an estimate; 
+ -- check the returns table for Q4 rows to back it 
+ SELECT COUNT ( * ) AS n_rows, SUM (amount) AS returns
+ FROM finance . returns
+ WHERE product = 'Product A' 
+ AND fiscal_quarter = 'Q4-FY25' ; 
+ 
+ 
+ 
+ 
+ 
+ n_rows 
+ returns 
+ 
+ 
+ 0 
+ NULL 
+ 
+ 
+ 
+
+ # Q4 returns haven't loaded yet, so the −$0.7M is an estimate 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ So that −$0.7M has no source to check against yet. The other open item is the customer join: 
+ 
+ 
+
+ 
+ [6] 
+ 
+ SQL ▶ Code collapsed ✦ Ask AI ⌘K 
+ -- 183 of 12,480 unique customers are in Billing, not CRM, 
+ -- so some revenue can't be attributed. Pull them: 
+ SELECT b . customer_id, b . amount
+ FROM billing . invoices b
+ LEFT JOIN crm . customers c USING (customer_id)
+ WHERE c . customer_id IS NULL 
+ ORDER BY b . amount DESC 
+ LIMIT 5 ; 
+ 
+ 
+ 
+ 
+ 
+ customer_id 
+ amount 
+ 
+ 
+ BIL-44821 
+ 18,400 
+ 
+ 
+ BIL-39105 
+ 12,950 
+ 
+ 
+ BIL-50277 
+ 9,310 
+ 
+ 
+ ... 
+ ... 
+ 
+ 
+ 
+
+ # 183 rows · $61,540 unattributed 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ That's $61,540 of revenue whose customer attribution is uncertain, surfaced so a person can resolve it before the total is trusted. 
+ 
+ 
+
+ 
+
+ 
+ 
+ Contents 
+ ✦ Assistant 
+ 
+
+ 
+
+ 
+ New thread ✕ 
+ 
+ What was net revenue for Product A last quarter? 
+ 
+ ✦ 
+ I pulled Product A's net revenue from the order lines using finance's governed definition, broke it out by region, and flagged what I couldn't verify. The cells are on the left. 
+ 
+ ✓ Generated the cells in this notebook 
+ 
+ 
+ 
+ Ask a follow-up... 
+ SQL [2] Auto ▾ ↑ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ The notebook reads top to bottom: the assumptions the agent made, the queries it ran, and an explicit list of what it could not verify. 
+
+ 
+ 
+ 
+ 
+ There is a lot to unpack here. Here are notable changes: 
+ 
+ The agent optionally performs retrieval from vetted analyses, and the interface shows which one was used along with who authored it. 
+ There is progressive disclosure of details. The chat reply shows high value items like sources, assumptions, and issues. The user can optionally open an interactive notebook to see the full context. 
+ The AI-generated notebook (see notebook tab above) is organized to promote verification: it opens with the assumptions the agent made, like the metric definition and where it came from, then shows the queries it ran and the numbers they returned. It breaks the total down so you can sanity-check the distribution, and it closes with a list of what it could not verify, each item left as a cell you can run. 
+ The AI agent is also available in the notebook to help with follow-ups. Finally, the user can publish the notebook back to a knowledge base, where it can be retrieved by future analyses, creating a virtuous cycle. 
+ 
+ This design sketch is far from perfect. The point is that the product should help the user verify the answer as a domain expert would. Compare it to the earlier approach, where the only output was the number. 
+ Data agents like these are not science fiction. Hex 4 is my favorite product in this genre; it integrates notebooks and chat better than anything I’ve seen. Here are screenshots from their landing page: 
+ 
+ 
+ 
+ 
+ 
+ 
+ Chat interface. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Notebook view which allows the user to see the intermediate steps and data. 
+ 
+ 
+ 
+ 
+ 
+ But what does this have to do with evals? If you design your product for verification, annotation becomes less expensive and evals will have better signals to draw from. More importantly, you’ll provide your users with a better product. 
+ 
+ 
+ Example 2: the PE curriculum builder 
+ A founder I advised was building an AI tool that writes physical education lesson plans for K-12 teachers. A teacher enters their constraints, like the grade they teach, how long the class is, whether it meets indoors or outdoors, and what equipment they have. The tool then writes a lesson plan for those constraints. The goal is to save teachers the time they spend planning and give them a plan that fits their class. Here is a sketch of what the product looks like: 
+ 
+ 
+ 
+ 
+ 
+ PE Planner 
+ 
+ 
+
+ 
+ Class details 
+ 
+ Grade 
+ Grade 4 ▾ 
+ 
+ 
+ Class length 
+ 45 minutes ▾ 
+ 
+ 
+ Location 
+ Outdoors ▾ 
+ 
+ 
+ Equipment 
+ 12 cones, 6 balls 
+ 
+ Generate lesson plan 
+ 
+
+ 
+ 
+ Ball skills 
+ Lesson 1 of 8 
+ Generated plan 
+ 
+ 
+ 
+ Warm-up · 8 min 
+ Jog the perimeter, then dynamic stretches: arm circles, lunges, and high knees. Finish with a partner toss to warm up the hands. 
+ 
+ 
+ Main activity · 30 min 
+ Pair students and set cones 10 feet apart. Partners practice underhand throws, then overhand. Cue them to step with the opposite foot and follow through. Widen the gap as accuracy improves and rotate partners every 5 minutes. 
+ 
+ 
+ Cool-down · 7 min 
+ Static stretches and a quick recap of throwing cues: step, point, follow through. 
+ 
+ 
+ Assessment · notes 
+ Watch for a stepped throw with the opposite foot forward and eyes on the target. Note students who need a shorter throwing distance next class. 
+ 
+ 
+ Equipment 
+ 12 cones, 6 foam balls, 3 station markers. 
+ 
+ 
+ 
+
+ 
+ 
+ The teacher enters constraints and the tool writes a plan from scratch. The only output is the plan, so its difficult to verify. 
+ 
+ The founder asked me how to eval the lesson plans. I turned the question around: what does a teacher care about? 
+ The fastest way to trust a plan is to see that a teacher like them already uses it. Additionally, teachers value visibility into what others are doing so they can learn new approaches. Therefore, a better design might start from vetted lesson plans that are actively used in schools. When the tool generates a plan, it shows which vetted plan it started from, who uses that plan, and a diff of what it changed for this teacher’s constraints. 
+ Next, the teacher can check a small set of changes against 
+
+[... truncated for safety ...]
+
+</details>
