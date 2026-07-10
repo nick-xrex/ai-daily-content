@@ -1,0 +1,19 @@
+---
+id: inbox_6dc428c4
+source: hackernews
+source_type: hn
+url: "https://microsoft.github.io/flint-chart/#/"
+author: "chenglong-hn"
+published_at: 2026-07-08T17:46:12+00:00
+fetched_at: 2026-07-10T00:25:20.158390+00:00
+content_hash: "c3c47306c1bed607b76e144c3c44157c2bc57dd8be42630f51d55b993c607512"
+lang: en
+caption_quality: None
+raw: true
+topics: []
+---
+
+# Show HN: Microsoft releases Flint, a visualization language for AI agents
+
+Data visualizations are the bridge between user and data. But building AI agents that can generate visualizations reliably can be very tricky: - simple chart specs can be reliable, but generated charts are often of low quality due to reliance on system defaults; 
+- complex chart specs with explicit details can produce good-looking charts, but they are verbose and agents can struggle with reliability We figured out it is a limitation on the language issue (not just AI capability thing) -- current visualization languages are a bit too low-level for AI agents, requiring them to explicitly make visual decisions that are supposed to be handled by a good compiler. Flint is a visualization intermediate language to address this issue, allow AI agents to solve this last-mile human-agent interaction problem. It provides a simple semantic-type based specification, and contains a layout optimization engine that can produce good-looking charts (filled with derived low-level details) from simple high-level specs. The result is also very human understandable and adaptable. Flint powers data formulator for generating visualizations (another open source project from microsoft https:&#x2F;&#x2F;data-formulator.ai&#x2F; ). Flint is available open source, and we built a MCP server that you can directly plug flint in your favorite agent app to play with data.
