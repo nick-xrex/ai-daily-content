@@ -1,0 +1,107 @@
+---
+id: inbox_b1bf2f19
+source: ruflo-releases
+source_type: rss
+url: "https://github.com/ruvnet/ruflo/releases/tag/v3.32.35"
+author: "ruvnet"
+published_at: 2026-07-29T18:02:33+00:00
+fetched_at: 2026-07-29T22:26:10.229471+00:00
+content_hash: "8e9f93e49159b4525ac8ed73bf8f30c682e9bd7cca11420f1fea4aa437e01e63"
+lang: en
+caption_quality: None
+raw: true
+topics: []
+---
+
+# Ruflo v3.32.35 — Adaptive Swarms and Safer Learning Loops
+
+Ruflo v3.32.35: Adaptive Swarms and Safer Learning Loops 
+ Ruflo v3.32.35 gives long-running agent teams a controlled way to learn which 
+workers should receive future tasks. The new pheromone-adaptive topology 
+combines outcome, latency, and consensus signals while preserving protected 
+roles, a minimum active quorum, and existing permissions. It begins in dry-run 
+mode so teams can inspect its decisions before enabling scheduling changes. 
+ This release also makes the surrounding learning loop more trustworthy: 
+project flywheels must evaluate against a project-local, hash-pinned benchmark; 
+learned routing updates inside a live MCP process; AgentDB deletes and upserts 
+remove stale vectors; and daemon auto-start is limited to actual Ruflo 
+projects. 
+ Install or upgrade 
+ npm install --global ruflo@3.32.35
+ruflo doctor 
+ Existing installations remain compatible. The default topology is still 
+ hierarchical , old swarm state remains readable, historical flywheel receipts 
+remain verifiable, and the new adaptive scheduler is opt-in. 
+ Try adaptive swarm scheduling 
+ Start in the default calibration mode: 
+ ruflo swarm init \
+ --topology pheromone-adaptive \
+ --max-agents 8
+
+ruflo swarm pheromone
+ruflo agent metrics --format json 
+ When the observations look right, explicitly enable scheduling enforcement: 
+ ruflo swarm init \
+ --topology pheromone-adaptive \
+ --max-agents 8 \
+ --apsc-live 
+ Live mode changes Ruflo dispatch eligibility only. It does not terminate 
+agents, revoke access, discard context, or widen permissions. 
+ Use a project-local flywheel anchor 
+ Create .claude/eval/flywheel-anchor.manifest.json : 
+ {
+ "schemaVersion" : " ruflo.flywheel-anchor-manifest/v1 " ,
+ "path" : " my-project-anchor.json " ,
+ "sha256" : " sha256:&lt;canonical-task-hash&gt; " 
+} 
+ The referenced anchor contains at least four labelled tasks. Ruflo binds its 
+canonical hash into new evaluation receipts. A non-Ruflo repository without a 
+project anchor now fails closed instead of silently optimizing against Ruflo's 
+built-in development benchmark. 
+ What changed 
+ 
+ Adds the opt-in pheromone-adaptive swarm topology with role-aware EMA 
+scoring, dry-run calibration, protected roles, quorum floors, bounded 
+exploration, atomic cross-process updates, CLI inspection, and MCP tools. 
+ Connects hooks post-task outcomes to adaptive scheduling and exposes each 
+agent's score, sample count, role, and eligibility through agent metrics . 
+ Adds hash-pinned, project-local flywheel evaluation anchors and receipt 
+binding while retaining historical receipt verification. 
+ Makes learned routing use supported, discriminative evidence and immediately 
+invalidates a warm router after labelled outcomes. 
+ Makes AgentDB logical-key upserts, deletes, and cleanup reconcile every stale 
+vector and report accurate lifecycle metrics. 
+ Limits daemon auto-start to projects containing .claude-flow/ , reports the 
+first start, and applies a 30-minute abandoned-daemon idle timeout. 
+ 
+ Measured benchmark 
+ On the declared synthetic benchmark (12 agents, 20,000 updates), adaptive 
+scheduling produced: 
+ 
+ 33.3% active-agent reduction; 
+ +0.2617 admitted mean score; 
+ 0.0066 ms update p95 in the release validation run; 
+ preserved quorum and protected-role invariants. 
+ 
+ These are Ruflo benchmark results for that workload, not a universal production 
+performance claim. 
+ Validation 
+ 
+ TypeScript builds passed for @claude-flow/shared , @claude-flow/swarm , and 
+ @claude-flow/cli . 
+ The changed-surface suite passed 93 tests across nine files. 
+ Twenty concurrent outcome writers persisted all twenty rounds with no 
+residual lock. 
+ Built CLI smoke tests covered initialization, automatic post-task learning, 
+status, manual updates, and JSON metrics. 
+ CI/CD, V3 CI/CD, CodeQL, cross-agent integration, CVE audit, and verification 
+workflows passed on the merged commit. 
+ 
+ This release ships #2848 and 
+resolves 
+ #2815 , 
+ #2819 , 
+ #2832 , 
+ #2834 , 
+ #2839 , and 
+ #2840 .
